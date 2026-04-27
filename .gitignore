@@ -12,6 +12,19 @@ dist
 dist-ssr
 *.local
 
+# User data (should be in userData, but protect just in case)
+**/data/settings.json
+**/data/runtime-state.json
+**/data/current.json
+**/data/last-good.json
+**/data/diary-events.json
+**/data/diary-entries.json
+**/data/diary-day-summaries.json
+*.local.json
+
+# Build output
+release/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
