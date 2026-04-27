@@ -35,8 +35,8 @@ export function createDiaryWindow(parentWindow) {
     const preloadPath = path.join(__dirname, '../preload/index.js');
     const [px, py] = parentWindow.getPosition();
     const win = new BrowserWindow({
-        width: 420,
-        height: 480,
+        width: 380,
+        height: 400,
         x: px - 440,
         y: py,
         frame: false,

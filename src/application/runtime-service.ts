@@ -677,7 +677,7 @@ export class RuntimeService {
 
     const effect = FOOD_EFFECTS[foodItem.category]
     const scoreBonus = foodItem.preferenceScore - 3
-    const feedSatietyGain = getFeedSatietyGainForPreference(foodItem.preferenceScore)
+    const feedSatietyGain = getFeedSatietyGainForPreference(foodItem.preferenceScore, foodItem.category)
 
     const line = this.decorateSpeechLine(
       this.formatFoodLine(

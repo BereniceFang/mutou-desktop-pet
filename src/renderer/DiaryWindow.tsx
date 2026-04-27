@@ -28,29 +28,29 @@ export function DiaryWindow() {
   const [entries, setEntries] = useState<DiaryEntry[]>([])
   const [selected, setSelected] = useState<DiaryEntry | null>(null)
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    window.petApp.listDiaryEntries(60).then((d) => {
-      setEntries(d as DiaryEntry[])
+    if (!window.petApp) {
+      setError('petApp 未就绪')
       setLoading(false)
-    })
+      return
+    }
+    window.petApp.listDiaryEntries(60)
+      .then((d) => {
+        setEntries(d as DiaryEntry[])
+        setLoading(false)
+      })
+      .catch((err) => {
+        console.error('[diary-window] load failed:', err)
+        setError(String(err?.message ?? err))
+        setLoading(false)
+      })
   }, [])
 
   const handleClose = useCallback(() => {
     window.petApp.closeDiaryWindow()
   }, [])
-
-  if (loading) {
-    return (
-      <div className="dw-root">
-        <div className="dw-header">
-          <span className="dw-title">木头的日记</span>
-          <button className="dw-close" onClick={handleClose}>✕</button>
-        </div>
-        <div className="dw-loading">翻开日记本中…</div>
-      </div>
-    )
-  }
 
   const currentIdx = selected ? entries.findIndex((e) => e.dateKey === selected.dateKey) : -1
   const hasPrev = currentIdx >= 0 && currentIdx < entries.length - 1
@@ -70,6 +70,18 @@ export function DiaryWindow() {
   const goNext = useCallback(() => {
     if (hasNext) goDay(entries[currentIdx - 1].dateKey)
   }, [hasNext, currentIdx, entries, goDay])
+
+  if (loading || error) {
+    return (
+      <div className="dw-root">
+        <div className="dw-header">
+          <span className="dw-title">木头的日记</span>
+          <button className="dw-close" onClick={handleClose}>✕</button>
+        </div>
+        <div className="dw-loading">{error ?? '翻开日记本中…'}</div>
+      </div>
+    )
+  }
 
   if (selected) {
     const fd = friendlyDate(selected.dateKey)

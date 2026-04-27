@@ -536,7 +536,7 @@ export class RuntimeService {
         }
         const effect = FOOD_EFFECTS[foodItem.category];
         const scoreBonus = foodItem.preferenceScore - 3;
-        const feedSatietyGain = getFeedSatietyGainForPreference(foodItem.preferenceScore);
+        const feedSatietyGain = getFeedSatietyGainForPreference(foodItem.preferenceScore, foodItem.category);
         const line = this.decorateSpeechLine(this.formatFoodLine(this.pickFeedLine(foodType, foodItem.category, shouldUseRepeatLine), foodItem.label, foodItem.preferenceScore));
         const hour = new Date().getHours();
         const isNight = hour >= 23 || hour < 5;

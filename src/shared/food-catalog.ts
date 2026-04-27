@@ -74,13 +74,22 @@ export function getFoodDialogueType(foodType: string): string {
 }
 
 // AIGC START
+const CATEGORY_SATIETY_BASE: Record<FoodCategory, number> = {
+  sweet: 3,
+  drink: 2,
+  fruit: 4,
+  savory: 5,
+  meal: 8,
+}
+
 /**
- * 与 `RuntimeService.handleFeed` 中饱腹增加一致，供 UI 预览。
- * 偏好 1–5：9 / 12 / 15 / 18 / 21（每档相差 3，与旧版 12–16 相比拉开梯度）
+ * 饱腹增加 = 类别基础值 + 偏好加成。
+ * 零食/饮品基础低（2~3），正餐基础高（8），偏好 1–5 额外加 1–5。
  */
-export function getFeedSatietyGainForPreference(preferenceScore: number): number {
-  const tier = Math.min(5, Math.max(1, Math.round(preferenceScore)))
-  return 6 + tier * 3
+export function getFeedSatietyGainForPreference(preferenceScore: number, category?: FoodCategory): number {
+  const pref = Math.min(5, Math.max(1, Math.round(preferenceScore)))
+  const base = category ? CATEGORY_SATIETY_BASE[category] : 5
+  return base + pref
 }
 // AIGC END
 // AIGC END

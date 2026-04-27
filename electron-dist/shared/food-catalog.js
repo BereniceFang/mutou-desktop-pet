@@ -54,13 +54,17 @@ export function getFoodDialogueType(foodType) {
     return `feed_food_${foodType}`;
 }
 // AIGC START
-/**
- * 与 `RuntimeService.handleFeed` 中饱腹增加一致，供 UI 预览。
- * 偏好 1–5：9 / 12 / 15 / 18 / 21（每档相差 3，与旧版 12–16 相比拉开梯度）
- */
-export function getFeedSatietyGainForPreference(preferenceScore) {
-    const tier = Math.min(5, Math.max(1, Math.round(preferenceScore)));
-    return 6 + tier * 3;
+const CATEGORY_SATIETY_BASE = {
+    sweet: 3,
+    drink: 2,
+    fruit: 4,
+    savory: 5,
+    meal: 8,
+};
+export function getFeedSatietyGainForPreference(preferenceScore, category) {
+    const pref = Math.min(5, Math.max(1, Math.round(preferenceScore)));
+    const base = category ? CATEGORY_SATIETY_BASE[category] : 5;
+    return base + pref;
 }
 // AIGC END
 // AIGC END

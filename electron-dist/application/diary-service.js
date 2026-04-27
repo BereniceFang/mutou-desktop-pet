@@ -24,17 +24,15 @@ function pick(items, seed) {
 function stripTerminalPunctuation(text) {
     return text.trim().replace(/[，。！？；：、]+$/g, '');
 }
-function composeDiaryTitle(primary, suffix, seed) {
-    const base = stripTerminalPunctuation(primary);
-    const tail = stripTerminalPunctuation(suffix);
-    const joiner = seed % 2 === 0 ? '，' : '：';
-    if (!base) {
-        return tail;
-    }
-    if (!tail) {
-        return base;
-    }
-    return `${base}${joiner}${tail}`;
+const TITLE_JOINERS = ['，', '：', ' · ', '——', '｜'];
+function pickJoiner(seed) {
+    return TITLE_JOINERS[seed % TITLE_JOINERS.length];
+}
+function composeTitleParts(parts, seed) {
+    const stripped = parts.map(stripTerminalPunctuation).filter(Boolean);
+    if (stripped.length === 0) return '今天';
+    if (stripped.length === 1) return stripped[0];
+    return stripped.join(pickJoiner(seed));
 }
 function pickDistinct(items, seed, count) {
     if (items.length === 0 || count <= 0) {
@@ -62,16 +60,27 @@ function isQuietNormalDay(summary) {
         summary.focusInterruptedCount === 0);
 }
 function absenceTitleFor(summary, templates, seed) {
-    const primary = pick(templates.absenceTitle, seed);
-    const suffix = pick(templates.moodTags.miss, seed + 5);
-    return composeDiaryTitle(primary, suffix, seed + summary.dateKey.length);
+    const s = seed + hashSeed(summary.dateKey);
+    const primary = pick(templates.absenceTitle, s);
+    const moodSuffix = pick(templates.moodTags.miss, s + 7);
+    const closingSuffix = pick(templates.moodTags.quiet, s + 13);
+    const variant = s % 3;
+    if (variant === 0) return composeTitleParts([primary, moodSuffix], s);
+    if (variant === 1) return composeTitleParts([primary, closingSuffix], s + 3);
+    return composeTitleParts([moodSuffix, primary], s + 5);
 }
 function quietNormalTitleFor(summary, templates, seed) {
-    const calmTierTitles = templates.title[summary.relationshipTier].filter((title) => /安静|轻|记录|备注|日常|陪伴|安心|稳|收下|放好|留给今天/.test(title));
-    const quietPrimaryPool = [...templates.title.low, ...calmTierTitles];
-    const primary = pick(quietPrimaryPool, seed + 3);
-    const suffix = pick(templates.moodTags.quiet, seed + 17);
-    return composeDiaryTitle(primary, suffix, seed + summary.interactionCount + summary.focusStartedCount);
+    const s = seed + hashSeed(summary.dateKey);
+    const tierPool = templates.title[summary.relationshipTier];
+    const quietMood = pick(templates.moodTags.quiet, s + 11);
+    const softMood = pick(templates.moodTags.soft, s + 19);
+    const lowTitle = pick(templates.title.low, s + 3);
+    const tierTitle = pick(tierPool, s + 7);
+    const variant = s % 4;
+    if (variant === 0) return composeTitleParts([lowTitle, quietMood], s);
+    if (variant === 1) return composeTitleParts([tierTitle, softMood], s + 2);
+    if (variant === 2) return composeTitleParts([quietMood, lowTitle], s + 5);
+    return composeTitleParts([softMood, tierTitle], s + 8);
 }
 // AIGC END
 function addDaysToDateKey(dateKey, deltaDays) {

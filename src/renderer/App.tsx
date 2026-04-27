@@ -349,7 +349,7 @@ function FeedPanel({
       <div className="feed-grid">
         {foods.map((food) => {
           const unlocked = isFoodUnlockedForTier(food, tier)
-          const gain = getFeedSatietyGainForPreference(food.preferenceScore)
+          const gain = getFeedSatietyGainForPreference(food.preferenceScore, food.category)
           return (
             <button
               key={food.id}
@@ -906,6 +906,21 @@ function DebugPanel() {
           <span>互动: {appState?.stats.interactionCount}</span>
           <span>状态: {appState?.mainState}</span>
           <span>表情: {appState?.currentExpression}</span>
+        </div>
+      </div>
+
+      <div className="debug-section">
+        <div className="debug-section-title">亲密度覆盖</div>
+        <div className="debug-btn-row">
+          {TIER_OPTIONS.map((opt) => (
+            <button
+              key={opt.value}
+              className={`debug-btn ${debugTier === opt.value ? 'debug-btn-active' : ''}`}
+              onClick={() => setDebugTier(opt.value)}
+            >
+              {opt.label}
+            </button>
+          ))}
         </div>
       </div>
 
