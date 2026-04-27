@@ -3,11 +3,14 @@ export type FoodCategory = 'sweet' | 'fruit' | 'drink' | 'savory' | 'meal'
 
 export type RelationshipTier = 'low' | 'mid' | 'high'
 
+export type SeasonalUnlock = { month: number; day: number; duration: number }
+
 export interface FoodCatalogItem {
   id: string
   label: string
   category: FoodCategory
   preferenceScore: number
+  seasonalUnlock?: SeasonalUnlock
   unlockTier: RelationshipTier
 }
 
@@ -40,6 +43,13 @@ export const FOOD_CATALOG: FoodCatalogItem[] = [
   { id: 'ramen', label: '拉面', category: 'meal', preferenceScore: 5, unlockTier: 'high' },
   { id: 'hotpot', label: '火锅', category: 'meal', preferenceScore: 5, unlockTier: 'high' },
   { id: 'snackPlatter', label: '小零食拼盘', category: 'savory', preferenceScore: 5, unlockTier: 'high' },
+  // 节日限定食物
+  { id: 'iceCreamSummer', label: '夏日冰激凌', category: 'sweet', preferenceScore: 5, unlockTier: 'low', seasonalUnlock: { month: 6, day: 1, duration: 92 } },
+  { id: 'dumplings', label: '饺子', category: 'meal', preferenceScore: 5, unlockTier: 'low', seasonalUnlock: { month: 1, day: 1, duration: 15 } },
+  { id: 'tangyuan', label: '汤圆', category: 'sweet', preferenceScore: 5, unlockTier: 'low', seasonalUnlock: { month: 2, day: 1, duration: 28 } },
+  { id: 'mooncake', label: '月饼', category: 'sweet', preferenceScore: 5, unlockTier: 'low', seasonalUnlock: { month: 9, day: 1, duration: 30 } },
+  { id: 'zongzi', label: '粽子', category: 'meal', preferenceScore: 5, unlockTier: 'low', seasonalUnlock: { month: 5, day: 20, duration: 20 } },
+  { id: 'birthdayCake', label: '生日蛋糕', category: 'sweet', preferenceScore: 5, unlockTier: 'low', seasonalUnlock: { month: 4, day: 16, duration: 3 } },
 ]
 
 const RELATIONSHIP_TIER_ORDER: RelationshipTier[] = ['low', 'mid', 'high']
@@ -52,9 +62,24 @@ export function isRelationshipTierUnlocked(currentTier: RelationshipTier, requir
   return RELATIONSHIP_TIER_ORDER.indexOf(currentTier) >= RELATIONSHIP_TIER_ORDER.indexOf(requiredTier)
 }
 
+export function isSeasonalFoodAvailable(food: FoodCatalogItem, now?: Date): boolean {
+  if (!food.seasonalUnlock) return true
+  const d = now ?? new Date()
+  const { month, day, duration } = food.seasonalUnlock
+  const start = new Date(d.getFullYear(), month - 1, day)
+  const end = new Date(start.getTime() + duration * 86400000)
+  if (d >= start && d < end) return true
+  const prevStart = new Date(d.getFullYear() - 1, month - 1, day)
+  const prevEnd = new Date(prevStart.getTime() + duration * 86400000)
+  return d >= prevStart && d < prevEnd
+}
+
 export function isFoodUnlockedForTier(foodOrType: string | FoodCatalogItem, relationshipTier: RelationshipTier): boolean {
   const food = typeof foodOrType === 'string' ? getFoodCatalogItem(foodOrType) : foodOrType
-  return Boolean(food && isRelationshipTierUnlocked(relationshipTier, food.unlockTier))
+  if (!food) return false
+  if (!isRelationshipTierUnlocked(relationshipTier, food.unlockTier)) return false
+  if (food.seasonalUnlock && !isSeasonalFoodAvailable(food)) return false
+  return true
 }
 
 export function getFoodUnlockTierLabel(tier: RelationshipTier): string {

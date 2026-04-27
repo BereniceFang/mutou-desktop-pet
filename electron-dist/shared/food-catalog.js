@@ -27,6 +27,12 @@ export const FOOD_CATALOG = [
     { id: 'ramen', label: '拉面', category: 'meal', preferenceScore: 5, unlockTier: 'high' },
     { id: 'hotpot', label: '火锅', category: 'meal', preferenceScore: 5, unlockTier: 'high' },
     { id: 'snackPlatter', label: '小零食拼盘', category: 'savory', preferenceScore: 5, unlockTier: 'high' },
+    { id: 'iceCreamSummer', label: '夏日冰激凌', category: 'sweet', preferenceScore: 5, unlockTier: 'low', seasonalUnlock: { month: 6, day: 1, duration: 92 } },
+    { id: 'dumplings', label: '饺子', category: 'meal', preferenceScore: 5, unlockTier: 'low', seasonalUnlock: { month: 1, day: 1, duration: 15 } },
+    { id: 'tangyuan', label: '汤圆', category: 'sweet', preferenceScore: 5, unlockTier: 'low', seasonalUnlock: { month: 2, day: 1, duration: 28 } },
+    { id: 'mooncake', label: '月饼', category: 'sweet', preferenceScore: 5, unlockTier: 'low', seasonalUnlock: { month: 9, day: 1, duration: 30 } },
+    { id: 'zongzi', label: '粽子', category: 'meal', preferenceScore: 5, unlockTier: 'low', seasonalUnlock: { month: 5, day: 20, duration: 20 } },
+    { id: 'birthdayCake', label: '生日蛋糕', category: 'sweet', preferenceScore: 5, unlockTier: 'low', seasonalUnlock: { month: 4, day: 16, duration: 3 } },
 ];
 const RELATIONSHIP_TIER_ORDER = ['low', 'mid', 'high'];
 export function getFoodCatalogItem(foodType) {
@@ -35,9 +41,23 @@ export function getFoodCatalogItem(foodType) {
 export function isRelationshipTierUnlocked(currentTier, requiredTier) {
     return RELATIONSHIP_TIER_ORDER.indexOf(currentTier) >= RELATIONSHIP_TIER_ORDER.indexOf(requiredTier);
 }
+export function isSeasonalFoodAvailable(food, now) {
+    if (!food.seasonalUnlock) return true;
+    const d = now ?? new Date();
+    const { month, day, duration } = food.seasonalUnlock;
+    const start = new Date(d.getFullYear(), month - 1, day);
+    const end = new Date(start.getTime() + duration * 86400000);
+    if (d >= start && d < end) return true;
+    const prevStart = new Date(d.getFullYear() - 1, month - 1, day);
+    const prevEnd = new Date(prevStart.getTime() + duration * 86400000);
+    return d >= prevStart && d < prevEnd;
+}
 export function isFoodUnlockedForTier(foodOrType, relationshipTier) {
     const food = typeof foodOrType === 'string' ? getFoodCatalogItem(foodOrType) : foodOrType;
-    return Boolean(food && isRelationshipTierUnlocked(relationshipTier, food.unlockTier));
+    if (!food) return false;
+    if (!isRelationshipTierUnlocked(relationshipTier, food.unlockTier)) return false;
+    if (food.seasonalUnlock && !isSeasonalFoodAvailable(food)) return false;
+    return true;
 }
 export function getFoodUnlockTierLabel(tier) {
     switch (tier) {

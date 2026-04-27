@@ -82,6 +82,16 @@ const SATIETY_HUNGER_THRESHOLD = 36
 const SATIETY_DECAY_PER_HOUR = 3.25
 const SATIETY_DECAY_BURST_CAP = 48
 
+/** 心情每小时自然下降 */
+const MOOD_DECAY_PER_HOUR = 1.5
+const MOOD_DECAY_BURST_CAP = 20
+const MOOD_FLOOR = 30
+
+/** 精力每小时自然下降 */
+const ENERGY_DECAY_PER_HOUR = 2.0
+const ENERGY_DECAY_BURST_CAP = 25
+const ENERGY_FLOOR = 20
+
 /** 单次点击、双击带来的「活动消耗」饱腹扣减（互动越密额外略增） */
 const SATIETY_ACTIVITY_DRAIN_CLICK = 1
 const SATIETY_ACTIVITY_DRAIN_DOUBLE = 2
@@ -1142,6 +1152,20 @@ export class RuntimeService {
     await this.persist()
   }
 
+  async handleDragBubble(): Promise<{ state: AppState; bubbleText: string | null }> {
+    if (!this.state.settings.speechEnabled) {
+      return { state: this.state, bubbleText: null }
+    }
+    const line = this.decorateSpeechLine(this.pickLineWithFallback('interaction_drag', 'interaction'))
+    this.state = {
+      ...this.state,
+      currentExpression: line.expressionHint,
+      currentMotion: line.motionHint,
+      lastBubbleText: line.text,
+    }
+    return { state: this.state, bubbleText: line.text }
+  }
+
   getWindowPositionForDisplayMode(mode: string): WindowPosition | null {
     const slot = getWindowPositionSlotForDisplayMode(mode)
     return this.state.windowPositions[slot] ?? (slot === 'desktop' ? this.state.windowPosition : null)
@@ -1224,13 +1248,16 @@ export class RuntimeService {
       return
     }
     const hours = elapsedMs / 3600000
-    const decay = Math.min(SATIETY_DECAY_BURST_CAP, hours * SATIETY_DECAY_PER_HOUR)
-    const nextSatiety = Math.max(0, Math.round(this.state.stats.satiety - decay))
+    const satietyDecay = Math.min(SATIETY_DECAY_BURST_CAP, hours * SATIETY_DECAY_PER_HOUR)
+    const moodDecay = Math.min(MOOD_DECAY_BURST_CAP, hours * MOOD_DECAY_PER_HOUR)
+    const energyDecay = Math.min(ENERGY_DECAY_BURST_CAP, hours * ENERGY_DECAY_PER_HOUR)
     this.state = {
       ...this.state,
       stats: {
         ...this.state.stats,
-        satiety: nextSatiety,
+        satiety: Math.max(0, Math.round(this.state.stats.satiety - satietyDecay)),
+        mood: Math.max(MOOD_FLOOR, Math.round(this.state.stats.mood - moodDecay)),
+        energy: Math.max(ENERGY_FLOOR, Math.round(this.state.stats.energy - energyDecay)),
         satietyClockAt: now.toISOString(),
       },
     }

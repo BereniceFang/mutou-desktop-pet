@@ -318,6 +318,22 @@
   font-size: 10px;
 }
 
+.food-item.seasonal {
+  border-color: rgba(255, 180, 100, 0.2);
+}
+
+.food-item.seasonal:hover:not(:disabled) {
+  background: rgba(255, 180, 100, 0.15);
+}
+
+.food-seasonal {
+  font-size: 9px;
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: rgba(255, 180, 100, 0.2);
+  color: rgba(255, 200, 130, 0.9);
+}
+
 .feed-card-footer {
   margin-top: auto;
   display: flex;
@@ -335,6 +351,140 @@
   max-width: 100%;
   overflow-wrap: anywhere;
   text-align: left;
+}
+
+/* === Profile panel === */
+.profile-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profile-header {
+  text-align: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.profile-name {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.profile-relation {
+  font-size: 11px;
+  opacity: 0.45;
+  margin-top: 2px;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.profile-section-title {
+  font-size: 11px;
+  font-weight: 600;
+  opacity: 0.4;
+  letter-spacing: 0.5px;
+}
+
+.profile-bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  opacity: 0.65;
+}
+
+.profile-bar-next {
+  opacity: 0.5;
+}
+
+.profile-bar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.profile-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, rgba(134, 59, 255, 0.5), rgba(134, 59, 255, 0.8));
+  border-radius: 3px;
+  transition: width 0.3s;
+}
+
+.profile-vitals {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.profile-vital {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vital-label {
+  font-size: 11px;
+  opacity: 0.55;
+  width: 28px;
+  flex-shrink: 0;
+}
+
+.vital-bar {
+  flex: 1;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.vital-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s;
+}
+
+.vital-mood { background: linear-gradient(90deg, #ff8a65, #ffb74d); }
+.vital-energy { background: linear-gradient(90deg, #4fc3f7, #81d4fa); }
+.vital-satiety { background: linear-gradient(90deg, #81c784, #aed581); }
+
+.vital-num {
+  font-size: 10px;
+  opacity: 0.4;
+  width: 22px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.profile-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 6px 0;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+}
+
+.profile-stat .stat-num {
+  font-size: 16px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.profile-stat .stat-label {
+  font-size: 10px;
+  opacity: 0.35;
 }
 
 /* === Focus panel === */

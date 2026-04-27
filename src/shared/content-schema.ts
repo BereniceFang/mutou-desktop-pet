@@ -26,6 +26,7 @@ const dialogueTypes = [
   'interaction_comfort',
   'interaction_comfort_light',
   'interaction_comfort_heavy',
+  'interaction_drag',
   'idle',
   'idle_comfort',
   'idle_morning',

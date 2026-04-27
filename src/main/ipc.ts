@@ -155,6 +155,10 @@ export function registerIpcHandlers(
     return runtimeService.handlePetContextMenu()
   })
 
+  ipcMain.handle('pet:drag-bubble', async () => {
+    return runtimeService.handleDragBubble()
+  })
+
   ipcMain.handle('pet:window-drag:start', async (_event, screenX: number, screenY: number) => {
     const win = getWindow()
     if (!win) {

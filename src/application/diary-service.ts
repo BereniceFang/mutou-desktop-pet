@@ -381,7 +381,7 @@ export async function appendDiaryEvent(dataRoot: string, partial: DiaryEventPart
 
 async function finalizeCompletedDaysInner(
   dataRoot: string,
-  templates: DiaryTemplates,
+  _templates: DiaryTemplates,
   relationshipTier: RelationshipTier,
 ): Promise<void> {
   const eventsData = await loadDiaryEvents(dataRoot)

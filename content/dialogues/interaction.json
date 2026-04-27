@@ -2114,6 +2114,62 @@
       "text": "第二下算奖励，那我也要奖励你一句：辛苦啦。",
       "expressionHint": "comfort",
       "motionHint": "pat"
+    },
+    {
+      "id": "interaction_drag_001",
+      "type": "interaction_drag",
+      "text": "哇——又被搬家了，轻点轻点。",
+      "expressionHint": "happy",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "interaction_drag_002",
+      "type": "interaction_drag",
+      "text": "你拖我的时候我有点晕，但也有点开心。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_drag_003",
+      "type": "interaction_drag",
+      "text": "我知道你在给我找更好的位置，对吧？",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_drag_004",
+      "type": "interaction_drag",
+      "text": "搬来搬去的，我脚都站不稳了啦。",
+      "expressionHint": "happy",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "interaction_drag_005",
+      "type": "interaction_drag",
+      "text": "放哪都行，只要还在你看得到的地方。",
+      "expressionHint": "warm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_drag_006",
+      "type": "interaction_drag",
+      "text": "我刚站好你又拽我……好吧，你开心就好。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_drag_007",
+      "type": "interaction_drag",
+      "text": "这是在帮我搬家吗？新位置风景怎么样？",
+      "expressionHint": "calm",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_drag_008",
+      "type": "interaction_drag",
+      "text": "你轻轻的拖就好，我不会跑的。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
     }
   ]
 }

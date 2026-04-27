@@ -108,6 +108,7 @@ export function RendererApp() {
   }, [bubbleText, clearBubble, quitting])
 
   const dragRef = useRef(false)
+  const lastDragBubbleRef = useRef(0)
 
   const onPointerDown = useCallback((e: React.PointerEvent) => {
     if ((e.target as HTMLElement).closest('[data-no-drag]')) return
@@ -117,7 +118,17 @@ export function RendererApp() {
 
   const onPointerMove = useCallback((e: React.PointerEvent) => {
     if (e.buttons !== 1) return
-    dragRef.current = true
+    if (!dragRef.current) {
+      dragRef.current = true
+      const now = Date.now()
+      if (now - lastDragBubbleRef.current > 15_000) {
+        lastDragBubbleRef.current = now
+        window.petApp.triggerDragBubble().then((r) => {
+          const res = r as { state: unknown; bubbleText: string | null }
+          if (res.bubbleText) usePetStore.setState({ bubbleText: res.bubbleText })
+        })
+      }
+    }
     window.petApp.dragWindowTo(e.screenX, e.screenY)
   }, [])
 
@@ -300,20 +311,70 @@ export function RendererApp() {
   )
 }
 
+const TIER_LABELS: Record<string, string> = { low: '初识', mid: '熟悉', high: '亲密' }
+const TIER_THRESHOLDS: Record<string, number> = { low: 60, mid: 200, high: Infinity }
+
 function StatusPanel({ appState }: { appState: NonNullable<ReturnType<typeof usePetStore.getState>['appState']> }) {
   const s = appState.stats
+  const tier = appState.relationshipTier
+  const tierLabel = TIER_LABELS[tier] ?? tier
+  const nextThreshold = TIER_THRESHOLDS[tier] ?? Infinity
+  const progress = nextThreshold === Infinity ? 1 : Math.min(1, s.favorability / nextThreshold)
+  const nick = appState.settings.userNickname || '主人'
+
   return (
-    <div className="panel-body status-panel">
-      <div className="stat-row"><span>好感度</span><span>{s.favorability}</span></div>
-      <div className="stat-row"><span>默契</span><span>{s.tacit}</span></div>
-      <div className="stat-row"><span>心情</span><span>{s.mood}</span></div>
-      <div className="stat-row"><span>精力</span><span>{s.energy}</span></div>
-      <div className="stat-row"><span>饱腹</span><span>{Math.round(s.satiety)}</span></div>
-      <div className="stat-row"><span>陪伴天数</span><span>{s.companionDays}</span></div>
-      <div className="stat-row"><span>互动次数</span><span>{s.interactionCount}</span></div>
-      <div className="stat-row"><span>专注完成</span><span>{s.focusCompletedCount}</span></div>
-      <div className="stat-row"><span>喂食次数</span><span>{s.feedCount}</span></div>
-      <div className="stat-row"><span>关系</span><span>{appState.relationshipTier}</span></div>
+    <div className="panel-body profile-panel">
+      {/* Identity */}
+      <div className="profile-header">
+        <div className="profile-name">木头</div>
+        <div className="profile-relation">{tierLabel}（{nick}）· 第 {s.companionDays} 天</div>
+      </div>
+
+      {/* Relationship bar */}
+      <div className="profile-section">
+        <div className="profile-bar-label">
+          <span>好感 {s.favorability}</span>
+          {nextThreshold !== Infinity && <span className="profile-bar-next">→ {TIER_LABELS[tier === 'low' ? 'mid' : 'high']}（{nextThreshold}）</span>}
+        </div>
+        <div className="profile-bar">
+          <div className="profile-bar-fill" style={{ width: `${progress * 100}%` }} />
+        </div>
+      </div>
+
+      {/* Vitals */}
+      <div className="profile-section">
+        <div className="profile-section-title">状态</div>
+        <div className="profile-vitals">
+          <div className="profile-vital">
+            <span className="vital-label">心情</span>
+            <div className="vital-bar"><div className="vital-fill vital-mood" style={{ width: `${s.mood}%` }} /></div>
+            <span className="vital-num">{s.mood}</span>
+          </div>
+          <div className="profile-vital">
+            <span className="vital-label">精力</span>
+            <div className="vital-bar"><div className="vital-fill vital-energy" style={{ width: `${s.energy}%` }} /></div>
+            <span className="vital-num">{s.energy}</span>
+          </div>
+          <div className="profile-vital">
+            <span className="vital-label">饱腹</span>
+            <div className="vital-bar"><div className="vital-fill vital-satiety" style={{ width: `${s.satiety}%` }} /></div>
+            <span className="vital-num">{Math.round(s.satiety)}</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Stats */}
+      <div className="profile-section">
+        <div className="profile-section-title">档案</div>
+        <div className="profile-stats">
+          <div className="profile-stat"><span className="stat-num">{s.interactionCount}</span><span className="stat-label">互动</span></div>
+          <div className="profile-stat"><span className="stat-num">{s.feedCount}</span><span className="stat-label">喂食</span></div>
+          <div className="profile-stat"><span className="stat-num">{s.focusCompletedCount}</span><span className="stat-label">专注</span></div>
+          <div className="profile-stat"><span className="stat-num">{s.tacit}</span><span className="stat-label">默契</span></div>
+          <div className="profile-stat"><span className="stat-num">{Number(s.focusTotalMinutes ?? 0)}</span><span className="stat-label">专注分钟</span></div>
+          <div className="profile-stat"><span className="stat-num">{s.nightInteractionCount}</span><span className="stat-label">深夜互动</span></div>
+        </div>
+      </div>
     </div>
   )
 }
@@ -353,14 +414,15 @@ function FeedPanel({
           return (
             <button
               key={food.id}
-              className={`food-item ${unlocked ? '' : 'locked'}`}
+              className={`food-item ${unlocked ? '' : 'locked'} ${food.seasonalUnlock ? 'seasonal' : ''}`}
               disabled={!unlocked || satiety >= 100}
               onClick={() => onFeed(food.id)}
-              title={unlocked ? `${food.label} (+${gain} 饱腹)` : `需要更高关系等级`}
+              title={unlocked ? `${food.label} (+${gain} 饱腹)` : food.seasonalUnlock ? '限定时令食物' : '需要更高关系等级'}
             >
               <span className="food-label">{food.label}</span>
+              {food.seasonalUnlock && unlocked && <span className="food-seasonal">限定</span>}
               {unlocked && <span className="food-gain">+{gain}</span>}
-              {!unlocked && <span className="food-lock">🔒</span>}
+              {!unlocked && <span className="food-lock">{food.seasonalUnlock ? '⏳' : '🔒'}</span>}
             </button>
           )
         })}

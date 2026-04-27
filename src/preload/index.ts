@@ -19,6 +19,7 @@ export interface PetApi {
   handlePetContextMenu(): Promise<unknown>
   debugLog(scope: string, payload: unknown): Promise<void>
   setWindowDisplayMode(mode: string): Promise<void>
+  triggerDragBubble(): Promise<unknown>
   startWindowDrag(screenX: number, screenY: number): Promise<void>
   dragWindowTo(screenX: number, screenY: number): Promise<void>
   endWindowDrag(): Promise<void>
@@ -56,6 +57,7 @@ const petApi: PetApi = {
   // AIGC END
   debugLog: (scope, payload) => ipcRenderer.invoke('pet:debug-log', scope, payload),
   setWindowDisplayMode: (mode) => ipcRenderer.invoke('pet:window-display-mode', mode),
+  triggerDragBubble: () => ipcRenderer.invoke('pet:drag-bubble'),
   startWindowDrag: (screenX, screenY) => ipcRenderer.invoke('pet:window-drag:start', screenX, screenY),
   dragWindowTo: (screenX, screenY) => ipcRenderer.invoke('pet:window-drag:move', screenX, screenY),
   endWindowDrag: () => ipcRenderer.invoke('pet:window-drag:end'),
