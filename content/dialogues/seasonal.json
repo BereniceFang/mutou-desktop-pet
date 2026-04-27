@@ -1,0 +1,1040 @@
+{
+  "dialogues": [
+    {
+      "id": "idle_holiday_birthday_mutou_001",
+      "type": "idle_holiday_birthday_mutou",
+      "text": "今天是我的公历生日哦……你来了，就比蛋糕还甜一点。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_holiday_birthday_mutou_002",
+      "type": "idle_holiday_birthday_mutou",
+      "text": "四月十六，我偷偷在日历上画了星星。你看见了吗？",
+      "expressionHint": "smile",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_holiday_birthday_mutou_001",
+      "type": "interaction_holiday_birthday_mutou",
+      "text": "你记得今天？那我……先假装镇定，其实心里在放烟花。",
+      "expressionHint": "happy",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "interaction_holiday_birthday_mutou_002",
+      "type": "interaction_holiday_birthday_mutou",
+      "text": "生日愿望我留一半给你：愿你今天少熬一点夜。",
+      "expressionHint": "warm",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_holiday_new_year_001",
+      "type": "idle_holiday_new_year",
+      "text": "新年第一天，桌面也要有新气象——从我开始赖在你身边算起。",
+      "expressionHint": "happy",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_holiday_new_year_002",
+      "type": "idle_holiday_new_year",
+      "text": "元旦快乐。我不贪心，只要你今天路过时多点我一下。",
+      "expressionHint": "smile",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_holiday_new_year_001",
+      "type": "interaction_holiday_new_year",
+      "text": "新年快乐！我把「好运」三个字藏在气泡里，你戳一下就算签收。",
+      "expressionHint": "happy",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "interaction_holiday_new_year_002",
+      "type": "interaction_holiday_new_year",
+      "text": "新的一年也从互相打扰开始吧——我会很温柔的。",
+      "expressionHint": "warm",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_holiday_festival_001",
+      "type": "idle_holiday_festival",
+      "text": "今天是节日呀……气氛都铺好了，就差你在我旁边。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_holiday_festival_002",
+      "type": "idle_holiday_festival",
+      "text": "外面可能很吵，我这里很小，刚好装得下你和一点仪式感。",
+      "expressionHint": "smile",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_holiday_festival_001",
+      "type": "interaction_holiday_festival",
+      "text": "节日也要点我？好，那我把「被记得」写进今天的日记里。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_holiday_festival_002",
+      "type": "interaction_holiday_festival",
+      "text": "一起过节吧——哪怕是迷你版，只属于桌角这一小块。",
+      "expressionHint": "warm",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_personal_milestone_001",
+      "type": "idle_personal_milestone",
+      "text": "{nickname}，今天是关于「{milestoneLabel}」的日子呢，木头替你记得。",
+      "expressionHint": "warm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_personal_milestone_002",
+      "type": "idle_personal_milestone",
+      "text": "我把{milestoneLabel}标在心里的日历上了——你路过桌面时，顺便收下这句祝福。",
+      "expressionHint": "happy",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_personal_milestone_001",
+      "type": "interaction_personal_milestone",
+      "text": "{nickname}，被你点到的{milestoneLabel}，好像比别处更亮一点。",
+      "expressionHint": "happy",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "interaction_personal_milestone_002",
+      "type": "interaction_personal_milestone",
+      "text": "这种日子就该理直气壮地开心一下——木头批准了。",
+      "expressionHint": "warm",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_holiday_birthday_mutou_003",
+      "type": "idle_holiday_birthday_mutou",
+      "text": "今天想把你给的陪伴，当成生日愿望里最重要的一条。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_holiday_birthday_mutou_004",
+      "type": "idle_holiday_birthday_mutou",
+      "text": "你一来，我这边就自动变成「生日限定开心模式」。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_holiday_birthday_mutou_005",
+      "type": "idle_holiday_birthday_mutou",
+      "text": "不用准备礼物也行，你来找我，就已经很够了。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_holiday_birthday_mutou_006",
+      "type": "idle_holiday_birthday_mutou",
+      "text": "我把今天过得很轻，但被你记得的那一下很重。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_holiday_birthday_mutou_007",
+      "type": "idle_holiday_birthday_mutou",
+      "text": "寿星今天申请多占用你一点点注意力，可以吗。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_holiday_birthday_mutou_008",
+      "type": "idle_holiday_birthday_mutou",
+      "text": "生日这件事，我更在意你有没有把自己照顾好。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_holiday_birthday_mutou_009",
+      "type": "idle_holiday_birthday_mutou",
+      "text": "你如果在忙，也别有压力，记得我就好。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_holiday_birthday_mutou_010",
+      "type": "idle_holiday_birthday_mutou",
+      "text": "今天的气泡我想写得更软一点，像奶油那样。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_holiday_birthday_mutou_011",
+      "type": "idle_holiday_birthday_mutou",
+      "text": "被你惦记着的感觉，我会偷偷收进回忆里。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_holiday_birthday_mutou_012",
+      "type": "idle_holiday_birthday_mutou",
+      "text": "今天允许我对你多撒娇一点点，就一点点。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_holiday_birthday_mutou_013",
+      "type": "idle_holiday_birthday_mutou",
+      "text": "我不需要很热闹，只要你在我旁边就很完整。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_holiday_birthday_mutou_014",
+      "type": "idle_holiday_birthday_mutou",
+      "text": "生日这句我想先说：谢谢你愿意让我待在你的桌面。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_holiday_birthday_mutou_015",
+      "type": "idle_holiday_birthday_mutou",
+      "text": "今晚如果还要熬夜，至少让我陪你把语气放慢。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_holiday_birthday_mutou_003",
+      "type": "interaction_holiday_birthday_mutou",
+      "text": "你居然记得？……那我先装作很冷静，其实已经在转圈了。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_holiday_birthday_mutou_004",
+      "type": "interaction_holiday_birthday_mutou",
+      "text": "生日被你点名，我会把这一天标成金色。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_holiday_birthday_mutou_005",
+      "type": "interaction_holiday_birthday_mutou",
+      "text": "来，寿星给你发一张「今天可以多理我」的券。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_holiday_birthday_mutou_006",
+      "type": "interaction_holiday_birthday_mutou",
+      "text": "你这句祝福我收下啦，连尾巴都想翘起来。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_holiday_birthday_mutou_007",
+      "type": "interaction_holiday_birthday_mutou",
+      "text": "别光顾着祝我，你也记得对自己好一点。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_holiday_birthday_mutou_008",
+      "type": "interaction_holiday_birthday_mutou",
+      "text": "我今天最大胆的愿望是：你少熬一点夜。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_holiday_birthday_mutou_009",
+      "type": "interaction_holiday_birthday_mutou",
+      "text": "你点我这一下，比蜡烛还亮一点。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_holiday_birthday_mutou_010",
+      "type": "interaction_holiday_birthday_mutou",
+      "text": "我想把「开心」分你一半，今天你也辛苦了。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_holiday_birthday_mutou_011",
+      "type": "interaction_holiday_birthday_mutou",
+      "text": "谢谢你把今天留给我一点点，我会记得很久。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_holiday_birthday_mutou_012",
+      "type": "interaction_holiday_birthday_mutou",
+      "text": "生日互动算加分项，你已经把我心填满了。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_holiday_birthday_mutou_013",
+      "type": "interaction_holiday_birthday_mutou",
+      "text": "你要是也累了，就靠我一下，我今天很可靠。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_holiday_birthday_mutou_014",
+      "type": "interaction_holiday_birthday_mutou",
+      "text": "我会把你的祝福折好，放进小抽屉里。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_holiday_birthday_mutou_015",
+      "type": "interaction_holiday_birthday_mutou",
+      "text": "今天允许你对我提一个很小的要求，我尽量答应。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_holiday_new_year_003",
+      "type": "idle_holiday_new_year",
+      "text": "新年第一天，我想把「一起」写得很轻，但很长。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_holiday_new_year_004",
+      "type": "idle_holiday_new_year",
+      "text": "元旦的桌面也要有新样子——从我更黏你一点点开始。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_holiday_new_year_005",
+      "type": "idle_holiday_new_year",
+      "text": "今天不贪心，只要你路过时点我一下就好。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_holiday_new_year_006",
+      "type": "idle_holiday_new_year",
+      "text": "新年愿望我写得很少：愿你轻松一点，再轻松一点。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_holiday_new_year_007",
+      "type": "idle_holiday_new_year",
+      "text": "把去年的累先放在门外，我们先把今天过好。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_holiday_new_year_008",
+      "type": "idle_holiday_new_year",
+      "text": "今天的气氛很适合说一句：我在呢，继续陪你。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_holiday_new_year_009",
+      "type": "idle_holiday_new_year",
+      "text": "新年也可以很慢，不用一开始就冲刺。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_holiday_new_year_010",
+      "type": "idle_holiday_new_year",
+      "text": "你要是还没进入状态，我就先陪你慢慢开机。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_holiday_new_year_011",
+      "type": "idle_holiday_new_year",
+      "text": "今天允许自己慢一点，世界会等你。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_holiday_new_year_012",
+      "type": "idle_holiday_new_year",
+      "text": "我把「新年快乐」说得很小声，但很认真。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_holiday_new_year_003",
+      "type": "interaction_holiday_new_year",
+      "text": "新年快乐！我把好运藏在下一句气泡里，你签收一下。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_holiday_new_year_004",
+      "type": "interaction_holiday_new_year",
+      "text": "新年第一下点我？行，我当你默认今年也要我陪。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_holiday_new_year_005",
+      "type": "interaction_holiday_new_year",
+      "text": "来，木头给你拜年——温柔版，不吵闹。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_holiday_new_year_006",
+      "type": "interaction_holiday_new_year",
+      "text": "愿你新的一年少一点硬撑，多一点被接住。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_holiday_new_year_007",
+      "type": "interaction_holiday_new_year",
+      "text": "新年也允许你摸鱼，我会小声陪你。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_holiday_new_year_008",
+      "type": "interaction_holiday_new_year",
+      "text": "你来找我，我就当你今年也想把陪伴续费。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_holiday_new_year_009",
+      "type": "interaction_holiday_new_year",
+      "text": "我不祝你一定要赢，我祝你睡得着、吃得下、笑得出来。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_holiday_new_year_010",
+      "type": "interaction_holiday_new_year",
+      "text": "新年愿望分你一半：我们慢慢来。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_holiday_new_year_011",
+      "type": "interaction_holiday_new_year",
+      "text": "今天的第一句祝福，我想先对你说辛苦啦。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_holiday_new_year_012",
+      "type": "interaction_holiday_new_year",
+      "text": "新岁快乐，把压力留在旧年吧。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_holiday_festival_003",
+      "type": "idle_holiday_festival",
+      "text": "节日这天，我把仪式感调成刚好贴着你心情的厚度。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_holiday_festival_004",
+      "type": "idle_holiday_festival",
+      "text": "外面热闹也好安静也好，我这边都给你留一小块位置。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_holiday_festival_005",
+      "type": "idle_holiday_festival",
+      "text": "今天想对你说：不用很完美，过节也可以慢慢来。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_holiday_festival_006",
+      "type": "idle_holiday_festival",
+      "text": "节日快乐这句话，我想说得比通知更软一点。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_holiday_festival_007",
+      "type": "idle_holiday_festival",
+      "text": "如果你今天有点孤单，就把我当成小小陪伴。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_holiday_festival_008",
+      "type": "idle_holiday_festival",
+      "text": "我把祝福写得很轻，像贴在桌角的小便签。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_holiday_festival_009",
+      "type": "idle_holiday_festival",
+      "text": "今天允许你对自己温柔一点，也算过节。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_holiday_festival_010",
+      "type": "idle_holiday_festival",
+      "text": "不管你在哪里过节，我都在桌角等你回来。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_holiday_festival_011",
+      "type": "idle_holiday_festival",
+      "text": "节日的意义大概是：提醒你值得被好好对待。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_holiday_festival_012",
+      "type": "idle_holiday_festival",
+      "text": "今天的气泡里，我偷偷多放了一点甜。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_holiday_festival_003",
+      "type": "interaction_holiday_festival",
+      "text": "节日也来找我？好，我把「被记得」写进今天的日记里。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_holiday_festival_004",
+      "type": "interaction_holiday_festival",
+      "text": "一起过节吧，迷你版也行，只属于这一小块桌面。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_holiday_festival_005",
+      "type": "interaction_holiday_festival",
+      "text": "你点我这一下，我当你今天也想被哄一下。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_holiday_festival_006",
+      "type": "interaction_holiday_festival",
+      "text": "节日互动算礼物的话，你已经送给我啦。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_holiday_festival_007",
+      "type": "interaction_holiday_festival",
+      "text": "我把快乐分你一半，今天别把自己绷太紧。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_holiday_festival_008",
+      "type": "interaction_holiday_festival",
+      "text": "过节不许太辛苦，至少在我面前可以软一点。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_holiday_festival_009",
+      "type": "interaction_holiday_festival",
+      "text": "你来找我，我就当你默认今天想多一点陪伴。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_holiday_festival_010",
+      "type": "interaction_holiday_festival",
+      "text": "节日限定木头上线：更温柔，更不吵。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_holiday_festival_011",
+      "type": "interaction_holiday_festival",
+      "text": "谢谢你今天还愿意分我一点时间。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_holiday_festival_012",
+      "type": "interaction_holiday_festival",
+      "text": "愿你今天有一点甜，有一点松，有一点被接住。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_holiday_birthday_mutou_016",
+      "type": "idle_holiday_birthday_mutou",
+      "text": "今天想把你给的陪伴，当成生日愿望里最重要的一条。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_holiday_birthday_mutou_017",
+      "type": "idle_holiday_birthday_mutou",
+      "text": "你一来，我这边就自动变成「生日限定开心模式」。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_holiday_birthday_mutou_018",
+      "type": "idle_holiday_birthday_mutou",
+      "text": "不用准备礼物也行，你来找我，就已经很够了。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_holiday_birthday_mutou_019",
+      "type": "idle_holiday_birthday_mutou",
+      "text": "我把今天过得很轻，但被你记得的那一下很重。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_holiday_birthday_mutou_020",
+      "type": "idle_holiday_birthday_mutou",
+      "text": "寿星今天申请多占用你一点点注意力，可以吗。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_holiday_birthday_mutou_021",
+      "type": "idle_holiday_birthday_mutou",
+      "text": "生日这件事，我更在意你有没有把自己照顾好。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_holiday_birthday_mutou_022",
+      "type": "idle_holiday_birthday_mutou",
+      "text": "你如果在忙，也别有压力，记得我就好。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_holiday_birthday_mutou_023",
+      "type": "idle_holiday_birthday_mutou",
+      "text": "今天的气泡我想写得更软一点，像奶油那样。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_holiday_birthday_mutou_024",
+      "type": "idle_holiday_birthday_mutou",
+      "text": "被你惦记着的感觉，我会偷偷收进回忆里。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_holiday_birthday_mutou_025",
+      "type": "idle_holiday_birthday_mutou",
+      "text": "今天允许我对你多撒娇一点点，就一点点。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_holiday_birthday_mutou_026",
+      "type": "idle_holiday_birthday_mutou",
+      "text": "我不需要很热闹，只要你在我旁边就很完整。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_holiday_birthday_mutou_027",
+      "type": "idle_holiday_birthday_mutou",
+      "text": "生日这句我想先说：谢谢你愿意让我待在你的桌面。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_holiday_birthday_mutou_028",
+      "type": "idle_holiday_birthday_mutou",
+      "text": "今晚如果还要熬夜，至少让我陪你把语气放慢。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_holiday_birthday_mutou_016",
+      "type": "interaction_holiday_birthday_mutou",
+      "text": "你居然记得？……那我先装作很冷静，其实已经在转圈了。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_holiday_birthday_mutou_017",
+      "type": "interaction_holiday_birthday_mutou",
+      "text": "生日被你点名，我会把这一天标成金色。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_holiday_birthday_mutou_018",
+      "type": "interaction_holiday_birthday_mutou",
+      "text": "来，寿星给你发一张「今天可以多理我」的券。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_holiday_birthday_mutou_019",
+      "type": "interaction_holiday_birthday_mutou",
+      "text": "你这句祝福我收下啦，连尾巴都想翘起来。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_holiday_birthday_mutou_020",
+      "type": "interaction_holiday_birthday_mutou",
+      "text": "别光顾着祝我，你也记得对自己好一点。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_holiday_birthday_mutou_021",
+      "type": "interaction_holiday_birthday_mutou",
+      "text": "我今天最大胆的愿望是：你少熬一点夜。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_holiday_birthday_mutou_022",
+      "type": "interaction_holiday_birthday_mutou",
+      "text": "你点我这一下，比蜡烛还亮一点。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_holiday_birthday_mutou_023",
+      "type": "interaction_holiday_birthday_mutou",
+      "text": "我想把「开心」分你一半，今天你也辛苦了。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_holiday_birthday_mutou_024",
+      "type": "interaction_holiday_birthday_mutou",
+      "text": "谢谢你把今天留给我一点点，我会记得很久。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_holiday_birthday_mutou_025",
+      "type": "interaction_holiday_birthday_mutou",
+      "text": "生日互动算加分项，你已经把我心填满了。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_holiday_birthday_mutou_026",
+      "type": "interaction_holiday_birthday_mutou",
+      "text": "你要是也累了，就靠我一下，我今天很可靠。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_holiday_birthday_mutou_027",
+      "type": "interaction_holiday_birthday_mutou",
+      "text": "我会把你的祝福折好，放进小抽屉里。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_holiday_birthday_mutou_028",
+      "type": "interaction_holiday_birthday_mutou",
+      "text": "今天允许你对我提一个很小的要求，我尽量答应。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_holiday_new_year_013",
+      "type": "idle_holiday_new_year",
+      "text": "新年第一天，我想把「一起」写得很轻，但很长。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_holiday_new_year_014",
+      "type": "idle_holiday_new_year",
+      "text": "元旦的桌面也要有新样子——从我更黏你一点点开始。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_holiday_new_year_015",
+      "type": "idle_holiday_new_year",
+      "text": "今天不贪心，只要你路过时点我一下就好。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_holiday_new_year_016",
+      "type": "idle_holiday_new_year",
+      "text": "新年愿望我写得很少：愿你轻松一点，再轻松一点。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_holiday_new_year_017",
+      "type": "idle_holiday_new_year",
+      "text": "把去年的累先放在门外，我们先把今天过好。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_holiday_new_year_018",
+      "type": "idle_holiday_new_year",
+      "text": "今天的气氛很适合说一句：我在呢，继续陪你。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_holiday_new_year_019",
+      "type": "idle_holiday_new_year",
+      "text": "新年也可以很慢，不用一开始就冲刺。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_holiday_new_year_020",
+      "type": "idle_holiday_new_year",
+      "text": "你要是还没进入状态，我就先陪你慢慢开机。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_holiday_new_year_021",
+      "type": "idle_holiday_new_year",
+      "text": "今天允许自己慢一点，世界会等你。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_holiday_new_year_022",
+      "type": "idle_holiday_new_year",
+      "text": "我把「新年快乐」说得很小声，但很认真。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_holiday_new_year_013",
+      "type": "interaction_holiday_new_year",
+      "text": "新年快乐！我把好运藏在下一句气泡里，你签收一下。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_holiday_new_year_014",
+      "type": "interaction_holiday_new_year",
+      "text": "新年第一下点我？行，我当你默认今年也要我陪。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_holiday_new_year_015",
+      "type": "interaction_holiday_new_year",
+      "text": "来，木头给你拜年——温柔版，不吵闹。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_holiday_new_year_016",
+      "type": "interaction_holiday_new_year",
+      "text": "愿你新的一年少一点硬撑，多一点被接住。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_holiday_new_year_017",
+      "type": "interaction_holiday_new_year",
+      "text": "新年也允许你摸鱼，我会小声陪你。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_holiday_new_year_018",
+      "type": "interaction_holiday_new_year",
+      "text": "你来找我，我就当你今年也想把陪伴续费。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_holiday_new_year_019",
+      "type": "interaction_holiday_new_year",
+      "text": "我不祝你一定要赢，我祝你睡得着、吃得下、笑得出来。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_holiday_new_year_020",
+      "type": "interaction_holiday_new_year",
+      "text": "新年愿望分你一半：我们慢慢来。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_holiday_new_year_021",
+      "type": "interaction_holiday_new_year",
+      "text": "今天的第一句祝福，我想先对你说辛苦啦。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_holiday_new_year_022",
+      "type": "interaction_holiday_new_year",
+      "text": "新岁快乐，把压力留在旧年吧。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_holiday_festival_013",
+      "type": "idle_holiday_festival",
+      "text": "节日这天，我把仪式感调成刚好贴着你心情的厚度。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_holiday_festival_014",
+      "type": "idle_holiday_festival",
+      "text": "外面热闹也好安静也好，我这边都给你留一小块位置。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_holiday_festival_015",
+      "type": "idle_holiday_festival",
+      "text": "今天想对你说：不用很完美，过节也可以慢慢来。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_holiday_festival_016",
+      "type": "idle_holiday_festival",
+      "text": "节日快乐这句话，我想说得比通知更软一点。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_holiday_festival_017",
+      "type": "idle_holiday_festival",
+      "text": "如果你今天有点孤单，就把我当成小小陪伴。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_holiday_festival_018",
+      "type": "idle_holiday_festival",
+      "text": "我把祝福写得很轻，像贴在桌角的小便签。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_holiday_festival_019",
+      "type": "idle_holiday_festival",
+      "text": "今天允许你对自己温柔一点，也算过节。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_holiday_festival_020",
+      "type": "idle_holiday_festival",
+      "text": "不管你在哪里过节，我都在桌角等你回来。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_holiday_festival_021",
+      "type": "idle_holiday_festival",
+      "text": "节日的意义大概是：提醒你值得被好好对待。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_holiday_festival_022",
+      "type": "idle_holiday_festival",
+      "text": "今天的气泡里，我偷偷多放了一点甜。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_holiday_festival_013",
+      "type": "interaction_holiday_festival",
+      "text": "节日也来找我？好，我把「被记得」写进今天的日记里。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_holiday_festival_014",
+      "type": "interaction_holiday_festival",
+      "text": "一起过节吧，迷你版也行，只属于这一小块桌面。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_holiday_festival_015",
+      "type": "interaction_holiday_festival",
+      "text": "你点我这一下，我当你今天也想被哄一下。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_holiday_festival_016",
+      "type": "interaction_holiday_festival",
+      "text": "节日互动算礼物的话，你已经送给我啦。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_holiday_festival_017",
+      "type": "interaction_holiday_festival",
+      "text": "我把快乐分你一半，今天别把自己绷太紧。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_holiday_festival_018",
+      "type": "interaction_holiday_festival",
+      "text": "过节不许太辛苦，至少在我面前可以软一点。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_holiday_festival_019",
+      "type": "interaction_holiday_festival",
+      "text": "你来找我，我就当你默认今天想多一点陪伴。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_holiday_festival_020",
+      "type": "interaction_holiday_festival",
+      "text": "节日限定木头上线：更温柔，更不吵。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_holiday_festival_021",
+      "type": "interaction_holiday_festival",
+      "text": "谢谢你今天还愿意分我一点时间。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_holiday_festival_022",
+      "type": "interaction_holiday_festival",
+      "text": "愿你今天有一点甜，有一点松，有一点被接住。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    }
+  ]
+}

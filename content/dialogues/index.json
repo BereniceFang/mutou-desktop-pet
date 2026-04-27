@@ -1,0 +1,8 @@
+{
+  "bundles": [
+    "interaction.json",
+    "idle.json",
+    "care.json",
+    "seasonal.json"
+  ]
+}

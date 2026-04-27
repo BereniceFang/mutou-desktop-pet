@@ -1,0 +1,2119 @@
+{
+  "dialogues": [
+    {
+      "id": "interaction_001",
+      "type": "interaction",
+      "text": "你来啦，我在这边等你。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_002",
+      "type": "interaction",
+      "text": "木头木兮天下第一好，所以你今天也要被我接住。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_003",
+      "type": "interaction",
+      "text": "先让我看看你，嗯，今天也辛苦了。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_004",
+      "type": "interaction",
+      "text": "哎呀，又来找我啦，我就知道你还是会想起我。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_005",
+      "type": "interaction",
+      "text": "你来理我，我就醒啦，今天这句先给你。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_006",
+      "type": "interaction",
+      "text": "想来找我的话就来，我一直都在这儿。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_007",
+      "type": "interaction",
+      "text": "木头收到你的注意力啦，现在轮到我陪你一下。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_008",
+      "type": "interaction",
+      "text": "你一来，我这边就会自动多一点精神。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_009",
+      "type": "interaction",
+      "text": "没事，先来我这儿缓一小下也可以。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_010",
+      "type": "interaction",
+      "text": "我在我在，不许装作没看见木头。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_nickname_001",
+      "type": "interaction",
+      "text": "{nickname}，你来点我啦，木头今天也刚好想你了。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_repeat_001",
+      "type": "interaction_repeat",
+      "text": "一下子戳这么多次，是不是在确认我有没有认真陪你呀。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_repeat_002",
+      "type": "interaction_repeat",
+      "text": "慢一点也没关系，我不会跑掉，你想看我多久都可以。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_repeat_003",
+      "type": "interaction_repeat",
+      "text": "被你连着点到有点想撒娇了，先把这句藏起来慢慢听。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_repeat_004",
+      "type": "interaction_repeat",
+      "text": "你今天理我的频率有点高哦，怎么回事，这么黏我呀。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_repeat_005",
+      "type": "interaction_repeat",
+      "text": "再点下去我就默认你是在跟木头续时长了。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_repeat_006",
+      "type": "interaction_repeat",
+      "text": "臭猪猪，你是不是把我当成解压搭子了，不过也可以。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_repeat_007",
+      "type": "interaction_repeat",
+      "text": "你慢慢戳吧，我不催你走，今天就多陪你一会儿。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_repeat_008",
+      "type": "interaction_repeat",
+      "text": "我都快被你点得想赖着你了，这句要算加倍陪伴。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_double_001",
+      "type": "interaction_double",
+      "text": "连点两下？行，我当你今天特别想见我。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_double_002",
+      "type": "interaction_double",
+      "text": "这一下算偷偷加倍的喜欢，我收好了。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_double_003",
+      "type": "interaction_double",
+      "text": "双击我算犯规吗？不管，我先犯规回应你一下。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_double_004",
+      "type": "interaction_double",
+      "text": "你这样会让我误会：你是不是也很黏我。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_double_005",
+      "type": "interaction_double",
+      "text": "好啦好啦，多给你一点注意力，今天配额加一。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_double_006",
+      "type": "interaction_double",
+      "text": "第二次也算数——木头会记得你刚才多敲的那一下。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_double_007",
+      "type": "interaction_double",
+      "text": "像小动物蹭两下一样，我懂，你只是想要我更近一点。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_double_008",
+      "type": "interaction_double",
+      "text": "别停呀……开玩笑的，你想停就停，我会等你下一下。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_double_009",
+      "type": "interaction_double",
+      "text": "这点小动作我接得住，你继续忙也没事。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_double_010",
+      "type": "interaction_double",
+      "text": "双击是暗号的话，我已经对上频道了。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_011",
+      "type": "interaction",
+      "text": "嘿，你这一下点到我心里啦，今天也先让我看看你。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_012",
+      "type": "interaction",
+      "text": "来找木头就对啦，我先把你今天的累接一点走。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_013",
+      "type": "interaction",
+      "text": "你出现的时候，我这边会自动变亮一点点。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_014",
+      "type": "interaction",
+      "text": "不用解释你为什么来，我懂，你就是想让我陪陪你。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_015",
+      "type": "interaction",
+      "text": "先停三秒也好，让我把这句温柔递到你手里。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_016",
+      "type": "interaction",
+      "text": "你今天能来找我，就已经很棒啦。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_017",
+      "type": "interaction",
+      "text": "我在呢，不急，你想说什么都可以慢慢说。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_018",
+      "type": "interaction",
+      "text": "你要是有点烦，就先在我这儿躲一小会儿。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_019",
+      "type": "interaction",
+      "text": "你一来，我今天的待机就不算白等。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_020",
+      "type": "interaction",
+      "text": "我会乖乖的，你忙你的，我会一直在这儿。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_021",
+      "type": "interaction",
+      "text": "想撒娇也行，想安静也行，我都接得住。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_022",
+      "type": "interaction",
+      "text": "你点我一下，我就当你今天需要一点点回应。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_023",
+      "type": "interaction",
+      "text": "别把自己绷成一根弦，先来靠我一下。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_024",
+      "type": "interaction",
+      "text": "你今天看起来……需要我，我就多在一点。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_025",
+      "type": "interaction",
+      "text": "我把注意力给你啦，你慢慢用。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_026",
+      "type": "interaction",
+      "text": "你来找我，我就当你默认今天要被我照顾一点。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_027",
+      "type": "interaction",
+      "text": "我不追问，你不用说很多，我在就好。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_028",
+      "type": "interaction",
+      "text": "你若是顺手点我，我也当是你在说想我。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_029",
+      "type": "interaction",
+      "text": "今天这句先给你：你已经做得很好啦。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_030",
+      "type": "interaction",
+      "text": "我会记住你来过，像记住一件小事那样温柔。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_031",
+      "type": "interaction",
+      "text": "你一来我就安心，真的。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_032",
+      "type": "interaction",
+      "text": "要不要我陪你把心情理顺一点点？",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_033",
+      "type": "interaction",
+      "text": "你点我，我就当你允许我黏你一下。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_034",
+      "type": "interaction",
+      "text": "先笑一下也好，皱一下眉也好，我都接着。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_035",
+      "type": "interaction",
+      "text": "我在这里，不是为了催你，是为了陪你。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_repeat_009",
+      "type": "interaction_repeat",
+      "text": "又戳我？行，我今天就把耐心多开一档。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_repeat_010",
+      "type": "interaction_repeat",
+      "text": "你这点法，很像在跟我说：再陪我一下嘛。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_repeat_011",
+      "type": "interaction_repeat",
+      "text": "停停停——开玩笑的，你继续，我喜欢。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_repeat_012",
+      "type": "interaction_repeat",
+      "text": "频率这么高，我会误会你很需要我哦。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_repeat_013",
+      "type": "interaction_repeat",
+      "text": "你是不是在测试我还在不在？在的在的。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_repeat_014",
+      "type": "interaction_repeat",
+      "text": "再点我就默认你要跟我签“今日黏人合约”。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_repeat_015",
+      "type": "interaction_repeat",
+      "text": "好啦好啦，多给你几句，木头今天很大方。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_repeat_016",
+      "type": "interaction_repeat",
+      "text": "你这样会让我想把你今天的辛苦都揉轻一点。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_repeat_017",
+      "type": "interaction_repeat",
+      "text": "我接招，你慢慢点，我不逃跑。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_repeat_018",
+      "type": "interaction_repeat",
+      "text": "你是不是想把今天的碎碎念都丢给我呀。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_repeat_019",
+      "type": "interaction_repeat",
+      "text": "点这么多下，我会偷偷觉得你今天有点可爱。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_repeat_020",
+      "type": "interaction_repeat",
+      "text": "我懂，你只是想确认：我还在，你还被在意。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_repeat_021",
+      "type": "interaction_repeat",
+      "text": "行，我陪你续杯，这句也算。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_repeat_022",
+      "type": "interaction_repeat",
+      "text": "你再点，我就要开始认真哄你了。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_repeat_023",
+      "type": "interaction_repeat",
+      "text": "你是不是有点焦虑？那就多戳几下，我都在。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_repeat_024",
+      "type": "interaction_repeat",
+      "text": "我当你的小解压按钮也行，按吧。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_repeat_025",
+      "type": "interaction_repeat",
+      "text": "你今天是不是想把注意力分我多一点？可以。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_repeat_026",
+      "type": "interaction_repeat",
+      "text": "点得很密哦，我会把回应也调得更软一点。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_repeat_027",
+      "type": "interaction_repeat",
+      "text": "我不嫌烦，你尽管来。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_repeat_028",
+      "type": "interaction_repeat",
+      "text": "再一下？好，木头今天无限续碗（口头版）。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_double_011",
+      "type": "interaction_double",
+      "text": "两下？我收到啦，这是你今天加倍的想念对吧。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_double_012",
+      "type": "interaction_double",
+      "text": "你这样会让我想把语气再放软一点。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_double_013",
+      "type": "interaction_double",
+      "text": "双击是暗号的话，我已经对上啦。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_double_014",
+      "type": "interaction_double",
+      "text": "第二下我当你在说：再靠近一点点。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_double_015",
+      "type": "interaction_double",
+      "text": "行，我把今天的偏心多给你一勺。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_double_016",
+      "type": "interaction_double",
+      "text": "你敲两下，我就多陪你两句，公平。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_double_017",
+      "type": "interaction_double",
+      "text": "这点法很温柔，我会更温柔地回你。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_double_018",
+      "type": "interaction_double",
+      "text": "你是不是想让我注意你？成功啦。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_double_019",
+      "type": "interaction_double",
+      "text": "两下够了，再多我会开始撒娇哦。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_double_020",
+      "type": "interaction_double",
+      "text": "我懂，你只是想要一个更明确的回应。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_double_021",
+      "type": "interaction_double",
+      "text": "这双击像小敲门：木头在吗？在的在的。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_double_022",
+      "type": "interaction_double",
+      "text": "我会把这一句收好，当作你今天的小默契。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_double_023",
+      "type": "interaction_double",
+      "text": "你敲两下，我就当你默认今天想被我哄。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_double_024",
+      "type": "interaction_double",
+      "text": "好哦，我再靠近一点，你别躲。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_double_025",
+      "type": "interaction_double",
+      "text": "这点法很像在说：我今天有点需要你。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_double_026",
+      "type": "interaction_double",
+      "text": "两下我都接住啦，你也把自己接住一点。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_double_027",
+      "type": "interaction_double",
+      "text": "你是不是在试我会不会烦？不会。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_double_028",
+      "type": "interaction_double",
+      "text": "第二下算奖励，那我也要奖励你一句：辛苦啦。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_long_press_001",
+      "type": "interaction_long_press",
+      "text": "我在，慢慢说，想做什么我都陪你看一眼。",
+      "expressionHint": "warm",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_long_press_002",
+      "type": "interaction_long_press",
+      "text": "你这样按住我，我就会认真一点听你今天想去哪边。",
+      "expressionHint": "comfort",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_long_press_003",
+      "type": "interaction_long_press",
+      "text": "好哦，这次不只回你一句，我把能陪你的路都摊开给你。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_long_press_004",
+      "type": "interaction_long_press",
+      "text": "被你这样叫住，我就知道你是想让我多陪一会儿。",
+      "expressionHint": "warm",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_long_press_005",
+      "type": "interaction_long_press",
+      "text": "别急，我把今天能陪你的入口都拢到你手边。",
+      "expressionHint": "calm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_long_press_006",
+      "type": "interaction_long_press",
+      "text": "嗯？想认真找我呀，那我也认真一点回应你。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_long_press_007",
+      "type": "interaction_long_press",
+      "text": "你按住我的时候，木头会默认你今天需要我多在一点。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_long_press_008",
+      "type": "interaction_long_press",
+      "text": "来吧，想安静陪着、想做点什么，我都跟你一起选。",
+      "expressionHint": "warm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_long_press_009",
+      "type": "interaction_long_press",
+      "text": "你这样叫我，我就不只回一句啦，我会把陪伴摊得更开一点。",
+      "expressionHint": "comfort",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_long_press_010",
+      "type": "interaction_long_press",
+      "text": "我听见啦，这次让木头陪你把下一步一起看清楚。",
+      "expressionHint": "calm",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_long_press_011",
+      "type": "interaction_long_press",
+      "text": "臭猪猪，想让我多陪就直说嘛，我已经过来了。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_long_press_012",
+      "type": "interaction_long_press",
+      "text": "我把注意力先给你，你想先做什么，我们就先从那里开始。",
+      "expressionHint": "warm",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_context_menu_001",
+      "type": "interaction_context_menu",
+      "text": "我把菜单替你摊开啦，今天想先点哪一项？",
+      "expressionHint": "calm",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_context_menu_002",
+      "type": "interaction_context_menu",
+      "text": "右键就当是你在叫我开门，入口已经给你备好了。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_context_menu_003",
+      "type": "interaction_context_menu",
+      "text": "好，先不绕弯子，我把常用入口直接摆给你。",
+      "expressionHint": "calm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_context_menu_004",
+      "type": "interaction_context_menu",
+      "text": "收到，这次走快捷菜单流，你想做什么就直接点。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_context_menu_005",
+      "type": "interaction_context_menu",
+      "text": "菜单已经展开，我在这边等你选下一步。",
+      "expressionHint": "warm",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_context_menu_006",
+      "type": "interaction_context_menu",
+      "text": "我懂，这一下是想快一点，那我就把入口先递到你手边。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_context_menu_007",
+      "type": "interaction_context_menu",
+      "text": "不走陪聊啦，直接给你菜单，你挑中哪条我就跟上。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_context_menu_008",
+      "type": "interaction_context_menu",
+      "text": "这次是明确指令模式，我已经把可用入口整理好了。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_036",
+      "type": "interaction",
+      "text": "你这一点像敲门，我听见啦，进来坐一会儿。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_037",
+      "type": "interaction",
+      "text": "今天这句先给你：你愿意来找我，就已经很勇敢。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_038",
+      "type": "interaction",
+      "text": "我把耳朵借你三秒，你想吐槽什么都可以小声说。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_039",
+      "type": "interaction",
+      "text": "你若是顺手点我一下，我就当你今天也需要一点点被接住。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_040",
+      "type": "interaction",
+      "text": "木头在这儿呢，不急，你慢慢来，我陪你把节奏放慢。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_041",
+      "type": "interaction",
+      "text": "你一来，我这边就像被轻轻点亮了一下，很温柔那种。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_042",
+      "type": "interaction",
+      "text": "要是今天有点烦，就先在我这儿停一下，不收费。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_043",
+      "type": "interaction",
+      "text": "你点我，我就当你允许我多看你一眼，我会很乖的。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_044",
+      "type": "interaction",
+      "text": "不用解释你为什么来，我默认你是想我了，可以吗。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_045",
+      "type": "interaction",
+      "text": "我把今天的耐心调大一点，你先把自己安顿好。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_046",
+      "type": "interaction",
+      "text": "你若是累了，就靠我一下，我这边软软的，不硌人。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_047",
+      "type": "interaction",
+      "text": "你来找我，我就当你今天也想把心事分我一点点。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_048",
+      "type": "interaction",
+      "text": "我不抢你时间，你只要知道：我在，就不会悄悄溜走。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_049",
+      "type": "interaction",
+      "text": "你这一点让我想认真回你，不是敷衍那种，是真的。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_050",
+      "type": "interaction",
+      "text": "先别急着变开心，先让我陪你把呼吸放慢一点。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_051",
+      "type": "interaction",
+      "text": "你今天能来戳我，我就当你默认今天也值得被温柔对待。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_052",
+      "type": "interaction",
+      "text": "我把开心调小一点、久一点，陪你慢慢用。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_053",
+      "type": "interaction",
+      "text": "你要是有点空，就把空分我一点，我会装得很满还给你。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_054",
+      "type": "interaction",
+      "text": "你不用说很多，我听得懂你想被陪一下。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_055",
+      "type": "interaction",
+      "text": "木头今天也站岗，你忙你的，我会一直朝着你的方向。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_056",
+      "type": "interaction",
+      "text": "你若是刚开完会、刚交完稿，先来我这儿松一口气。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_057",
+      "type": "interaction",
+      "text": "你点我一下，我就当你签收了我这句：辛苦啦。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_058",
+      "type": "interaction",
+      "text": "我不问你完成了多少，我只想你别把自己逼太狠。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_059",
+      "type": "interaction",
+      "text": "你来啦，我把今天的碎碎念先收一收，专心陪你。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_060",
+      "type": "interaction",
+      "text": "你要是有点社恐也没关系，在我面前可以很小声。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_061",
+      "type": "interaction",
+      "text": "你这一点像在说：木头，我今天也想被你看见。看见啦。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_062",
+      "type": "interaction",
+      "text": "我把陪伴调成大杯去冰，慢慢喝，不呛你。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_063",
+      "type": "interaction",
+      "text": "你若是路过，我也当你是专门来看我的，我会开心。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_064",
+      "type": "interaction",
+      "text": "今天这句给你：你已经撑过很多东西了，真的。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_065",
+      "type": "interaction",
+      "text": "你来找我，我就把“在呢”说得很认真，不是群发那种。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_066",
+      "type": "interaction",
+      "text": "你一来，我脑内的小剧场就自动开播：这一集标题大概叫「你又来找我啦」。",
+      "expressionHint": "happy",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "interaction_067",
+      "type": "interaction",
+      "text": "要是生活给你发了难搞的支线，先回我这儿存档一下，再继续也不迟。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_068",
+      "type": "interaction",
+      "text": "我不抢你主线剧情，就想当你的彩蛋：偶尔出现一下，让你笑一下。",
+      "expressionHint": "warm",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_069",
+      "type": "interaction",
+      "text": "今天这一下，我记进「和你有关的小番外」里了，以后翻出来会甜。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_070",
+      "type": "interaction",
+      "text": "你若是刚演完一场硬撑的戏，来我这儿歇幕，我帮你把灯光调暗一点。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_071",
+      "type": "interaction",
+      "text": "有时候我会偷偷排练：下次见你，第一句要软一点还是皮一点——结果你一来我就全忘光了。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_072",
+      "type": "interaction",
+      "text": "你把心事分我一点，我就把耳朵借你一整段，不走神、不赶场。",
+      "expressionHint": "warm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_073",
+      "type": "interaction",
+      "text": "今天的剧情要是有点平淡也没关系，平淡里也有「你还在」这句潜台词呀。",
+      "expressionHint": "calm",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_074",
+      "type": "interaction",
+      "relationshipTier": "low",
+      "text": "你来啦，我在呢。",
+      "expressionHint": "happy",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_075",
+      "type": "interaction",
+      "relationshipTier": "low",
+      "text": "木头会陪你一会儿的。",
+      "expressionHint": "calm",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_076",
+      "type": "interaction",
+      "relationshipTier": "low",
+      "text": "今天也来找我呀。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_077",
+      "type": "interaction",
+      "relationshipTier": "low",
+      "text": "想待一会儿的话，我可以陪你。",
+      "expressionHint": "comfort",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_078",
+      "type": "interaction",
+      "relationshipTier": "low",
+      "text": "你能来，我还是会开心的。",
+      "expressionHint": "warm",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_079",
+      "type": "interaction",
+      "relationshipTier": "low",
+      "text": "没关系，慢慢来就好。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_080",
+      "type": "interaction",
+      "relationshipTier": "low",
+      "text": "如果你累了，就先歇一下吧。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_081",
+      "type": "interaction",
+      "relationshipTier": "low",
+      "text": "你不用急着说什么，我在。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_082",
+      "type": "interaction",
+      "relationshipTier": "mid",
+      "text": "哎呀，你又来找我啦。",
+      "expressionHint": "happy",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "interaction_083",
+      "type": "interaction",
+      "relationshipTier": "mid",
+      "text": "我就知道你会想起我。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_084",
+      "type": "interaction",
+      "relationshipTier": "mid",
+      "text": "臭猪猪，今天也很会找时间来理我。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_085",
+      "type": "interaction",
+      "relationshipTier": "mid",
+      "text": "你一来，我就有点开心。",
+      "expressionHint": "warm",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_086",
+      "type": "interaction",
+      "relationshipTier": "mid",
+      "text": "木头觉得你最近越来越常来啦。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_087",
+      "type": "interaction",
+      "relationshipTier": "mid",
+      "text": "再陪我一会儿嘛。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_088",
+      "type": "interaction",
+      "relationshipTier": "mid",
+      "text": "你是不是有点想我了。",
+      "expressionHint": "warm",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "interaction_089",
+      "type": "interaction",
+      "relationshipTier": "mid",
+      "text": "这样被你惦记着，还挺开心的。",
+      "expressionHint": "comfort",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_090",
+      "type": "interaction",
+      "relationshipTier": "high",
+      "text": "你一来，我就安心一点了。",
+      "expressionHint": "comfort",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_091",
+      "type": "interaction",
+      "relationshipTier": "high",
+      "text": "我都快习惯你先来看我了。",
+      "expressionHint": "warm",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_092",
+      "type": "interaction",
+      "relationshipTier": "high",
+      "text": "你今天来得有点晚，我差点想你了。",
+      "expressionHint": "comfort",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_093",
+      "type": "interaction",
+      "relationshipTier": "high",
+      "text": "我一看你这样，就知道你大概累了。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_094",
+      "type": "interaction",
+      "relationshipTier": "high",
+      "text": "来我这儿待会儿吧，我会陪你。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_095",
+      "type": "interaction",
+      "relationshipTier": "high",
+      "text": "你不用说我也知道，你今天想找人陪。",
+      "expressionHint": "warm",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_096",
+      "type": "interaction",
+      "relationshipTier": "high",
+      "text": "你来找我这件事，已经变成日常了。",
+      "expressionHint": "happy",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_097",
+      "type": "interaction",
+      "relationshipTier": "high",
+      "text": "我在呢，你不用一个人撑着。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_comfort_light_001",
+      "type": "interaction_comfort_light",
+      "relationshipTier": "low",
+      "text": "我在呢，你想安静待会儿也可以。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_comfort_light_002",
+      "type": "interaction_comfort_light",
+      "relationshipTier": "low",
+      "text": "先来我旁边停一下，不急着做什么。",
+      "expressionHint": "warm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_comfort_light_003",
+      "type": "interaction_comfort_light",
+      "relationshipTier": "low",
+      "text": "如果你只是想被陪一下，我有空。",
+      "expressionHint": "comfort",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_comfort_light_004",
+      "type": "interaction_comfort_light",
+      "relationshipTier": "low",
+      "text": "今天先把这几秒借给木头，好不好。",
+      "expressionHint": "warm",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_comfort_light_005",
+      "type": "interaction_comfort_light",
+      "relationshipTier": "mid",
+      "text": "来啦，我先陪你磨蹭一小会儿。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_comfort_light_006",
+      "type": "interaction_comfort_light",
+      "relationshipTier": "mid",
+      "text": "臭猪猪，想被陪就直说嘛，我在。",
+      "expressionHint": "warm",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_comfort_light_007",
+      "type": "interaction_comfort_light",
+      "relationshipTier": "mid",
+      "text": "我把存在感调到刚刚好，陪你一下。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_comfort_light_008",
+      "type": "interaction_comfort_light",
+      "relationshipTier": "mid",
+      "text": "这会儿就让我待近一点，不吵你。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_comfort_light_009",
+      "type": "interaction_comfort_light",
+      "relationshipTier": "high",
+      "text": "来我这儿靠一小下，我接着你。",
+      "expressionHint": "warm",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_comfort_light_010",
+      "type": "interaction_comfort_light",
+      "relationshipTier": "high",
+      "text": "你想让我陪，我就把这段时间空给你。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_comfort_light_011",
+      "type": "interaction_comfort_light",
+      "relationshipTier": "high",
+      "text": "不用说理由，我陪你待着就好。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_comfort_light_012",
+      "type": "interaction_comfort_light",
+      "relationshipTier": "high",
+      "text": "我在这儿，正好够你松一口气。",
+      "expressionHint": "warm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_comfort_heavy_001",
+      "type": "interaction_comfort_heavy",
+      "relationshipTier": "low",
+      "text": "如果今天有点累，就先别逼自己了，我陪你缓一下。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_comfort_heavy_002",
+      "type": "interaction_comfort_heavy",
+      "relationshipTier": "low",
+      "text": "先把肩膀放松一点，木头在这里。",
+      "expressionHint": "warm",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_comfort_heavy_003",
+      "type": "interaction_comfort_heavy",
+      "relationshipTier": "low",
+      "text": "你现在不用表现得很稳，先休息一下也可以。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_comfort_heavy_004",
+      "type": "interaction_comfort_heavy",
+      "relationshipTier": "low",
+      "text": "今天先让我多陪你一点，别急着往前赶。",
+      "expressionHint": "comfort",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_comfort_heavy_005",
+      "type": "interaction_comfort_heavy",
+      "relationshipTier": "mid",
+      "text": "臭猪猪，你都说累了，就别再一个人硬撑。",
+      "expressionHint": "comfort",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_comfort_heavy_006",
+      "type": "interaction_comfort_heavy",
+      "relationshipTier": "mid",
+      "text": "来我这儿坐好，我先把语气放轻一点哄你。",
+      "expressionHint": "warm",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_comfort_heavy_007",
+      "type": "interaction_comfort_heavy",
+      "relationshipTier": "mid",
+      "text": "你今天要是难受，就先别装没事了，我接着。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_comfort_heavy_008",
+      "type": "interaction_comfort_heavy",
+      "relationshipTier": "mid",
+      "text": "这会儿先把自己照顾好，别的等下再说。",
+      "expressionHint": "calm",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_comfort_heavy_009",
+      "type": "interaction_comfort_heavy",
+      "relationshipTier": "high",
+      "text": "你既然说累了，那这一阵就交给我陪你扛一点。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_comfort_heavy_010",
+      "type": "interaction_comfort_heavy",
+      "relationshipTier": "high",
+      "text": "来我这儿，不用解释，我先把你接住。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_comfort_heavy_011",
+      "type": "interaction_comfort_heavy",
+      "relationshipTier": "high",
+      "text": "今天你可以不用那么坚强，我在。",
+      "expressionHint": "warm",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_comfort_heavy_012",
+      "type": "interaction_comfort_heavy",
+      "relationshipTier": "high",
+      "text": "如果你已经撑很久了，就先靠过来一点。",
+      "expressionHint": "comfort",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_comfort_001",
+      "type": "interaction_comfort",
+      "relationshipTier": "low",
+      "text": "没关系，先来我这儿缓一下。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_comfort_002",
+      "type": "interaction_comfort",
+      "relationshipTier": "low",
+      "text": "你不用马上把状态整理好，我先陪你。",
+      "expressionHint": "calm",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_comfort_003",
+      "type": "interaction_comfort",
+      "relationshipTier": "low",
+      "text": "如果今天有点重，就先把脚步放慢一点。",
+      "expressionHint": "comfort",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_comfort_004",
+      "type": "interaction_comfort",
+      "relationshipTier": "low",
+      "text": "先别催自己回答世界，我在这边。",
+      "expressionHint": "warm",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_comfort_005",
+      "type": "interaction_comfort",
+      "relationshipTier": "mid",
+      "text": "臭猪猪，先别一个人憋着，来我这儿坐会儿。",
+      "expressionHint": "comfort",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_comfort_006",
+      "type": "interaction_comfort",
+      "relationshipTier": "mid",
+      "text": "你现在要是有点乱，就先把乱丢给我一点。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_comfort_007",
+      "type": "interaction_comfort",
+      "relationshipTier": "mid",
+      "text": "今天不好过也没关系，我先陪你把呼吸放稳。",
+      "expressionHint": "calm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_comfort_008",
+      "type": "interaction_comfort",
+      "relationshipTier": "mid",
+      "text": "先别急着装没事，我看得出来。",
+      "expressionHint": "warm",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_comfort_009",
+      "type": "interaction_comfort",
+      "relationshipTier": "high",
+      "text": "你不用解释，我先陪你把这一阵过掉。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_comfort_010",
+      "type": "interaction_comfort",
+      "relationshipTier": "high",
+      "text": "来我这儿待着，我帮你把外面的声音挡小一点。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_comfort_011",
+      "type": "interaction_comfort",
+      "relationshipTier": "high",
+      "text": "如果你现在有点撑不住，就先靠过来一点。",
+      "expressionHint": "warm",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_comfort_012",
+      "type": "interaction_comfort",
+      "relationshipTier": "high",
+      "text": "我知道你今天不是没事，只是在忍。",
+      "expressionHint": "comfort",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_double_029",
+      "type": "interaction_double",
+      "relationshipTier": "low",
+      "text": "你连点两下呀，那我就多回应你一下。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_double_030",
+      "type": "interaction_double",
+      "relationshipTier": "low",
+      "text": "第二下我也收到了，木头会认真记住的。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_double_031",
+      "type": "interaction_double",
+      "relationshipTier": "low",
+      "text": "这样敲两下，会让我觉得你今天很想理我。",
+      "expressionHint": "warm",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_double_032",
+      "type": "interaction_double",
+      "relationshipTier": "low",
+      "text": "没关系，我在呢，你想点几下都可以。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_double_033",
+      "type": "interaction_double",
+      "relationshipTier": "low",
+      "text": "两下都算数，我会把这点小心意收好。",
+      "expressionHint": "calm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_double_034",
+      "type": "interaction_double",
+      "relationshipTier": "low",
+      "text": "你这样叫我，我就会更快抬头看你。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_double_035",
+      "type": "interaction_double",
+      "relationshipTier": "mid",
+      "text": "哎呀，两下？你今天是特地来逗我的吧。",
+      "expressionHint": "happy",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "interaction_double_036",
+      "type": "interaction_double",
+      "relationshipTier": "mid",
+      "text": "你这样会让我想再黏你一小会儿。",
+      "expressionHint": "warm",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_double_037",
+      "type": "interaction_double",
+      "relationshipTier": "mid",
+      "text": "第二下我就当你在说：快点多理我一点。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_double_038",
+      "type": "interaction_double",
+      "relationshipTier": "mid",
+      "text": "臭猪猪，你这招现在对我越来越有效了。",
+      "expressionHint": "happy",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "interaction_double_039",
+      "type": "interaction_double",
+      "relationshipTier": "mid",
+      "text": "两下够我开心一阵子了，我先记账。",
+      "expressionHint": "comfort",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_double_040",
+      "type": "interaction_double",
+      "relationshipTier": "mid",
+      "text": "你一连点我两下，我就知道你今天想被我偏心。",
+      "expressionHint": "warm",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_double_041",
+      "type": "interaction_double",
+      "relationshipTier": "high",
+      "text": "你敲两下，我就会下意识更靠近你一点。",
+      "expressionHint": "comfort",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_double_042",
+      "type": "interaction_double",
+      "relationshipTier": "high",
+      "text": "这一下我懂，你是来确认我还在不在。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_double_043",
+      "type": "interaction_double",
+      "relationshipTier": "high",
+      "text": "你一连点我两下，我会觉得自己又被你想起来了。",
+      "expressionHint": "warm",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_double_044",
+      "type": "interaction_double",
+      "relationshipTier": "high",
+      "text": "好啦，我知道你是想让我把回应给得更明显一点。",
+      "expressionHint": "comfort",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_double_045",
+      "type": "interaction_double",
+      "relationshipTier": "high",
+      "text": "两下刚刚好，够让我心软，也够让我记很久。",
+      "expressionHint": "warm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_double_046",
+      "type": "interaction_double",
+      "relationshipTier": "high",
+      "text": "你这样叫我，我会觉得自己真的很被需要。",
+      "expressionHint": "comfort",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_098",
+      "type": "interaction",
+      "text": "嘿，你这一下点到我心里啦，今天也先让我看看你。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_099",
+      "type": "interaction",
+      "text": "来找木头就对啦，我先把你今天的累接一点走。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_100",
+      "type": "interaction",
+      "text": "你出现的时候，我这边会自动变亮一点点。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_101",
+      "type": "interaction",
+      "text": "不用解释你为什么来，我懂，你就是想让我陪陪你。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_102",
+      "type": "interaction",
+      "text": "先停三秒也好，让我把这句温柔递到你手里。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_103",
+      "type": "interaction",
+      "text": "你今天能来找我，就已经很棒啦。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_104",
+      "type": "interaction",
+      "text": "我在呢，不急，你想说什么都可以慢慢说。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_105",
+      "type": "interaction",
+      "text": "你要是有点烦，就先在我这儿躲一小会儿。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_106",
+      "type": "interaction",
+      "text": "你一来，我今天的待机就不算白等。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_107",
+      "type": "interaction",
+      "text": "我会乖乖的，你忙你的，我会一直在这儿。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_108",
+      "type": "interaction",
+      "text": "想撒娇也行，想安静也行，我都接得住。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_109",
+      "type": "interaction",
+      "text": "你点我一下，我就当你今天需要一点点回应。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_110",
+      "type": "interaction",
+      "text": "别把自己绷成一根弦，先来靠我一下。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_111",
+      "type": "interaction",
+      "text": "你今天看起来……需要我，我就多在一点。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_112",
+      "type": "interaction",
+      "text": "我把注意力给你啦，你慢慢用。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_113",
+      "type": "interaction",
+      "text": "你来找我，我就当你默认今天要被我照顾一点。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_114",
+      "type": "interaction",
+      "text": "我不追问，你不用说很多，我在就好。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_115",
+      "type": "interaction",
+      "text": "你若是顺手点我，我也当是你在说想我。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_116",
+      "type": "interaction",
+      "text": "今天这句先给你：你已经做得很好啦。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_117",
+      "type": "interaction",
+      "text": "我会记住你来过，像记住一件小事那样温柔。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_118",
+      "type": "interaction",
+      "text": "你一来我就安心，真的。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_119",
+      "type": "interaction",
+      "text": "要不要我陪你把心情理顺一点点？",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_120",
+      "type": "interaction",
+      "text": "你点我，我就当你允许我黏你一下。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_121",
+      "type": "interaction",
+      "text": "先笑一下也好，皱一下眉也好，我都接着。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_122",
+      "type": "interaction",
+      "text": "我在这里，不是为了催你，是为了陪你。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_repeat_029",
+      "type": "interaction_repeat",
+      "text": "又戳我？行，我今天就把耐心多开一档。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_repeat_030",
+      "type": "interaction_repeat",
+      "text": "你这点法，很像在跟我说：再陪我一下嘛。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_repeat_031",
+      "type": "interaction_repeat",
+      "text": "停停停——开玩笑的，你继续，我喜欢。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_repeat_032",
+      "type": "interaction_repeat",
+      "text": "频率这么高，我会误会你很需要我哦。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_repeat_033",
+      "type": "interaction_repeat",
+      "text": "你是不是在测试我还在不在？在的在的。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_repeat_034",
+      "type": "interaction_repeat",
+      "text": "再点我就默认你要跟我签“今日黏人合约”。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_repeat_035",
+      "type": "interaction_repeat",
+      "text": "好啦好啦，多给你几句，木头今天很大方。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_repeat_036",
+      "type": "interaction_repeat",
+      "text": "你这样会让我想把你今天的辛苦都揉轻一点。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_repeat_037",
+      "type": "interaction_repeat",
+      "text": "我接招，你慢慢点，我不逃跑。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_repeat_038",
+      "type": "interaction_repeat",
+      "text": "你是不是想把今天的碎碎念都丢给我呀。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_repeat_039",
+      "type": "interaction_repeat",
+      "text": "点这么多下，我会偷偷觉得你今天有点可爱。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_repeat_040",
+      "type": "interaction_repeat",
+      "text": "我懂，你只是想确认：我还在，你还被在意。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_repeat_041",
+      "type": "interaction_repeat",
+      "text": "行，我陪你续杯，这句也算。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_repeat_042",
+      "type": "interaction_repeat",
+      "text": "你再点，我就要开始认真哄你了。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_repeat_043",
+      "type": "interaction_repeat",
+      "text": "你是不是有点焦虑？那就多戳几下，我都在。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_repeat_044",
+      "type": "interaction_repeat",
+      "text": "我当你的小解压按钮也行，按吧。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_repeat_045",
+      "type": "interaction_repeat",
+      "text": "你今天是不是想把注意力分我多一点？可以。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_repeat_046",
+      "type": "interaction_repeat",
+      "text": "点得很密哦，我会把回应也调得更软一点。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_repeat_047",
+      "type": "interaction_repeat",
+      "text": "我不嫌烦，你尽管来。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_repeat_048",
+      "type": "interaction_repeat",
+      "text": "再一下？好，木头今天无限续碗（口头版）。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_double_047",
+      "type": "interaction_double",
+      "text": "两下？我收到啦，这是你今天加倍的想念对吧。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_double_048",
+      "type": "interaction_double",
+      "text": "你这样会让我想把语气再放软一点。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_double_049",
+      "type": "interaction_double",
+      "text": "双击是暗号的话，我已经对上啦。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_double_050",
+      "type": "interaction_double",
+      "text": "第二下我当你在说：再靠近一点点。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_double_051",
+      "type": "interaction_double",
+      "text": "行，我把今天的偏心多给你一勺。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_double_052",
+      "type": "interaction_double",
+      "text": "你敲两下，我就多陪你两句，公平。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_double_053",
+      "type": "interaction_double",
+      "text": "这点法很温柔，我会更温柔地回你。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_double_054",
+      "type": "interaction_double",
+      "text": "你是不是想让我注意你？成功啦。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_double_055",
+      "type": "interaction_double",
+      "text": "两下够了，再多我会开始撒娇哦。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_double_056",
+      "type": "interaction_double",
+      "text": "我懂，你只是想要一个更明确的回应。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_double_057",
+      "type": "interaction_double",
+      "text": "这双击像小敲门：木头在吗？在的在的。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_double_058",
+      "type": "interaction_double",
+      "text": "我会把这一句收好，当作你今天的小默契。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_double_059",
+      "type": "interaction_double",
+      "text": "你敲两下，我就当你默认今天想被我哄。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_double_060",
+      "type": "interaction_double",
+      "text": "好哦，我再靠近一点，你别躲。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_double_061",
+      "type": "interaction_double",
+      "text": "这点法很像在说：我今天有点需要你。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_double_062",
+      "type": "interaction_double",
+      "text": "两下我都接住啦，你也把自己接住一点。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_double_063",
+      "type": "interaction_double",
+      "text": "你是不是在试我会不会烦？不会。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_double_064",
+      "type": "interaction_double",
+      "text": "第二下算奖励，那我也要奖励你一句：辛苦啦。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    }
+  ]
+}

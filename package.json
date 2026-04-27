@@ -1,0 +1,69 @@
+{
+  "name": "mutou-desktop-pet",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "electron-dist/main/index.js",
+  "scripts": {
+    "dev": "concurrently -k \"npm:dev:renderer\" \"npm:dev:desktop\"",
+    "dev:renderer": "vite",
+    "dev:desktop": "wait-on tcp:5173 file:./electron-dist/main/index.js && node ./node_modules/cross-env/dist/bin/cross-env.js ELECTRON_RUN_AS_NODE= VITE_DEV_SERVER_URL=http://127.0.0.1:5173 electron .",
+    "start": "node ./node_modules/cross-env/dist/bin/cross-env.js ELECTRON_RUN_AS_NODE= electron .",
+    "build": "tsc -b && vite build",
+    "dist": "npm run build && electron-builder",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "zod": "^4.3.6",
+    "zustand": "^5.0.12"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@types/node": "^24.12.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
+    "electron": "^41.2.0",
+    "electron-builder": "^26.8.1",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.4.0",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.58.0",
+    "vite": "^8.0.4",
+    "vite-plugin-static-copy": "^4.0.1",
+    "wait-on": "^9.0.5"
+  },
+  "build": {
+    "appId": "com.mutou.desktoppet",
+    "productName": "Mutou Desktop Pet",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron-dist/**/*",
+      "package.json",
+      "!**/*.map"
+    ],
+    "extraResources": [
+      {
+        "from": "content",
+        "to": "content",
+        "filter": ["**/*", "!**/preview/**", "!**/.DS_Store", "!**/*.local.json", "!**/*.local.*"]
+      }
+    ],
+    "mac": {
+      "target": ["dmg"]
+    },
+    "win": {
+      "target": ["nsis"]
+    }
+  }
+}

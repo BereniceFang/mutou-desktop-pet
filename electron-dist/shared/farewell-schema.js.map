@@ -1,0 +1,1 @@
+{"version":3,"file":"farewell-schema.js","sourceRoot":"","sources":["../../src/shared/farewell-schema.ts"],"names":[],"mappings":"AAAA,aAAa;AACb,OAAO,EAAE,CAAC,EAAE,MAAM,KAAK,CAAA;AAEvB,MAAM,CAAC,MAAM,oBAAoB,GAAG,CAAC,CAAC,MAAM,CAAC;IAC3C,KAAK,EAAE,CAAC,CAAC,KAAK,CAAC,CAAC,CAAC,MAAM,EAAE,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC;CACzC,CAAC,CAAA;AAGF,WAAW"}

@@ -1,0 +1,91 @@
+{
+  "plots": [
+    {
+      "id": "plot_tea_shop",
+      "prompt": "欸，跟我随口说一句也行：你这会儿，更像「累瘫了」还是「有点烦」，还是其实害行？",
+      "promptExpressionHint": "calm",
+      "promptMotionHint": "idle",
+      "choices": [
+        {
+          "id": "tired",
+          "label": "累瘫了，想趴一会儿",
+          "text": "那先趴。我不催你充电完毕才准起来——歇着算数，不算偷懒。",
+          "expressionHint": "comfort",
+          "motionHint": "pat"
+        },
+        {
+          "id": "annoyed",
+          "label": "烦，说不清为啥",
+          "text": "烦就烦呗，不用先编理由。你先叹口气，我在，不急着要你变开心。",
+          "expressionHint": "warm",
+          "motionHint": "settle"
+        },
+        {
+          "id": "ok",
+          "label": "害行，就顺口一提",
+          "text": "行，那我当你今天还算顺——轻松点也好，别把自己绷太紧。",
+          "expressionHint": "happy",
+          "motionHint": "smile"
+        }
+      ]
+    },
+    {
+      "id": "plot_rain_window",
+      "prompt": "我话有时候挺密的……你要我今天就蹲旁边少出声，还是陪你唠两句？还是想我先皮一下？",
+      "promptExpressionHint": "happy",
+      "promptMotionHint": "look_up",
+      "choices": [
+        {
+          "id": "quiet",
+          "label": "今天想安静点",
+          "text": "收到，我把音量拧小。你忙你的，我在桌角当块软垫子，踩得到就行。",
+          "expressionHint": "calm",
+          "motionHint": "idle"
+        },
+        {
+          "id": "chat",
+          "label": "唠两句呗，我想听你说",
+          "text": "来，我听着。你今天能坐在这儿，就已经很可以了——下一句你想从哪开始都行。",
+          "expressionHint": "warm",
+          "motionHint": "lean_in"
+        },
+        {
+          "id": "joke",
+          "label": "你先皮，我跟着笑",
+          "text": "行，那沉重先寄存。我笑点低，你随便抛梗，接不住算我的。",
+          "expressionHint": "happy",
+          "motionHint": "bounce"
+        }
+      ]
+    },
+    {
+      "id": "plot_late_night",
+      "prompt": "要是脑子已经转不动了……你现在更想先糊弄一口吃的，先躺平，还是先把手里那摊事儿收个尾？",
+      "promptExpressionHint": "comfort",
+      "promptMotionHint": "pat",
+      "choices": [
+        {
+          "id": "work",
+          "label": "先把活儿收了，不然睡不着",
+          "text": "懂，那种「不收尾就硌得慌」的感觉。那我陪你一小段——弄完一步，就给自己点个头。",
+          "expressionHint": "encourage",
+          "motionHint": "look_up"
+        },
+        {
+          "id": "rest",
+          "label": "先躺，脑子不转了",
+          "text": "躺就躺，别跟脑子讲道理。被子一裹，明天的事明天再跟它算账。",
+          "expressionHint": "comfort",
+          "motionHint": "settle"
+        },
+        {
+          "id": "mood",
+          "label": "先缓缓心，别的靠边",
+          "text": "行，心顺一点，后面都会轻。我不给你上课，就陪你把气儿捋顺一点。",
+          "expressionHint": "warm",
+          "motionHint": "pat"
+        }
+      ]
+    }
+  ]
+}

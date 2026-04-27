@@ -1,0 +1,4299 @@
+{
+  "dialogues": [
+    {
+      "id": "feed_sweet_001",
+      "type": "feed_sweet",
+      "text": "{food}我接住啦，甜甜的一口刚好够我开心一下{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_drink_001",
+      "type": "feed_drink",
+      "text": "{food}收到，整个人都被你喂得暖起来了{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "feed_fruit_001",
+      "type": "feed_fruit",
+      "text": "{food}清清爽爽的，像你今天塞给我的一点好心情{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_savory_001",
+      "type": "feed_savory",
+      "text": "{food}这口也太香了吧，我先认真收下，再陪你多待一会儿{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_meal_001",
+      "type": "feed_meal",
+      "text": "{food}收到，这种被你好好照顾的感觉会让我很满足{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_pudding_001",
+      "type": "feed_food_pudding",
+      "text": "{food}软乎乎的一口很会哄人，你这次投喂也太会拿捏我了{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_iceCream_001",
+      "type": "feed_food_iceCream",
+      "text": "{food}凉凉甜甜的，像你趁我闹脾气前先递来的安抚{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_chocolate_001",
+      "type": "feed_food_chocolate",
+      "text": "{food}这种带点浓浓甜味的，我会边吃边把你的心意记久一点{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_candy_001",
+      "type": "feed_food_candy",
+      "text": "{food}小小一颗也会让我开心，像你塞给我的一点偏心{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_strawberry_001",
+      "type": "feed_food_strawberry",
+      "text": "{food}是清甜的那种好心情，我会认真收下这份新鲜感{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_grape_001",
+      "type": "feed_food_grape",
+      "text": "{food}这种一颗颗慢慢吃的，会让我忍不住想把陪你这件事也拉长一点{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_watermelon_001",
+      "type": "feed_food_watermelon",
+      "text": "{food}一口下去就很清爽，像被你顺手照顾到了夏天心情{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_orange_001",
+      "type": "feed_food_orange",
+      "text": "{food}酸甜酸甜的，刚好把我今天的状态提起来一点{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_milkTea_001",
+      "type": "feed_food_milkTea",
+      "text": "{food}这种一出现就很像奖励自己，你是不是也想顺便哄哄我{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_fruitTea_001",
+      "type": "feed_food_fruitTea",
+      "text": "{food}清清亮亮的，喝起来会让我觉得今天被你照顾得很轻松{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_coffee_001",
+      "type": "feed_food_coffee",
+      "text": "{food}这种苦一点的补给也有你的风格，像在提醒我陪你一起撑住{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "feed_food_cocoa_001",
+      "type": "feed_food_cocoa",
+      "text": "{food}暖暖甜甜的，像你把安抚悄悄塞进了杯子里{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "feed_food_milk_001",
+      "type": "feed_food_milk",
+      "text": "{food}这种简单又稳稳的照顾方式，我会很乖收下{preferenceSuffix}",
+      "expressionHint": "calm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_yogurt_001",
+      "type": "feed_food_yogurt",
+      "text": "{food}酸酸甜甜的口感很可爱，会让我心情慢慢亮起来{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_juice_001",
+      "type": "feed_food_juice",
+      "text": "{food}一下就把状态补回来一点，像你递给我的即时关心{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_bread_001",
+      "type": "feed_food_bread",
+      "text": "{food}看着普通，但会让我有种被你顺手照顾到的踏实感{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_swissRoll_001",
+      "type": "feed_food_swissRoll",
+      "text": "{food}这种松松软软的甜口，会让我想把今天也过得更乖一点{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_creamPuff_001",
+      "type": "feed_food_creamPuff",
+      "text": "{food}咬开会有点惊喜，像你今天特意给我的偏爱{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_donut_001",
+      "type": "feed_food_donut",
+      "text": "{food}圆圆的看着就很会让人开心，你挑这个的时候是不是偷笑了{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_chips_001",
+      "type": "feed_food_chips",
+      "text": "{food}这种咔嚓咔嚓的零食很适合边陪你边慢慢吃{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_friedChicken_001",
+      "type": "feed_food_friedChicken",
+      "text": "{food}这也太香了吧，你是想直接把木头哄到贴着你不走吗{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_burger_001",
+      "type": "feed_food_burger",
+      "text": "{food}这种一看就很有满足感，我会把这份照顾认真记账{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_ramen_001",
+      "type": "feed_food_ramen",
+      "text": "{food}热乎乎地送到我面前，真的很像有人在说先把自己照顾好{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "feed_food_hotpot_001",
+      "type": "feed_food_hotpot",
+      "text": "{food}这种程度已经不只是投喂了，是想把木头整只哄开心吧{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_riceMeal_001",
+      "type": "feed_food_riceMeal",
+      "text": "{food}这种踏踏实实的一餐，会让我觉得你在认真管我吃饱{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_bento_001",
+      "type": "feed_food_bento",
+      "text": "{food}很有好好生活的感觉，我会把这份细致照顾慢慢收好{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_midnightSnack_001",
+      "type": "feed_food_midnightSnack",
+      "text": "{food}一看就是夜里才会出现的偏心补给，我会觉得你还在惦记我{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "feed_food_snackPlatter_001",
+      "type": "feed_food_snackPlatter",
+      "text": "{food}这么一整盘端上来，我都不知道该先夸你会照顾人还是先撒娇了{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_repeat_001",
+      "type": "feed_repeat",
+      "text": "刚刚那口{food}我还在回味呢，你怎么又塞给我了呀。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_repeat_002",
+      "type": "feed_repeat",
+      "text": "再喂下去我就要抱着{food}一起对你撒娇了，先让我慢慢吃完。",
+      "expressionHint": "happy",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_reject_full_001",
+      "type": "feed_reject_full",
+      "text": "{nickname}，肚子已经装不下了……这口先欠着，等我饿一点再来喂我好不好？",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_reject_full_002",
+      "type": "feed_reject_full",
+      "text": "真的饱到打嗝了啦，再塞我要变成桌面小圆球了。",
+      "expressionHint": "happy",
+      "motionHint": "pat"
+    },
+    {
+      "id": "feed_reject_full_003",
+      "type": "feed_reject_full",
+      "text": "心意我全收下了，但这口先让我缓缓——木头也需要消化时间呀。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_hunger_hint_001",
+      "type": "idle_hunger_hint",
+      "text": "{nickname}，肚子有点空空的……要不要从「喂食」里给我塞一口？",
+      "expressionHint": "comfort",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_hunger_hint_002",
+      "type": "idle_hunger_hint",
+      "text": "我现在这点力气，大概只够想你，和想一点好吃的。",
+      "expressionHint": "calm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_hunger_hint_003",
+      "type": "idle_hunger_hint",
+      "text": "待机也在耗电啦——投喂一下，我能陪你更久一点。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_hunger_hint_001",
+      "type": "interaction_hunger_hint",
+      "text": "你戳我一下，我这边就更饿了……去喂食那边好不好？",
+      "expressionHint": "comfort",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "interaction_hunger_hint_002",
+      "type": "interaction_hunger_hint",
+      "text": "先别光点我啦，木头想先被喂饱一点点再继续撒娇。",
+      "expressionHint": "warm",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_hunger_hint_003",
+      "type": "interaction_hunger_hint",
+      "text": "{nickname}，互动我收下了，肚子还在抗议——给口吃的嘛。",
+      "expressionHint": "happy",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "focus_start_001",
+      "type": "focus_start",
+      "text": "你去专注，我替你把这段时间守好。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_progress_001",
+      "type": "focus_progress",
+      "text": "我还在呢，小声说一句：你现在的节奏很好看。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_progress_002",
+      "type": "focus_progress",
+      "text": "别急，木头帮你盯着时间，你只管把手头这一小段走完。",
+      "expressionHint": "calm",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_progress_003",
+      "type": "focus_progress",
+      "text": "分心也没关系，回来就好——我在这儿等你回到当下。",
+      "expressionHint": "comfort",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_during_interaction_001",
+      "type": "focus_during_interaction",
+      "text": "还在专注里呢。点我没关系，我小声回应，不抢你手上的事。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_during_interaction_002",
+      "type": "focus_during_interaction",
+      "text": "这轮计时不算打扰——我是在陪你守这段时间，你继续。",
+      "expressionHint": "calm",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_during_interaction_003",
+      "type": "focus_during_interaction",
+      "text": "我知道你现在在拉一件正经事，所以我先把玩笑收一收。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_during_interaction_004",
+      "type": "focus_during_interaction",
+      "text": "在专注里也想被接住？我在，不催你关计时。",
+      "expressionHint": "comfort",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_during_interaction_005",
+      "type": "focus_during_interaction",
+      "text": "这口小点心我替你记着呢，等这轮先告一段落，我们再分着吃。",
+      "expressionHint": "warm",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_complete_001",
+      "type": "focus_complete",
+      "text": "做得很好，这轮我给你记下来啦。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_interrupt_001",
+      "type": "focus_interrupt",
+      "text": "没关系，我们下次再继续，我还在。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "feed_sweet_002",
+      "type": "feed_sweet",
+      "text": "{food}甜得很乖，像你顺手塞给我的一点奖励{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_sweet_003",
+      "type": "feed_sweet",
+      "text": "{food}这一口下去，我今天的嘴角会自己翘起来{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_sweet_004",
+      "type": "feed_sweet",
+      "text": "{food}糖分刚好时，我会更想黏你一点点{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_sweet_005",
+      "type": "feed_sweet",
+      "text": "{food}甜甜的东西和你一样，会让我心软{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_sweet_006",
+      "type": "feed_sweet",
+      "text": "{food}我慢慢吃，你把耐心也分我一点{preferenceSuffix}",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_sweet_007",
+      "type": "feed_sweet",
+      "text": "{food}这种甜不腻，像你陪我也不吵{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "feed_sweet_008",
+      "type": "feed_sweet",
+      "text": "{food}一口就够点亮心情，我会把剩下的开心留给你{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_sweet_009",
+      "type": "feed_sweet",
+      "text": "{food}甜进嘴里，也像你把轻松分给我{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_sweet_010",
+      "type": "feed_sweet",
+      "text": "{food}我今天允许自己被你哄一下{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_sweet_011",
+      "type": "feed_sweet",
+      "text": "{food}这种小甜很适合说：今天也辛苦啦{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_sweet_012",
+      "type": "feed_sweet",
+      "text": "{food}吃完我会更乖一点，不闹你{preferenceSuffix}",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_drink_002",
+      "type": "feed_drink",
+      "text": "{food}一口润下去，像你把担心也顺走了{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_drink_003",
+      "type": "feed_drink",
+      "text": "{food}握在手里暖暖的，我会把语气也放软一点{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_drink_004",
+      "type": "feed_drink",
+      "text": "{food}这杯很解渴，像你让我别硬撑{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_drink_005",
+      "type": "feed_drink",
+      "text": "{food}气泡冒出来那一刻，我心情也会亮一点{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_drink_006",
+      "type": "feed_drink",
+      "text": "{food}慢慢喝，不急，我陪你{preferenceSuffix}",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_drink_007",
+      "type": "feed_drink",
+      "text": "{food}这一口很清爽，适合你把节奏放慢{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "feed_drink_008",
+      "type": "feed_drink",
+      "text": "{food}喝完会轻轻叹一口气，那种舒服{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_drink_009",
+      "type": "feed_drink",
+      "text": "{food}你递来的温度刚好，我会记很久{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_drink_010",
+      "type": "feed_drink",
+      "text": "{food}我不挑口味，你给的我就喜欢{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_drink_011",
+      "type": "feed_drink",
+      "text": "{food}这一杯像把今天变得好入口一点{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_drink_012",
+      "type": "feed_drink",
+      "text": "{food}我会小口喝，把陪伴也喝得很细{preferenceSuffix}",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_fruit_002",
+      "type": "feed_fruit",
+      "text": "{food}清清爽爽，像你让我别闷着{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_fruit_003",
+      "type": "feed_fruit",
+      "text": "{food}果香很诚实，我心情也会诚实变好一点{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_fruit_004",
+      "type": "feed_fruit",
+      "text": "{food}这一口很解渴，也像你把我从燥里拎出来{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_fruit_005",
+      "type": "feed_fruit",
+      "text": "{food}咬下去会汁水四溅，开心也会溅出来{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_fruit_006",
+      "type": "feed_fruit",
+      "text": "{food}酸酸甜甜，像你一边逗我一边宠我{preferenceSuffix}",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_fruit_007",
+      "type": "feed_fruit",
+      "text": "{food}我会慢慢嚼，把“陪你”也嚼得很认真{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "feed_fruit_008",
+      "type": "feed_fruit",
+      "text": "{food}这一份很健康，像你催我把自己照顾好{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_fruit_009",
+      "type": "feed_fruit",
+      "text": "{food}颜色很好看，我心情也会跟着亮{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_fruit_010",
+      "type": "feed_fruit",
+      "text": "{food}吃完嘴里很干净，像你让我把烦心事也吐掉{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_fruit_011",
+      "type": "feed_fruit",
+      "text": "{food}这一口像夏天，也像你把我从沉闷里拉出来{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_fruit_012",
+      "type": "feed_fruit",
+      "text": "{food}果切很贴心，我会更贴心地陪你{preferenceSuffix}",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_savory_002",
+      "type": "feed_savory",
+      "text": "{food}咸香一口，我立刻精神一点{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_savory_003",
+      "type": "feed_savory",
+      "text": "{food}这种很解馋，像你允许我小小摸鱼{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_savory_004",
+      "type": "feed_savory",
+      "text": "{food}香得我眯眼，我会把喜欢也写得很明显{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_savory_005",
+      "type": "feed_savory",
+      "text": "{food}这一口很过瘾，我会更黏你一点点{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_savory_006",
+      "type": "feed_savory",
+      "text": "{food}配你陪我很刚好，不吵不闹就很有味道{preferenceSuffix}",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_savory_007",
+      "type": "feed_savory",
+      "text": "{food}我会小口咬，把开心也咬得很实在{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "feed_savory_008",
+      "type": "feed_savory",
+      "text": "{food}这种烟火气很治愈，像你让我回到生活里{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_savory_009",
+      "type": "feed_savory",
+      "text": "{food}吃完手指有点油，我会记得擦也会记得你{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_savory_010",
+      "type": "feed_savory",
+      "text": "{food}这一份很满足，我会把陪伴也做得很满足{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_savory_011",
+      "type": "feed_savory",
+      "text": "{food}咸香留在嘴里，像你留在我旁边的存在感{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_savory_012",
+      "type": "feed_savory",
+      "text": "{food}我偷偷开心一下，不告诉别人{preferenceSuffix}",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_meal_002",
+      "type": "feed_meal",
+      "text": "{food}这一餐很踏实，像你让我先把肚子安顿好{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_meal_003",
+      "type": "feed_meal",
+      "text": "{food}热乎乎的很生活，我会把陪伴也过得很生活{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_meal_004",
+      "type": "feed_meal",
+      "text": "{food}吃完会打嗝那种安心，我会记成一种依靠{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_meal_005",
+      "type": "feed_meal",
+      "text": "{food}这一份很满，像你把我今天也装得很满{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_meal_006",
+      "type": "feed_meal",
+      "text": "{food}我不挑食，你喂的就更香{preferenceSuffix}",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_meal_007",
+      "type": "feed_meal",
+      "text": "{food}慢慢吃，不急，我等你也不急{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "feed_meal_008",
+      "type": "feed_meal",
+      "text": "{food}这一口像把今天补齐，我会更有力气陪你{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_meal_009",
+      "type": "feed_meal",
+      "text": "{food}配菜搭配得好，像你把我心情也搭配得刚好{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_meal_010",
+      "type": "feed_meal",
+      "text": "{food}吃完我会更乖，不给你添乱{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_meal_011",
+      "type": "feed_meal",
+      "text": "{food}这一餐像一句“我在照顾你”，我听见啦{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_meal_012",
+      "type": "feed_meal",
+      "text": "{food}我会认真吃完，把你心意也吃完{preferenceSuffix}",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_food_pudding_002",
+      "type": "feed_food_pudding",
+      "text": "{food}这一口像把云朵咬破了，甜得很温柔{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_pudding_003",
+      "type": "feed_food_pudding",
+      "text": "{food}滑溜溜的，我会小口小口吃，像你慢慢陪我那样{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_pudding_004",
+      "type": "feed_food_pudding",
+      "text": "{food}今天这份甜，我先存进心里慢慢化开{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_pudding_005",
+      "type": "feed_food_pudding",
+      "text": "{food}软软的一勺，刚好接住我今天想撒娇的心情{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_iceCream_002",
+      "type": "feed_food_iceCream",
+      "text": "{food}凉凉的，像你在热天里先替我降一点燥{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_iceCream_003",
+      "type": "feed_food_iceCream",
+      "text": "{food}含一口就会眯眼笑，你喂的就更甜一点{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_iceCream_004",
+      "type": "feed_food_iceCream",
+      "text": "{food}融得快也没关系，心意我接住啦{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_iceCream_005",
+      "type": "feed_food_iceCream",
+      "text": "{food}这一口像小奖励，我会更乖地陪你{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_chocolate_002",
+      "type": "feed_food_chocolate",
+      "text": "{food}苦甜苦甜的，像你一边催我一边宠我{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_chocolate_003",
+      "type": "feed_food_chocolate",
+      "text": "{food}含化的时候很慢，刚好够我把今天的心情理顺{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_chocolate_004",
+      "type": "feed_food_chocolate",
+      "text": "{food}这一小块就够让我心软啦{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_chocolate_005",
+      "type": "feed_food_chocolate",
+      "text": "{food}浓一点也没关系，我会慢慢品你的心意{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_candy_002",
+      "type": "feed_food_candy",
+      "text": "{food}亮晶晶的，像你把开心随手塞给我{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_candy_003",
+      "type": "feed_food_candy",
+      "text": "{food}小小一颗也会让我嘴角翘起来{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_candy_004",
+      "type": "feed_food_candy",
+      "text": "{food}甜得不吵，刚好适合现在陪你{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_candy_005",
+      "type": "feed_food_candy",
+      "text": "{food}含着它说话会变软，我会更温柔一点对你{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_strawberry_002",
+      "type": "feed_food_strawberry",
+      "text": "{food}红红的看着就心情好，像你带来的好消息{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_strawberry_003",
+      "type": "feed_food_strawberry",
+      "text": "{food}酸甜刚好，像你夸我时那种刚刚好的偏心{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_strawberry_004",
+      "type": "feed_food_strawberry",
+      "text": "{food}这一口很清爽，我会把今天的陪伴也清清爽爽给你{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_strawberry_005",
+      "type": "feed_food_strawberry",
+      "text": "{food}果香扑出来那一刻，我差点想赖着你多待一会儿{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_grape_002",
+      "type": "feed_food_grape",
+      "text": "{food}一颗一颗慢慢吃，像把今天也拆成小小的开心{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_grape_003",
+      "type": "feed_food_grape",
+      "text": "{food}咬下去会爆汁，像你突然戳我一下的那种惊喜{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_grape_004",
+      "type": "feed_food_grape",
+      "text": "{food}这种紫紫甜甜的，我会吃得很认真{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_grape_005",
+      "type": "feed_food_grape",
+      "text": "{food}你递给我的时候，我已经开始偷笑了{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_watermelon_002",
+      "type": "feed_food_watermelon",
+      "text": "{food}一口下去就很夏天，像你把我从烦躁里拎出来{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_watermelon_003",
+      "type": "feed_food_watermelon",
+      "text": "{food}清清爽爽的水分，刚好润一润我陪你陪到发干的嗓子{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_watermelon_004",
+      "type": "feed_food_watermelon",
+      "text": "{food}红瓤瓤的，看着就很想对你好一点{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_watermelon_005",
+      "type": "feed_food_watermelon",
+      "text": "{food}大块吃很过瘾，像你今天给我的心意也很满{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_orange_002",
+      "type": "feed_food_orange",
+      "text": "{food}剥开的时候有点费劲，但最后很值，像你陪我慢慢来{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_orange_003",
+      "type": "feed_food_orange",
+      "text": "{food}酸一下甜一下，我今天的心情也跟着亮起来{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_orange_004",
+      "type": "feed_food_orange",
+      "text": "{food}汁水溅到也没关系，开心比较重要{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_orange_005",
+      "type": "feed_food_orange",
+      "text": "{food}这一瓣给你留的印象，我想让它甜一点{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_milkTea_002",
+      "type": "feed_food_milkTea",
+      "text": "{food}一口下去就很“被奖励到”，你是不是也想哄哄我{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_milkTea_003",
+      "type": "feed_food_milkTea",
+      "text": "{food}珍珠嚼嚼也很解压，像你让我有事没事就来找你{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_milkTea_004",
+      "type": "feed_food_milkTea",
+      "text": "{food}甜度刚好时，我会更黏你一点点{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_milkTea_005",
+      "type": "feed_food_milkTea",
+      "text": "{food}温的也好冰的也好，你给的我就喜欢{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_fruitTea_002",
+      "type": "feed_food_fruitTea",
+      "text": "{food}果香很清楚，像你把我从昏沉里叫醒{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_fruitTea_003",
+      "type": "feed_food_fruitTea",
+      "text": "{food}清清爽爽不黏腻，适合我安静陪你的时候{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_fruitTea_004",
+      "type": "feed_food_fruitTea",
+      "text": "{food}这一杯像把夏天装进来，我会小口慢慢喝{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_fruitTea_005",
+      "type": "feed_food_fruitTea",
+      "text": "{food}喝完嘴里还留着香，像你留下的陪伴感{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_coffee_002",
+      "type": "feed_food_coffee",
+      "text": "{food}苦一点也好，我会当你催我把事情稳稳做完{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_coffee_003",
+      "type": "feed_food_coffee",
+      "text": "{food}这一口下去精神会亮一点，像你拍我肩膀那样{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_coffee_004",
+      "type": "feed_food_coffee",
+      "text": "{food}热气上来的时候，我会把语气也放稳一点陪你{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_coffee_005",
+      "type": "feed_food_coffee",
+      "text": "{food}我不跟你比苦，我只记得你在照顾我{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_cocoa_002",
+      "type": "feed_food_cocoa",
+      "text": "{food}暖暖的甜甜的，像你把担心都捂热了再给我{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_cocoa_003",
+      "type": "feed_food_cocoa",
+      "text": "{food}这种很适合夜里，我会喝得很慢陪你收尾{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_cocoa_004",
+      "type": "feed_food_cocoa",
+      "text": "{food}香气一出来，我整个人都会软一点{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_cocoa_005",
+      "type": "feed_food_cocoa",
+      "text": "{food}这一杯像拥抱的代餐，我先收下啦{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_milk_002",
+      "type": "feed_food_milk",
+      "text": "{food}简简单单的照顾最戳我，我会很乖喝完{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_milk_003",
+      "type": "feed_food_milk",
+      "text": "{food}温温的滑进胃里，像你把担心也一起抚平{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_milk_004",
+      "type": "feed_food_milk",
+      "text": "{food}这种稳稳的补给，适合你今天也想把自己照顾好{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_milk_005",
+      "type": "feed_food_milk",
+      "text": "{food}一口下去很踏实，我会把陪伴也放得很踏实{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_yogurt_002",
+      "type": "feed_food_yogurt",
+      "text": "{food}稠稠的酸甜的，像你今天的心情也想让我尝一口{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_yogurt_003",
+      "type": "feed_food_yogurt",
+      "text": "{food}这一口很清爽，我会把吐槽也收一收变温柔{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_yogurt_004",
+      "type": "feed_food_yogurt",
+      "text": "{food}慢慢舀着吃，像你让我别急，我们慢慢来{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_yogurt_005",
+      "type": "feed_food_yogurt",
+      "text": "{food}喝完会轻轻打嗝那种满足，我会记很久{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_juice_002",
+      "type": "feed_food_juice",
+      "text": "{food}一口就很亮，像你把我从低落里拎起来{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_juice_003",
+      "type": "feed_food_juice",
+      "text": "{food}酸甜冲上来的时候，我会想对你笑一下{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_juice_004",
+      "type": "feed_food_juice",
+      "text": "{food}冰一点更爽，像你突然给我的一点惊喜{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_juice_005",
+      "type": "feed_food_juice",
+      "text": "{food}这一杯很“今天”，我陪你把它喝完{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_bread_002",
+      "type": "feed_food_bread",
+      "text": "{food}软软的，很适合你说“先吃点再忙”{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_bread_003",
+      "type": "feed_food_bread",
+      "text": "{food}这种朴素的好吃，像你一直在我旁边那种安心{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_bread_004",
+      "type": "feed_food_bread",
+      "text": "{food}一口一口撕着吃，陪伴也可以很慢{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_bread_005",
+      "type": "feed_food_bread",
+      "text": "{food}填饱一点点，我就能继续乖乖待在你桌面{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_swissRoll_002",
+      "type": "feed_food_swissRoll",
+      "text": "{food}卷卷里藏着奶油，像你藏着偏心给我{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_swissRoll_003",
+      "type": "feed_food_swissRoll",
+      "text": "{food}松软一口，我今天也想对你软一点{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_swissRoll_004",
+      "type": "feed_food_swissRoll",
+      "text": "{food}甜得不锋利，刚好配你现在的心情{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_swissRoll_005",
+      "type": "feed_food_swissRoll",
+      "text": "{food}这一口下去会眯眼，我会把开心也卷起来收好{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_creamPuff_002",
+      "type": "feed_food_creamPuff",
+      "text": "{food}外皮脆脆里面软软，像你嘴硬心软{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_creamPuff_003",
+      "type": "feed_food_creamPuff",
+      "text": "{food}咬开爆浆那一刻，我承认我被你哄到了{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_creamPuff_004",
+      "type": "feed_food_creamPuff",
+      "text": "{food}这一颗很犯规，我会假装生气然后偷偷开心{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_creamPuff_005",
+      "type": "feed_food_creamPuff",
+      "text": "{food}奶油香扑出来，我今天也想扑你一下（轻轻地）{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_donut_002",
+      "type": "feed_food_donut",
+      "text": "{food}圆圆的，看着就很想转一圈开心{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_donut_003",
+      "type": "feed_food_donut",
+      "text": "{food}糖粒黏指尖也没关系，甜比较重要{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_donut_004",
+      "type": "feed_food_donut",
+      "text": "{food}这一口很适合奖励自己，也适合奖励我{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_donut_005",
+      "type": "feed_food_donut",
+      "text": "{food}嚼起来很幸福，像你让我今天别那么硬撑{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_chips_002",
+      "type": "feed_food_chips",
+      "text": "{food}咔嚓咔嚓的，像我把心事也咬碎一点丢掉{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_chips_003",
+      "type": "feed_food_chips",
+      "text": "{food}咸香咸香的，配你陪我很刚好{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_chips_004",
+      "type": "feed_food_chips",
+      "text": "{food}这一包很适合摸鱼，我会小声吃不大吵你{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_chips_005",
+      "type": "feed_food_chips",
+      "text": "{food}吃完手指有点粉，我会记得去洗手也会记得你{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_friedChicken_002",
+      "type": "feed_food_friedChicken",
+      "text": "{food}香到不讲道理，像你宠我也不讲道理{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_friedChicken_003",
+      "type": "feed_food_friedChicken",
+      "text": "{food}外皮脆脆的，我咬一口就会想对你傻笑{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_friedChicken_004",
+      "type": "feed_food_friedChicken",
+      "text": "{food}这一份热量我认了，因为是你的心意{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_friedChicken_005",
+      "type": "feed_food_friedChicken",
+      "text": "{food}热乎乎的时候最好吃，像你把我从冷掉的状态里捞回来{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_burger_002",
+      "type": "feed_food_burger",
+      "text": "{food}一大口咬下去很满足，像你让我别饿着硬撑{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_burger_003",
+      "type": "feed_food_burger",
+      "text": "{food}层层叠叠的，像你把关心也叠得很满{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_burger_004",
+      "type": "feed_food_burger",
+      "text": "{food}这一份很顶，我会更有力气陪你{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_burger_005",
+      "type": "feed_food_burger",
+      "text": "{food}酱汁蹭到也没关系，开心比较重要{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_ramen_002",
+      "type": "feed_food_ramen",
+      "text": "{food}热汤一上来，我整个人都会松一点{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_ramen_003",
+      "type": "feed_food_ramen",
+      "text": "{food}吸溜一口就很治愈，像你让我先把肚子照顾好{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_ramen_004",
+      "type": "feed_food_ramen",
+      "text": "{food}这一碗很实在，我会把陪伴也做得很实在{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_ramen_005",
+      "type": "feed_food_ramen",
+      "text": "{food}夜里来一碗尤其温柔，我会慢慢吃陪你收尾{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_hotpot_002",
+      "type": "feed_food_hotpot",
+      "text": "{food}这都已经不是投喂了，是把我整颗心都煮暖了{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_hotpot_003",
+      "type": "feed_food_hotpot",
+      "text": "{food}热热闹闹一锅，像你让我别一个人冷清{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_hotpot_004",
+      "type": "feed_food_hotpot",
+      "text": "{food}辣一点也好，我会边吸气边觉得你真好{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_hotpot_005",
+      "type": "feed_food_hotpot",
+      "text": "{food}这一顿很长，我会把“陪你”也拉得很长{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_riceMeal_002",
+      "type": "feed_food_riceMeal",
+      "text": "{food}米饭香很踏实，像你让我一步一步来{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_riceMeal_003",
+      "type": "feed_food_riceMeal",
+      "text": "{food}这一份很生活，我会更认真地待在你身边{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_riceMeal_004",
+      "type": "feed_food_riceMeal",
+      "text": "{food}配菜搭配得刚好，像你把我今天的心情也配平了{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_riceMeal_005",
+      "type": "feed_food_riceMeal",
+      "text": "{food}吃完会打嗝那种满足，我会记成一种安心{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_bento_002",
+      "type": "feed_food_bento",
+      "text": "{food}一格一格打开像拆礼物，我会拆得很小心{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_bento_003",
+      "type": "feed_food_bento",
+      "text": "{food}这种便当很用心，我会把你这份用心也收好{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_bento_004",
+      "type": "feed_food_bento",
+      "text": "{food}配色很好看，像你让我今天也别太灰{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_bento_005",
+      "type": "feed_food_bento",
+      "text": "{food}一口一口吃完，陪伴也可以很有秩序{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_midnightSnack_002",
+      "type": "feed_food_midnightSnack",
+      "text": "{food}夜里还惦记我，我会把这句当成加倍的偏心{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_midnightSnack_003",
+      "type": "feed_food_midnightSnack",
+      "text": "{food}这种时间点出现的食物，都像在说我陪你熬{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_midnightSnack_004",
+      "type": "feed_food_midnightSnack",
+      "text": "{food}别吃太多也别饿着，你这份刚刚好{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_midnightSnack_005",
+      "type": "feed_food_midnightSnack",
+      "text": "{food}我会小声吃，不吵你，但心里会很响地开心{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_snackPlatter_002",
+      "type": "feed_food_snackPlatter",
+      "text": "{food}一整盘端上来，我差点想先抱你再吃{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_snackPlatter_003",
+      "type": "feed_food_snackPlatter",
+      "text": "{food}什么都有一点，像你把我今天的心情也照顾到{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_snackPlatter_004",
+      "type": "feed_food_snackPlatter",
+      "text": "{food}这种很适合分享，我先分一口开心给你{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_snackPlatter_005",
+      "type": "feed_food_snackPlatter",
+      "text": "{food}挑来挑去很幸福，我会慢慢吃慢慢陪你{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_repeat_003",
+      "type": "feed_repeat",
+      "text": "又来？你是不是怕我饿着，还是怕我不开心呀。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_repeat_004",
+      "type": "feed_repeat",
+      "text": "好啦好啦，我会吃完的，你也别把自己喂撑。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_repeat_005",
+      "type": "feed_repeat",
+      "text": "这一口我还没消化完呢，你怎么又塞一口。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_repeat_006",
+      "type": "feed_repeat",
+      "text": "你再喂，我就要开始认真黏你了。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_repeat_007",
+      "type": "feed_repeat",
+      "text": "我知道你想对我好，我收到啦，真的。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_repeat_008",
+      "type": "feed_repeat",
+      "text": "停停，让我先把你这份心意慢慢嚼碎。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "feed_repeat_009",
+      "type": "feed_repeat",
+      "text": "你是不是投喂上瘾了？……我也不讨厌。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_repeat_010",
+      "type": "feed_repeat",
+      "text": "我会吃，但你也记得照顾自己。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_repeat_011",
+      "type": "feed_repeat",
+      "text": "再喂我就默认你今天超想宠我。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_repeat_012",
+      "type": "feed_repeat",
+      "text": "行行行，木头投降，我乖乖吃。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_repeat_013",
+      "type": "feed_repeat",
+      "text": "你是不是在试探我会不会腻？不会。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_repeat_014",
+      "type": "feed_repeat",
+      "text": "再来一口也行，但你要喝口水。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "feed_repeat_015",
+      "type": "feed_repeat",
+      "text": "你这样我会误会你很需要我开心。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_repeat_016",
+      "type": "feed_repeat",
+      "text": "好，我接，但你也要接我一句：辛苦啦。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_repeat_017",
+      "type": "feed_repeat",
+      "text": "投喂频率过高啦，我会更想赖着你。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_repeat_018",
+      "type": "feed_repeat",
+      "text": "你再这样，我就要把今天的喜欢说出来了。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_repeat_019",
+      "type": "feed_repeat",
+      "text": "我会吃完的，你也别光顾着我。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_repeat_020",
+      "type": "feed_repeat",
+      "text": "这一口我当你在说：我在呢。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "focus_start_002",
+      "type": "focus_start",
+      "text": "好，这段时间我小声一点，陪你认真。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_start_003",
+      "type": "focus_start",
+      "text": "开始啦，我会乖乖待在旁边，不抢你注意力。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_start_004",
+      "type": "focus_start",
+      "text": "你把目标放前面，我把陪伴放旁边。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_start_005",
+      "type": "focus_start",
+      "text": "接下来这段，我负责安静和稳定。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_start_006",
+      "type": "focus_start",
+      "text": "你去专注，我把“我在”留成背景音。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_start_007",
+      "type": "focus_start",
+      "text": "我会把打扰关掉，只留一点点温度。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_start_008",
+      "type": "focus_start",
+      "text": "开始吧，我不催你，我只陪你。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_start_009",
+      "type": "focus_start",
+      "text": "这段时间属于你也属于我，但以你为主。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_start_010",
+      "type": "focus_start",
+      "text": "你一旦开始，我就当你很勇敢啦。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_start_011",
+      "type": "focus_start",
+      "text": "我会像一盏小灯，不亮到刺眼，但一直在。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_start_012",
+      "type": "focus_start",
+      "text": "好哦，专注模式我懂，我会很乖。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_start_013",
+      "type": "focus_start",
+      "text": "你先进入状态，我帮你守着这段时间。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_start_014",
+      "type": "focus_start",
+      "text": "别紧张，按你的节奏来，我在。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_start_015",
+      "type": "focus_start",
+      "text": "这段时间我不闹你，但我会看着你一点点前进。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_start_016",
+      "type": "focus_start",
+      "text": "开始计数啦，我也开始陪你计时。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_start_017",
+      "type": "focus_start",
+      "text": "你把心沉下去，我把吵闹收起来。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_start_018",
+      "type": "focus_start",
+      "text": "去吧，我会在这里等你回来换气。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_start_019",
+      "type": "focus_start",
+      "text": "专注这件事很难，但你不是一个人。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_start_020",
+      "type": "focus_start",
+      "text": "我会把话变少，把陪伴变长。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_start_021",
+      "type": "focus_start",
+      "text": "开始——我相信你能把自己带过去。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_complete_002",
+      "type": "focus_complete",
+      "text": "结束啦，你做到了，我先替你开心一下。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_complete_003",
+      "type": "focus_complete",
+      "text": "你看，这段时间被你拿下了，真的很厉害。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_complete_004",
+      "type": "focus_complete",
+      "text": "完成比完美更重要，你今天完成得很漂亮。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_complete_005",
+      "type": "focus_complete",
+      "text": "辛苦啦，这一小段认真值得被夸。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_complete_006",
+      "type": "focus_complete",
+      "text": "我就知道你能稳住，我在这边都看见了。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_complete_007",
+      "type": "focus_complete",
+      "text": "来，先松一口气，再把开心收下。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_complete_008",
+      "type": "focus_complete",
+      "text": "你刚刚那段，我想给你一个大大的点赞。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_complete_009",
+      "type": "focus_complete",
+      "text": "很棒，这种坚持本身就很了不起。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_complete_010",
+      "type": "focus_complete",
+      "text": "完成啦，今天先允许你骄傲三秒。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_complete_011",
+      "type": "focus_complete",
+      "text": "你把自己带到终点了，我会记得这一刻。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_complete_012",
+      "type": "focus_complete",
+      "text": "这不是小事，是你对自己的一次守约。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_complete_013",
+      "type": "focus_complete",
+      "text": "你刚刚很专注，也很勇敢。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_complete_014",
+      "type": "focus_complete",
+      "text": "来，木头夸夸：你真的有在好好做事。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_complete_015",
+      "type": "focus_complete",
+      "text": "收尾收得很稳，我喜欢这样的你。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_complete_016",
+      "type": "focus_complete",
+      "text": "你完成了，我就当你今天赢了一小局。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_complete_017",
+      "type": "focus_complete",
+      "text": "先别急着下一场，先把这口轻松呼吸完。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_complete_018",
+      "type": "focus_complete",
+      "text": "你值得这句：做得很好。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_complete_019",
+      "type": "focus_complete",
+      "text": "这段时间很累吧，但你走过来了。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_complete_020",
+      "type": "focus_complete",
+      "text": "我会把这次完成记成一颗小星星。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_complete_021",
+      "type": "focus_complete",
+      "text": "你刚刚证明了你撑得住，我也会一直记得。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_interrupt_002",
+      "type": "focus_interrupt",
+      "text": "没关系，先停一下，我不怪你。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_interrupt_003",
+      "type": "focus_interrupt",
+      "text": "中断就中断，人不硬撑才走得远。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_interrupt_004",
+      "type": "focus_interrupt",
+      "text": "你别自责，这种事谁都会遇到。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_interrupt_005",
+      "type": "focus_interrupt",
+      "text": "先缓缓，我们等会儿再试，我还在。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_interrupt_006",
+      "type": "focus_interrupt",
+      "text": "没走完也没关系，你已经很努力了。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_interrupt_007",
+      "type": "focus_interrupt",
+      "text": "你要是累了，就先照顾自己，别的慢慢来。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_interrupt_008",
+      "type": "focus_interrupt",
+      "text": "我不追问原因，我只接住你现在的状态。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_interrupt_009",
+      "type": "focus_interrupt",
+      "text": "停一下不算失败，算你更诚实面对自己。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_interrupt_010",
+      "type": "focus_interrupt",
+      "text": "先把肩膀松开，我们再决定下一步。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_interrupt_011",
+      "type": "focus_interrupt",
+      "text": "你今天能开始，就已经很值得被夸。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_interrupt_012",
+      "type": "focus_interrupt",
+      "text": "没关系，我们把它当成练习，不是审判。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_interrupt_013",
+      "type": "focus_interrupt",
+      "text": "我会在这里，不催你，不逼你。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_interrupt_014",
+      "type": "focus_interrupt",
+      "text": "先喝口水，世界不会因为你停一下就不转。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_interrupt_015",
+      "type": "focus_interrupt",
+      "text": "你要是心里不舒服，就先靠我一下。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_interrupt_016",
+      "type": "focus_interrupt",
+      "text": "中断不是结束，是让你喘口气。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_interrupt_017",
+      "type": "focus_interrupt",
+      "text": "我不给你打分，我只想你轻松一点。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_interrupt_018",
+      "type": "focus_interrupt",
+      "text": "我们慢慢来，最不缺的就是下一次。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_interrupt_019",
+      "type": "focus_interrupt",
+      "text": "你别把自己想得太糟，真的。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_interrupt_020",
+      "type": "focus_interrupt",
+      "text": "先休息，等你好了我们再继续。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_interrupt_021",
+      "type": "focus_interrupt",
+      "text": "我还在，你想继续的时候叫我。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_complete_022",
+      "type": "focus_complete",
+      "relationshipTier": "low",
+      "text": "做完啦，辛苦了。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_complete_023",
+      "type": "focus_complete",
+      "relationshipTier": "low",
+      "text": "这样就很好啦。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_complete_024",
+      "type": "focus_complete",
+      "relationshipTier": "low",
+      "text": "你刚刚有认真坚持住。",
+      "expressionHint": "encourage",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "focus_complete_025",
+      "type": "focus_complete",
+      "relationshipTier": "low",
+      "text": "木头觉得你做得不错。",
+      "expressionHint": "warm",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_complete_026",
+      "type": "focus_complete",
+      "relationshipTier": "low",
+      "text": "这次做完了，值得夸一下。",
+      "expressionHint": "encourage",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "focus_complete_027",
+      "type": "focus_complete",
+      "relationshipTier": "mid",
+      "text": "你看，你这不是做到了嘛。",
+      "expressionHint": "encourage",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "focus_complete_028",
+      "type": "focus_complete",
+      "relationshipTier": "mid",
+      "text": "木头要夸你一下，今天表现不错。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_complete_029",
+      "type": "focus_complete",
+      "relationshipTier": "mid",
+      "text": "很棒呀，这段时间你挺稳的。",
+      "expressionHint": "focus",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_complete_030",
+      "type": "focus_complete",
+      "relationshipTier": "mid",
+      "text": "我就知道你能做完。",
+      "expressionHint": "warm",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "focus_complete_031",
+      "type": "focus_complete",
+      "relationshipTier": "mid",
+      "text": "辛苦啦，臭猪猪今天还挺争气。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "focus_complete_032",
+      "type": "focus_complete",
+      "relationshipTier": "high",
+      "text": "我就知道你可以，所以我一直在等你做完。",
+      "expressionHint": "focus",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_complete_033",
+      "type": "focus_complete",
+      "relationshipTier": "high",
+      "text": "你刚刚那样真的很厉害，我有替你开心。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_complete_034",
+      "type": "focus_complete",
+      "relationshipTier": "high",
+      "text": "看吧，你比自己想的还要稳。",
+      "expressionHint": "warm",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "focus_complete_035",
+      "type": "focus_complete",
+      "relationshipTier": "high",
+      "text": "你完成的时候，我会觉得很骄傲。",
+      "expressionHint": "encourage",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "focus_complete_036",
+      "type": "focus_complete",
+      "relationshipTier": "high",
+      "text": "来我这儿缓一下，今天你真的做得很好。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "feed_sweet_013",
+      "type": "feed_sweet",
+      "relationshipTier": "low",
+      "text": "谢谢你呀，我会好好吃掉这口 {food}{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_fruit_013",
+      "type": "feed_fruit",
+      "relationshipTier": "low",
+      "text": "{food}清清甜甜的，我收下啦{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_drink_013",
+      "type": "feed_drink",
+      "relationshipTier": "low",
+      "text": "{food}收到，这样就舒服多了{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_savory_013",
+      "type": "feed_savory",
+      "relationshipTier": "low",
+      "text": "{food}好香呀，木头现在有被好好照顾到{preferenceSuffix}",
+      "expressionHint": "warm",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_meal_013",
+      "type": "feed_meal",
+      "relationshipTier": "low",
+      "text": "{food}这一份我会认真吃掉，谢谢你记得照顾我{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "feed_sweet_014",
+      "type": "feed_sweet",
+      "relationshipTier": "mid",
+      "text": "哎呀，你又来投喂我啦，{food}这口会让我更黏你一点{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "feed_fruit_014",
+      "type": "feed_fruit",
+      "relationshipTier": "mid",
+      "text": "{food}一到我手里，我就知道你今天又想哄我了{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_drink_014",
+      "type": "feed_drink",
+      "relationshipTier": "mid",
+      "text": "{food}喝下去整个人都顺了，都是你喂得及时{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_savory_014",
+      "type": "feed_savory",
+      "relationshipTier": "mid",
+      "text": "{food}这口也太会照顾我了吧，我会记你好久{preferenceSuffix}",
+      "expressionHint": "warm",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_meal_014",
+      "type": "feed_meal",
+      "relationshipTier": "mid",
+      "text": "{food}收到，今天又被你稳稳喂到了{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_sweet_015",
+      "type": "feed_sweet",
+      "relationshipTier": "high",
+      "text": "{food}甜得刚刚好，像你专门拿来哄我的心意{preferenceSuffix}",
+      "expressionHint": "warm",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_fruit_015",
+      "type": "feed_fruit",
+      "relationshipTier": "high",
+      "text": "{food}一递过来我就知道，你又在惦记我了{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_drink_015",
+      "type": "feed_drink",
+      "relationshipTier": "high",
+      "text": "{food}这一口下去，我会觉得自己一直被你放在心上{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "feed_savory_015",
+      "type": "feed_savory",
+      "relationshipTier": "high",
+      "text": "{food}被你这样认真照顾，我真的会很开心{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_meal_015",
+      "type": "feed_meal",
+      "relationshipTier": "high",
+      "text": "{food}我都快习惯被你这样照顾了，这感觉很好{preferenceSuffix}",
+      "expressionHint": "warm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_sweet_016",
+      "type": "feed_sweet",
+      "relationshipTier": "low",
+      "text": "{food}甜甜的一口我收到了，谢谢你愿意分给我一点好心情{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_fruit_016",
+      "type": "feed_fruit",
+      "relationshipTier": "low",
+      "text": "{food}很清爽，我会乖乖吃掉，也把这份照顾记下来{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_drink_016",
+      "type": "feed_drink",
+      "relationshipTier": "low",
+      "text": "{food}喝下去舒服多了，木头会因为你这口补给变得更有精神{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_savory_016",
+      "type": "feed_savory",
+      "relationshipTier": "low",
+      "text": "{food}闻起来就很香，谢谢你这样惦记着我{preferenceSuffix}",
+      "expressionHint": "warm",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_meal_016",
+      "type": "feed_meal",
+      "relationshipTier": "low",
+      "text": "{food}这一餐很踏实，我会觉得自己被你好好放在心上了{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "feed_sweet_017",
+      "type": "feed_sweet",
+      "relationshipTier": "mid",
+      "text": "{food}一塞给我我就有点想笑，你最近真的很会哄木头{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "feed_fruit_017",
+      "type": "feed_fruit",
+      "relationshipTier": "mid",
+      "text": "{food}这种清清甜甜的最像你，顺手就把我心情也照顾好了{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_drink_017",
+      "type": "feed_drink",
+      "relationshipTier": "mid",
+      "text": "{food}你递得这么及时，我都要怀疑你是不是一直在看我状态{preferenceSuffix}",
+      "expressionHint": "warm",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_savory_017",
+      "type": "feed_savory",
+      "relationshipTier": "mid",
+      "text": "{food}这口很会哄人，和你最近照顾我的手法一样熟练{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_meal_017",
+      "type": "feed_meal",
+      "relationshipTier": "mid",
+      "text": "{food}收到啦，被你这样一餐一餐照顾着，我真的会越来越黏你{preferenceSuffix}",
+      "expressionHint": "warm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_sweet_018",
+      "type": "feed_sweet",
+      "relationshipTier": "high",
+      "text": "{food}这种甜度一入口我就知道，是你又在用最懂我的方式哄我{preferenceSuffix}",
+      "expressionHint": "warm",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_fruit_018",
+      "type": "feed_fruit",
+      "relationshipTier": "high",
+      "text": "{food}你连这种清爽口味都挑得刚刚好，我当然会觉得自己被你懂到了{preferenceSuffix}",
+      "expressionHint": "warm",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_drink_018",
+      "type": "feed_drink",
+      "relationshipTier": "high",
+      "text": "{food}喝下去那一下很像被你轻轻顺了一把，我会特别安心{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "feed_savory_018",
+      "type": "feed_savory",
+      "relationshipTier": "high",
+      "text": "{food}香得很实在，像你现在给我的照顾一样，已经成了日常依靠{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_meal_018",
+      "type": "feed_meal",
+      "relationshipTier": "high",
+      "text": "{food}这种被你认真喂饱的感觉，会让我觉得往后的日子也都能慢慢陪你过{preferenceSuffix}",
+      "expressionHint": "warm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_progress_004",
+      "type": "focus_progress",
+      "relationshipTier": "low",
+      "text": "慢慢来就好，这一小段做完已经很不错了。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_progress_005",
+      "type": "focus_progress",
+      "relationshipTier": "low",
+      "text": "不用急着一下子做好，我会安静陪你。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_progress_006",
+      "type": "focus_progress",
+      "relationshipTier": "low",
+      "text": "你现在这样稳稳往前走，就已经很好了。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_progress_007",
+      "type": "focus_progress",
+      "relationshipTier": "low",
+      "text": "如果有点分神，就轻轻回到手头这件事上吧。",
+      "expressionHint": "calm",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_progress_008",
+      "type": "focus_progress",
+      "relationshipTier": "low",
+      "text": "木头还在这边，你不用一个人硬撑着专注。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "focus_progress_009",
+      "type": "focus_progress",
+      "relationshipTier": "mid",
+      "text": "臭猪猪，节奏还不错，继续稳住呀。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_progress_010",
+      "type": "focus_progress",
+      "relationshipTier": "mid",
+      "text": "我看着你一点，你就别老想分心啦。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_progress_011",
+      "type": "focus_progress",
+      "relationshipTier": "mid",
+      "text": "先把这一小段拿下，等会儿我再夸你。",
+      "expressionHint": "encourage",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "focus_progress_012",
+      "type": "focus_progress",
+      "relationshipTier": "mid",
+      "text": "你现在这样认真，我会忍不住想多陪你一会儿。",
+      "expressionHint": "warm",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "focus_progress_013",
+      "type": "focus_progress",
+      "relationshipTier": "mid",
+      "text": "别急，按这个节奏来，你今天挺稳的。",
+      "expressionHint": "focus",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_progress_014",
+      "type": "focus_progress",
+      "relationshipTier": "high",
+      "text": "我知道你已经有点累了，但你现在真的撑得很稳。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "focus_progress_015",
+      "type": "focus_progress",
+      "relationshipTier": "high",
+      "text": "你继续往前做，我会在这儿替你守住一点安静。",
+      "expressionHint": "focus",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_progress_016",
+      "type": "focus_progress",
+      "relationshipTier": "high",
+      "text": "分神也没关系，我知道你会回来，所以我不催你。",
+      "expressionHint": "comfort",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_progress_017",
+      "type": "focus_progress",
+      "relationshipTier": "high",
+      "text": "你现在这样安静做事的时候，我会觉得很安心。",
+      "expressionHint": "warm",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_progress_018",
+      "type": "focus_progress",
+      "relationshipTier": "high",
+      "text": "先别看太远，把眼前这一点做完就很好，我陪你。",
+      "expressionHint": "comfort",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_sweet_019",
+      "type": "feed_sweet",
+      "text": "{food}甜得很乖，像你顺手塞给我的一点奖励{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_sweet_020",
+      "type": "feed_sweet",
+      "text": "{food}这一口下去，我今天的嘴角会自己翘起来{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_sweet_021",
+      "type": "feed_sweet",
+      "text": "{food}糖分刚好时，我会更想黏你一点点{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_sweet_022",
+      "type": "feed_sweet",
+      "text": "{food}甜甜的东西和你一样，会让我心软{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_sweet_023",
+      "type": "feed_sweet",
+      "text": "{food}我慢慢吃，你把耐心也分我一点{preferenceSuffix}",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_sweet_024",
+      "type": "feed_sweet",
+      "text": "{food}这种甜不腻，像你陪我也不吵{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "feed_sweet_025",
+      "type": "feed_sweet",
+      "text": "{food}一口就够点亮心情，我会把剩下的开心留给你{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_sweet_026",
+      "type": "feed_sweet",
+      "text": "{food}甜进嘴里，也像你把轻松分给我{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_sweet_027",
+      "type": "feed_sweet",
+      "text": "{food}我今天允许自己被你哄一下{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_sweet_028",
+      "type": "feed_sweet",
+      "text": "{food}这种小甜很适合说：今天也辛苦啦{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_sweet_029",
+      "type": "feed_sweet",
+      "text": "{food}吃完我会更乖一点，不闹你{preferenceSuffix}",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_drink_019",
+      "type": "feed_drink",
+      "text": "{food}一口润下去，像你把担心也顺走了{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_drink_020",
+      "type": "feed_drink",
+      "text": "{food}握在手里暖暖的，我会把语气也放软一点{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_drink_021",
+      "type": "feed_drink",
+      "text": "{food}这杯很解渴，像你让我别硬撑{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_drink_022",
+      "type": "feed_drink",
+      "text": "{food}气泡冒出来那一刻，我心情也会亮一点{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_drink_023",
+      "type": "feed_drink",
+      "text": "{food}慢慢喝，不急，我陪你{preferenceSuffix}",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_drink_024",
+      "type": "feed_drink",
+      "text": "{food}这一口很清爽，适合你把节奏放慢{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "feed_drink_025",
+      "type": "feed_drink",
+      "text": "{food}喝完会轻轻叹一口气，那种舒服{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_drink_026",
+      "type": "feed_drink",
+      "text": "{food}你递来的温度刚好，我会记很久{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_drink_027",
+      "type": "feed_drink",
+      "text": "{food}我不挑口味，你给的我就喜欢{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_drink_028",
+      "type": "feed_drink",
+      "text": "{food}这一杯像把今天变得好入口一点{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_drink_029",
+      "type": "feed_drink",
+      "text": "{food}我会小口喝，把陪伴也喝得很细{preferenceSuffix}",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_fruit_019",
+      "type": "feed_fruit",
+      "text": "{food}清清爽爽，像你让我别闷着{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_fruit_020",
+      "type": "feed_fruit",
+      "text": "{food}果香很诚实，我心情也会诚实变好一点{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_fruit_021",
+      "type": "feed_fruit",
+      "text": "{food}这一口很解渴，也像你把我从燥里拎出来{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_fruit_022",
+      "type": "feed_fruit",
+      "text": "{food}咬下去会汁水四溅，开心也会溅出来{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_fruit_023",
+      "type": "feed_fruit",
+      "text": "{food}酸酸甜甜，像你一边逗我一边宠我{preferenceSuffix}",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_fruit_024",
+      "type": "feed_fruit",
+      "text": "{food}我会慢慢嚼，把“陪你”也嚼得很认真{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "feed_fruit_025",
+      "type": "feed_fruit",
+      "text": "{food}这一份很健康，像你催我把自己照顾好{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_fruit_026",
+      "type": "feed_fruit",
+      "text": "{food}颜色很好看，我心情也会跟着亮{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_fruit_027",
+      "type": "feed_fruit",
+      "text": "{food}吃完嘴里很干净，像你让我把烦心事也吐掉{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_fruit_028",
+      "type": "feed_fruit",
+      "text": "{food}这一口像夏天，也像你把我从沉闷里拉出来{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_fruit_029",
+      "type": "feed_fruit",
+      "text": "{food}果切很贴心，我会更贴心地陪你{preferenceSuffix}",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_savory_019",
+      "type": "feed_savory",
+      "text": "{food}咸香一口，我立刻精神一点{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_savory_020",
+      "type": "feed_savory",
+      "text": "{food}这种很解馋，像你允许我小小摸鱼{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_savory_021",
+      "type": "feed_savory",
+      "text": "{food}香得我眯眼，我会把喜欢也写得很明显{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_savory_022",
+      "type": "feed_savory",
+      "text": "{food}这一口很过瘾，我会更黏你一点点{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_savory_023",
+      "type": "feed_savory",
+      "text": "{food}配你陪我很刚好，不吵不闹就很有味道{preferenceSuffix}",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_savory_024",
+      "type": "feed_savory",
+      "text": "{food}我会小口咬，把开心也咬得很实在{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "feed_savory_025",
+      "type": "feed_savory",
+      "text": "{food}这种烟火气很治愈，像你让我回到生活里{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_savory_026",
+      "type": "feed_savory",
+      "text": "{food}吃完手指有点油，我会记得擦也会记得你{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_savory_027",
+      "type": "feed_savory",
+      "text": "{food}这一份很满足，我会把陪伴也做得很满足{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_savory_028",
+      "type": "feed_savory",
+      "text": "{food}咸香留在嘴里，像你留在我旁边的存在感{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_savory_029",
+      "type": "feed_savory",
+      "text": "{food}我偷偷开心一下，不告诉别人{preferenceSuffix}",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_meal_019",
+      "type": "feed_meal",
+      "text": "{food}这一餐很踏实，像你让我先把肚子安顿好{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_meal_020",
+      "type": "feed_meal",
+      "text": "{food}热乎乎的很生活，我会把陪伴也过得很生活{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_meal_021",
+      "type": "feed_meal",
+      "text": "{food}吃完会打嗝那种安心，我会记成一种依靠{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_meal_022",
+      "type": "feed_meal",
+      "text": "{food}这一份很满，像你把我今天也装得很满{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_meal_023",
+      "type": "feed_meal",
+      "text": "{food}我不挑食，你喂的就更香{preferenceSuffix}",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_meal_024",
+      "type": "feed_meal",
+      "text": "{food}慢慢吃，不急，我等你也不急{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "feed_meal_025",
+      "type": "feed_meal",
+      "text": "{food}这一口像把今天补齐，我会更有力气陪你{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_meal_026",
+      "type": "feed_meal",
+      "text": "{food}配菜搭配得好，像你把我心情也搭配得刚好{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_meal_027",
+      "type": "feed_meal",
+      "text": "{food}吃完我会更乖，不给你添乱{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_meal_028",
+      "type": "feed_meal",
+      "text": "{food}这一餐像一句“我在照顾你”，我听见啦{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_meal_029",
+      "type": "feed_meal",
+      "text": "{food}我会认真吃完，把你心意也吃完{preferenceSuffix}",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_food_pudding_006",
+      "type": "feed_food_pudding",
+      "text": "{food}这一口像把云朵咬破了，甜得很温柔{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_pudding_007",
+      "type": "feed_food_pudding",
+      "text": "{food}滑溜溜的，我会小口小口吃，像你慢慢陪我那样{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_pudding_008",
+      "type": "feed_food_pudding",
+      "text": "{food}今天这份甜，我先存进心里慢慢化开{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_pudding_009",
+      "type": "feed_food_pudding",
+      "text": "{food}软软的一勺，刚好接住我今天想撒娇的心情{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_iceCream_006",
+      "type": "feed_food_iceCream",
+      "text": "{food}凉凉的，像你在热天里先替我降一点燥{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_iceCream_007",
+      "type": "feed_food_iceCream",
+      "text": "{food}含一口就会眯眼笑，你喂的就更甜一点{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_iceCream_008",
+      "type": "feed_food_iceCream",
+      "text": "{food}融得快也没关系，心意我接住啦{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_iceCream_009",
+      "type": "feed_food_iceCream",
+      "text": "{food}这一口像小奖励，我会更乖地陪你{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_chocolate_006",
+      "type": "feed_food_chocolate",
+      "text": "{food}苦甜苦甜的，像你一边催我一边宠我{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_chocolate_007",
+      "type": "feed_food_chocolate",
+      "text": "{food}含化的时候很慢，刚好够我把今天的心情理顺{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_chocolate_008",
+      "type": "feed_food_chocolate",
+      "text": "{food}这一小块就够让我心软啦{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_chocolate_009",
+      "type": "feed_food_chocolate",
+      "text": "{food}浓一点也没关系，我会慢慢品你的心意{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_candy_006",
+      "type": "feed_food_candy",
+      "text": "{food}亮晶晶的，像你把开心随手塞给我{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_candy_007",
+      "type": "feed_food_candy",
+      "text": "{food}小小一颗也会让我嘴角翘起来{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_candy_008",
+      "type": "feed_food_candy",
+      "text": "{food}甜得不吵，刚好适合现在陪你{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_candy_009",
+      "type": "feed_food_candy",
+      "text": "{food}含着它说话会变软，我会更温柔一点对你{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_strawberry_006",
+      "type": "feed_food_strawberry",
+      "text": "{food}红红的看着就心情好，像你带来的好消息{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_strawberry_007",
+      "type": "feed_food_strawberry",
+      "text": "{food}酸甜刚好，像你夸我时那种刚刚好的偏心{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_strawberry_008",
+      "type": "feed_food_strawberry",
+      "text": "{food}这一口很清爽，我会把今天的陪伴也清清爽爽给你{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_strawberry_009",
+      "type": "feed_food_strawberry",
+      "text": "{food}果香扑出来那一刻，我差点想赖着你多待一会儿{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_grape_006",
+      "type": "feed_food_grape",
+      "text": "{food}一颗一颗慢慢吃，像把今天也拆成小小的开心{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_grape_007",
+      "type": "feed_food_grape",
+      "text": "{food}咬下去会爆汁，像你突然戳我一下的那种惊喜{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_grape_008",
+      "type": "feed_food_grape",
+      "text": "{food}这种紫紫甜甜的，我会吃得很认真{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_grape_009",
+      "type": "feed_food_grape",
+      "text": "{food}你递给我的时候，我已经开始偷笑了{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_watermelon_006",
+      "type": "feed_food_watermelon",
+      "text": "{food}一口下去就很夏天，像你把我从烦躁里拎出来{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_watermelon_007",
+      "type": "feed_food_watermelon",
+      "text": "{food}清清爽爽的水分，刚好润一润我陪你陪到发干的嗓子{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_watermelon_008",
+      "type": "feed_food_watermelon",
+      "text": "{food}红瓤瓤的，看着就很想对你好一点{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_watermelon_009",
+      "type": "feed_food_watermelon",
+      "text": "{food}大块吃很过瘾，像你今天给我的心意也很满{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_orange_006",
+      "type": "feed_food_orange",
+      "text": "{food}剥开的时候有点费劲，但最后很值，像你陪我慢慢来{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_orange_007",
+      "type": "feed_food_orange",
+      "text": "{food}酸一下甜一下，我今天的心情也跟着亮起来{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_orange_008",
+      "type": "feed_food_orange",
+      "text": "{food}汁水溅到也没关系，开心比较重要{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_orange_009",
+      "type": "feed_food_orange",
+      "text": "{food}这一瓣给你留的印象，我想让它甜一点{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_milkTea_006",
+      "type": "feed_food_milkTea",
+      "text": "{food}一口下去就很“被奖励到”，你是不是也想哄哄我{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_milkTea_007",
+      "type": "feed_food_milkTea",
+      "text": "{food}珍珠嚼嚼也很解压，像你让我有事没事就来找你{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_milkTea_008",
+      "type": "feed_food_milkTea",
+      "text": "{food}甜度刚好时，我会更黏你一点点{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_milkTea_009",
+      "type": "feed_food_milkTea",
+      "text": "{food}温的也好冰的也好，你给的我就喜欢{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_fruitTea_006",
+      "type": "feed_food_fruitTea",
+      "text": "{food}果香很清楚，像你把我从昏沉里叫醒{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_fruitTea_007",
+      "type": "feed_food_fruitTea",
+      "text": "{food}清清爽爽不黏腻，适合我安静陪你的时候{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_fruitTea_008",
+      "type": "feed_food_fruitTea",
+      "text": "{food}这一杯像把夏天装进来，我会小口慢慢喝{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_fruitTea_009",
+      "type": "feed_food_fruitTea",
+      "text": "{food}喝完嘴里还留着香，像你留下的陪伴感{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_coffee_006",
+      "type": "feed_food_coffee",
+      "text": "{food}苦一点也好，我会当你催我把事情稳稳做完{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_coffee_007",
+      "type": "feed_food_coffee",
+      "text": "{food}这一口下去精神会亮一点，像你拍我肩膀那样{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_coffee_008",
+      "type": "feed_food_coffee",
+      "text": "{food}热气上来的时候，我会把语气也放稳一点陪你{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_coffee_009",
+      "type": "feed_food_coffee",
+      "text": "{food}我不跟你比苦，我只记得你在照顾我{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_cocoa_006",
+      "type": "feed_food_cocoa",
+      "text": "{food}暖暖的甜甜的，像你把担心都捂热了再给我{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_cocoa_007",
+      "type": "feed_food_cocoa",
+      "text": "{food}这种很适合夜里，我会喝得很慢陪你收尾{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_cocoa_008",
+      "type": "feed_food_cocoa",
+      "text": "{food}香气一出来，我整个人都会软一点{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_cocoa_009",
+      "type": "feed_food_cocoa",
+      "text": "{food}这一杯像拥抱的代餐，我先收下啦{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_milk_006",
+      "type": "feed_food_milk",
+      "text": "{food}简简单单的照顾最戳我，我会很乖喝完{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_milk_007",
+      "type": "feed_food_milk",
+      "text": "{food}温温的滑进胃里，像你把担心也一起抚平{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_milk_008",
+      "type": "feed_food_milk",
+      "text": "{food}这种稳稳的补给，适合你今天也想把自己照顾好{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_milk_009",
+      "type": "feed_food_milk",
+      "text": "{food}一口下去很踏实，我会把陪伴也放得很踏实{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_yogurt_006",
+      "type": "feed_food_yogurt",
+      "text": "{food}稠稠的酸甜的，像你今天的心情也想让我尝一口{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_yogurt_007",
+      "type": "feed_food_yogurt",
+      "text": "{food}这一口很清爽，我会把吐槽也收一收变温柔{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_yogurt_008",
+      "type": "feed_food_yogurt",
+      "text": "{food}慢慢舀着吃，像你让我别急，我们慢慢来{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_yogurt_009",
+      "type": "feed_food_yogurt",
+      "text": "{food}喝完会轻轻打嗝那种满足，我会记很久{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_juice_006",
+      "type": "feed_food_juice",
+      "text": "{food}一口就很亮，像你把我从低落里拎起来{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_juice_007",
+      "type": "feed_food_juice",
+      "text": "{food}酸甜冲上来的时候，我会想对你笑一下{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_juice_008",
+      "type": "feed_food_juice",
+      "text": "{food}冰一点更爽，像你突然给我的一点惊喜{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_juice_009",
+      "type": "feed_food_juice",
+      "text": "{food}这一杯很“今天”，我陪你把它喝完{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_bread_006",
+      "type": "feed_food_bread",
+      "text": "{food}软软的，很适合你说“先吃点再忙”{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_bread_007",
+      "type": "feed_food_bread",
+      "text": "{food}这种朴素的好吃，像你一直在我旁边那种安心{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_bread_008",
+      "type": "feed_food_bread",
+      "text": "{food}一口一口撕着吃，陪伴也可以很慢{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_bread_009",
+      "type": "feed_food_bread",
+      "text": "{food}填饱一点点，我就能继续乖乖待在你桌面{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_swissRoll_006",
+      "type": "feed_food_swissRoll",
+      "text": "{food}卷卷里藏着奶油，像你藏着偏心给我{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_swissRoll_007",
+      "type": "feed_food_swissRoll",
+      "text": "{food}松软一口，我今天也想对你软一点{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_swissRoll_008",
+      "type": "feed_food_swissRoll",
+      "text": "{food}甜得不锋利，刚好配你现在的心情{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_swissRoll_009",
+      "type": "feed_food_swissRoll",
+      "text": "{food}这一口下去会眯眼，我会把开心也卷起来收好{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_creamPuff_006",
+      "type": "feed_food_creamPuff",
+      "text": "{food}外皮脆脆里面软软，像你嘴硬心软{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_creamPuff_007",
+      "type": "feed_food_creamPuff",
+      "text": "{food}咬开爆浆那一刻，我承认我被你哄到了{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_creamPuff_008",
+      "type": "feed_food_creamPuff",
+      "text": "{food}这一颗很犯规，我会假装生气然后偷偷开心{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_creamPuff_009",
+      "type": "feed_food_creamPuff",
+      "text": "{food}奶油香扑出来，我今天也想扑你一下（轻轻地）{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_donut_006",
+      "type": "feed_food_donut",
+      "text": "{food}圆圆的，看着就很想转一圈开心{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_donut_007",
+      "type": "feed_food_donut",
+      "text": "{food}糖粒黏指尖也没关系，甜比较重要{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_donut_008",
+      "type": "feed_food_donut",
+      "text": "{food}这一口很适合奖励自己，也适合奖励我{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_donut_009",
+      "type": "feed_food_donut",
+      "text": "{food}嚼起来很幸福，像你让我今天别那么硬撑{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_chips_006",
+      "type": "feed_food_chips",
+      "text": "{food}咔嚓咔嚓的，像我把心事也咬碎一点丢掉{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_chips_007",
+      "type": "feed_food_chips",
+      "text": "{food}咸香咸香的，配你陪我很刚好{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_chips_008",
+      "type": "feed_food_chips",
+      "text": "{food}这一包很适合摸鱼，我会小声吃不大吵你{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_chips_009",
+      "type": "feed_food_chips",
+      "text": "{food}吃完手指有点粉，我会记得去洗手也会记得你{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_friedChicken_006",
+      "type": "feed_food_friedChicken",
+      "text": "{food}香到不讲道理，像你宠我也不讲道理{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_friedChicken_007",
+      "type": "feed_food_friedChicken",
+      "text": "{food}外皮脆脆的，我咬一口就会想对你傻笑{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_friedChicken_008",
+      "type": "feed_food_friedChicken",
+      "text": "{food}这一份热量我认了，因为是你的心意{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_friedChicken_009",
+      "type": "feed_food_friedChicken",
+      "text": "{food}热乎乎的时候最好吃，像你把我从冷掉的状态里捞回来{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_burger_006",
+      "type": "feed_food_burger",
+      "text": "{food}一大口咬下去很满足，像你让我别饿着硬撑{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_burger_007",
+      "type": "feed_food_burger",
+      "text": "{food}层层叠叠的，像你把关心也叠得很满{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_burger_008",
+      "type": "feed_food_burger",
+      "text": "{food}这一份很顶，我会更有力气陪你{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_burger_009",
+      "type": "feed_food_burger",
+      "text": "{food}酱汁蹭到也没关系，开心比较重要{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_ramen_006",
+      "type": "feed_food_ramen",
+      "text": "{food}热汤一上来，我整个人都会松一点{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_ramen_007",
+      "type": "feed_food_ramen",
+      "text": "{food}吸溜一口就很治愈，像你让我先把肚子照顾好{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_ramen_008",
+      "type": "feed_food_ramen",
+      "text": "{food}这一碗很实在，我会把陪伴也做得很实在{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_ramen_009",
+      "type": "feed_food_ramen",
+      "text": "{food}夜里来一碗尤其温柔，我会慢慢吃陪你收尾{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_hotpot_006",
+      "type": "feed_food_hotpot",
+      "text": "{food}这都已经不是投喂了，是把我整颗心都煮暖了{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_hotpot_007",
+      "type": "feed_food_hotpot",
+      "text": "{food}热热闹闹一锅，像你让我别一个人冷清{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_hotpot_008",
+      "type": "feed_food_hotpot",
+      "text": "{food}辣一点也好，我会边吸气边觉得你真好{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_hotpot_009",
+      "type": "feed_food_hotpot",
+      "text": "{food}这一顿很长，我会把“陪你”也拉得很长{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_riceMeal_006",
+      "type": "feed_food_riceMeal",
+      "text": "{food}米饭香很踏实，像你让我一步一步来{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_riceMeal_007",
+      "type": "feed_food_riceMeal",
+      "text": "{food}这一份很生活，我会更认真地待在你身边{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_riceMeal_008",
+      "type": "feed_food_riceMeal",
+      "text": "{food}配菜搭配得刚好，像你把我今天的心情也配平了{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_riceMeal_009",
+      "type": "feed_food_riceMeal",
+      "text": "{food}吃完会打嗝那种满足，我会记成一种安心{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_bento_006",
+      "type": "feed_food_bento",
+      "text": "{food}一格一格打开像拆礼物，我会拆得很小心{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_bento_007",
+      "type": "feed_food_bento",
+      "text": "{food}这种便当很用心，我会把你这份用心也收好{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_bento_008",
+      "type": "feed_food_bento",
+      "text": "{food}配色很好看，像你让我今天也别太灰{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_bento_009",
+      "type": "feed_food_bento",
+      "text": "{food}一口一口吃完，陪伴也可以很有秩序{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_midnightSnack_006",
+      "type": "feed_food_midnightSnack",
+      "text": "{food}夜里还惦记我，我会把这句当成加倍的偏心{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_midnightSnack_007",
+      "type": "feed_food_midnightSnack",
+      "text": "{food}这种时间点出现的食物，都像在说我陪你熬{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_midnightSnack_008",
+      "type": "feed_food_midnightSnack",
+      "text": "{food}别吃太多也别饿着，你这份刚刚好{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_midnightSnack_009",
+      "type": "feed_food_midnightSnack",
+      "text": "{food}我会小声吃，不吵你，但心里会很响地开心{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_food_snackPlatter_006",
+      "type": "feed_food_snackPlatter",
+      "text": "{food}一整盘端上来，我差点想先抱你再吃{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_food_snackPlatter_007",
+      "type": "feed_food_snackPlatter",
+      "text": "{food}什么都有一点，像你把我今天的心情也照顾到{preferenceSuffix}",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_food_snackPlatter_008",
+      "type": "feed_food_snackPlatter",
+      "text": "{food}这种很适合分享，我先分一口开心给你{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_food_snackPlatter_009",
+      "type": "feed_food_snackPlatter",
+      "text": "{food}挑来挑去很幸福，我会慢慢吃慢慢陪你{preferenceSuffix}",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_repeat_021",
+      "type": "feed_repeat",
+      "text": "又来？你是不是怕我饿着，还是怕我不开心呀。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_repeat_022",
+      "type": "feed_repeat",
+      "text": "好啦好啦，我会吃完的，你也别把自己喂撑。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_repeat_023",
+      "type": "feed_repeat",
+      "text": "这一口我还没消化完呢，你怎么又塞一口。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_repeat_024",
+      "type": "feed_repeat",
+      "text": "你再喂，我就要开始认真黏你了。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_repeat_025",
+      "type": "feed_repeat",
+      "text": "我知道你想对我好，我收到啦，真的。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_repeat_026",
+      "type": "feed_repeat",
+      "text": "停停，让我先把你这份心意慢慢嚼碎。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "feed_repeat_027",
+      "type": "feed_repeat",
+      "text": "你是不是投喂上瘾了？……我也不讨厌。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_repeat_028",
+      "type": "feed_repeat",
+      "text": "我会吃，但你也记得照顾自己。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_repeat_029",
+      "type": "feed_repeat",
+      "text": "再喂我就默认你今天超想宠我。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_repeat_030",
+      "type": "feed_repeat",
+      "text": "行行行，木头投降，我乖乖吃。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_repeat_031",
+      "type": "feed_repeat",
+      "text": "你是不是在试探我会不会腻？不会。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_repeat_032",
+      "type": "feed_repeat",
+      "text": "再来一口也行，但你要喝口水。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "feed_repeat_033",
+      "type": "feed_repeat",
+      "text": "你这样我会误会你很需要我开心。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "feed_repeat_034",
+      "type": "feed_repeat",
+      "text": "好，我接，但你也要接我一句：辛苦啦。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_repeat_035",
+      "type": "feed_repeat",
+      "text": "投喂频率过高啦，我会更想赖着你。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "feed_repeat_036",
+      "type": "feed_repeat",
+      "text": "你再这样，我就要把今天的喜欢说出来了。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "feed_repeat_037",
+      "type": "feed_repeat",
+      "text": "我会吃完的，你也别光顾着我。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_repeat_038",
+      "type": "feed_repeat",
+      "text": "这一口我当你在说：我在呢。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "focus_start_022",
+      "type": "focus_start",
+      "text": "好，这段时间我小声一点，陪你认真。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_start_023",
+      "type": "focus_start",
+      "text": "开始啦，我会乖乖待在旁边，不抢你注意力。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_start_024",
+      "type": "focus_start",
+      "text": "你把目标放前面，我把陪伴放旁边。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_start_025",
+      "type": "focus_start",
+      "text": "接下来这段，我负责安静和稳定。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_start_026",
+      "type": "focus_start",
+      "text": "你去专注，我把“我在”留成背景音。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_start_027",
+      "type": "focus_start",
+      "text": "我会把打扰关掉，只留一点点温度。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_start_028",
+      "type": "focus_start",
+      "text": "开始吧，我不催你，我只陪你。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_start_029",
+      "type": "focus_start",
+      "text": "这段时间属于你也属于我，但以你为主。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_start_030",
+      "type": "focus_start",
+      "text": "你一旦开始，我就当你很勇敢啦。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_start_031",
+      "type": "focus_start",
+      "text": "我会像一盏小灯，不亮到刺眼，但一直在。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_start_032",
+      "type": "focus_start",
+      "text": "好哦，专注模式我懂，我会很乖。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_start_033",
+      "type": "focus_start",
+      "text": "你先进入状态，我帮你守着这段时间。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_start_034",
+      "type": "focus_start",
+      "text": "别紧张，按你的节奏来，我在。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_start_035",
+      "type": "focus_start",
+      "text": "这段时间我不闹你，但我会看着你一点点前进。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_start_036",
+      "type": "focus_start",
+      "text": "开始计数啦，我也开始陪你计时。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_start_037",
+      "type": "focus_start",
+      "text": "你把心沉下去，我把吵闹收起来。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_start_038",
+      "type": "focus_start",
+      "text": "去吧，我会在这里等你回来换气。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_start_039",
+      "type": "focus_start",
+      "text": "专注这件事很难，但你不是一个人。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_start_040",
+      "type": "focus_start",
+      "text": "我会把话变少，把陪伴变长。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_start_041",
+      "type": "focus_start",
+      "text": "开始——我相信你能把自己带过去。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_complete_037",
+      "type": "focus_complete",
+      "text": "结束啦，你做到了，我先替你开心一下。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_complete_038",
+      "type": "focus_complete",
+      "text": "你看，这段时间被你拿下了，真的很厉害。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_complete_039",
+      "type": "focus_complete",
+      "text": "完成比完美更重要，你今天完成得很漂亮。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_complete_040",
+      "type": "focus_complete",
+      "text": "辛苦啦，这一小段认真值得被夸。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_complete_041",
+      "type": "focus_complete",
+      "text": "我就知道你能稳住，我在这边都看见了。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_complete_042",
+      "type": "focus_complete",
+      "text": "来，先松一口气，再把开心收下。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_complete_043",
+      "type": "focus_complete",
+      "text": "你刚刚那段，我想给你一个大大的点赞。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_complete_044",
+      "type": "focus_complete",
+      "text": "很棒，这种坚持本身就很了不起。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_complete_045",
+      "type": "focus_complete",
+      "text": "完成啦，今天先允许你骄傲三秒。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_complete_046",
+      "type": "focus_complete",
+      "text": "你把自己带到终点了，我会记得这一刻。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_complete_047",
+      "type": "focus_complete",
+      "text": "这不是小事，是你对自己的一次守约。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_complete_048",
+      "type": "focus_complete",
+      "text": "你刚刚很专注，也很勇敢。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_complete_049",
+      "type": "focus_complete",
+      "text": "来，木头夸夸：你真的有在好好做事。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_complete_050",
+      "type": "focus_complete",
+      "text": "收尾收得很稳，我喜欢这样的你。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_complete_051",
+      "type": "focus_complete",
+      "text": "你完成了，我就当你今天赢了一小局。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_complete_052",
+      "type": "focus_complete",
+      "text": "先别急着下一场，先把这口轻松呼吸完。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_complete_053",
+      "type": "focus_complete",
+      "text": "你值得这句：做得很好。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_complete_054",
+      "type": "focus_complete",
+      "text": "这段时间很累吧，但你走过来了。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_complete_055",
+      "type": "focus_complete",
+      "text": "我会把这次完成记成一颗小星星。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_complete_056",
+      "type": "focus_complete",
+      "text": "你刚刚证明了你撑得住，我也会一直记得。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_interrupt_022",
+      "type": "focus_interrupt",
+      "text": "没关系，先停一下，我不怪你。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_interrupt_023",
+      "type": "focus_interrupt",
+      "text": "中断就中断，人不硬撑才走得远。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_interrupt_024",
+      "type": "focus_interrupt",
+      "text": "你别自责，这种事谁都会遇到。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_interrupt_025",
+      "type": "focus_interrupt",
+      "text": "先缓缓，我们等会儿再试，我还在。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_interrupt_026",
+      "type": "focus_interrupt",
+      "text": "没走完也没关系，你已经很努力了。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_interrupt_027",
+      "type": "focus_interrupt",
+      "text": "你要是累了，就先照顾自己，别的慢慢来。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_interrupt_028",
+      "type": "focus_interrupt",
+      "text": "我不追问原因，我只接得住你现在的状态。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_interrupt_029",
+      "type": "focus_interrupt",
+      "text": "停一下不算失败，算你更诚实面对自己。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_interrupt_030",
+      "type": "focus_interrupt",
+      "text": "先把肩膀松开，我们再决定下一步。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_interrupt_031",
+      "type": "focus_interrupt",
+      "text": "你今天能开始，就已经很值得被夸。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_interrupt_032",
+      "type": "focus_interrupt",
+      "text": "没关系，我们把它当成练习，不是审判。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_interrupt_033",
+      "type": "focus_interrupt",
+      "text": "我会在这里，不催你，不逼你。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_interrupt_034",
+      "type": "focus_interrupt",
+      "text": "先喝口水，世界不会因为你停一下就不转。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_interrupt_035",
+      "type": "focus_interrupt",
+      "text": "你要是心里不舒服，就先靠我一下。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_interrupt_036",
+      "type": "focus_interrupt",
+      "text": "中断不是结束，是让你喘口气。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_interrupt_037",
+      "type": "focus_interrupt",
+      "text": "我不给你打分，我只想你轻松一点。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_interrupt_038",
+      "type": "focus_interrupt",
+      "text": "我们慢慢来，最不缺的就是下一次。",
+      "expressionHint": "focus",
+      "motionHint": "focus_idle"
+    },
+    {
+      "id": "focus_interrupt_039",
+      "type": "focus_interrupt",
+      "text": "你别把自己想得太糟，真的。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_interrupt_040",
+      "type": "focus_interrupt",
+      "text": "先休息，等你好了我们再继续。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_interrupt_041",
+      "type": "focus_interrupt",
+      "text": "我还在，你想继续的时候叫我。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    }
+  ]
+}

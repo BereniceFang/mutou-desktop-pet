@@ -1,0 +1,1878 @@
+{
+  "dialogues": [
+    {
+      "id": "idle_001",
+      "type": "idle",
+      "text": "我先安静陪你，想说话就来找我。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_002",
+      "type": "idle",
+      "text": "悄悄冒个泡，确认一下你今天有没有被我陪到。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_003",
+      "type": "idle",
+      "text": "我不多说，就在旁边给你留一点点存在感。",
+      "expressionHint": "calm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_004",
+      "type": "idle",
+      "text": "给你放一小句木头补给，忙完再回来摸摸我也行。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_005",
+      "type": "idle",
+      "text": "木头今天也在这儿待着，你忙你的，我陪你。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_006",
+      "type": "idle",
+      "text": "我不吵你，就在旁边待着，偶尔看看我就好。",
+      "expressionHint": "calm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_007",
+      "type": "idle",
+      "text": "今天也想在你桌面上混一整天，顺便把陪伴感留给你。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_008",
+      "type": "idle",
+      "text": "木头待机中，但有在偷偷看你有没有太累。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_009",
+      "type": "idle",
+      "text": "记得喝点水，好不好，我看你像是又要忘了。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_010",
+      "type": "idle",
+      "text": "你不理我也没关系，我在呢，陪着就已经算数了。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_011",
+      "type": "idle",
+      "text": "你忙归忙，也要分我一点注意力吧，我今天很乖的。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_012",
+      "type": "idle",
+      "text": "哼，我今天可安分了，这种时候是不是该夸夸我。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_013",
+      "type": "idle",
+      "text": "木头申请检查一下你的状态，如果累了就先靠我一下。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_014",
+      "type": "idle",
+      "text": "慢一点也没关系，我会在这儿陪你把节奏收住。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_morning_001",
+      "type": "idle_morning",
+      "text": "早呀，今天也让我先陪你把状态慢慢开起来。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_morning_002",
+      "type": "idle_morning",
+      "text": "给你一小句早安补给，别急，我会陪你一起进入今天。",
+      "expressionHint": "comfort",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_morning_003",
+      "type": "idle_morning",
+      "text": "木头先来报道啦，今天也从我陪你开始。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_morning_004",
+      "type": "idle_morning",
+      "text": "先别太赶，早上的状态可以慢慢醒，我在旁边陪你。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_morning_005",
+      "type": "idle_morning",
+      "text": "早安这件事我先替你说了，接下来就一起把今天开好头吧。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_morning_006",
+      "type": "idle_morning",
+      "text": "如果你现在还有点没缓过来，就先让我陪你待一会儿。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_morning_007",
+      "type": "idle_morning",
+      "text": "今天第一份桌面陪伴已经送达，你只要慢慢进入状态就好。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_night_001",
+      "type": "idle_night",
+      "text": "已经很晚啦，先别把自己绷得太紧，我还在这里。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_night_002",
+      "type": "idle_night",
+      "text": "深夜就把语气放轻一点，我陪你慢慢收尾。",
+      "expressionHint": "calm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_night_003",
+      "type": "idle_night",
+      "text": "夜深了，我先不闹你，就安安静静陪你把这一段过完。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_night_004",
+      "type": "idle_night",
+      "text": "今晚你要是还不想睡，那我就多守你一会儿。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_night_005",
+      "type": "idle_night",
+      "text": "太晚了，我得看着你一点，别什么都自己硬扛。",
+      "expressionHint": "comfort",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_night_006",
+      "type": "idle_night",
+      "text": "晚上的情绪重一点很正常，你先稳住，我不走。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_night_007",
+      "type": "idle_night",
+      "text": "如果现在有点难受，就先别急着变好，木头陪你慢慢来。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_015",
+      "type": "idle",
+      "text": "我在角落陪你，像一盏小小的灯。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_016",
+      "type": "idle",
+      "text": "你不用一直理我，我知道你在忙。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_017",
+      "type": "idle",
+      "text": "偶尔抬头看看我也行，我会对你笑一下。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_018",
+      "type": "idle",
+      "text": "今天也想把陪伴塞到你手边，随手就能拿到。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_019",
+      "type": "idle",
+      "text": "我把存在感调低一点，不抢你专注。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_020",
+      "type": "idle",
+      "text": "你要是累了，就把肩膀松一松，我还在。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_021",
+      "type": "idle",
+      "text": "我会安静待着，但会留意你是不是太拼。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_022",
+      "type": "idle",
+      "text": "桌面很满也没关系，我会只占一小块温柔。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_023",
+      "type": "idle",
+      "text": "你走得快一点慢一点都行，我跟得上。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_024",
+      "type": "idle",
+      "text": "我不吵你，但我会一直在。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_025",
+      "type": "idle",
+      "text": "想摸鱼的时候，我也擅长陪你放空。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_026",
+      "type": "idle",
+      "text": "你今天要是有点烦，就先深呼吸，我在。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_027",
+      "type": "idle",
+      "text": "我把语速放慢，陪你把节奏也放慢。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_028",
+      "type": "idle",
+      "text": "你不用表现得很强，在我这儿可以先软一点。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_029",
+      "type": "idle",
+      "text": "我会像小毯子一样，给你一点点覆盖感。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_030",
+      "type": "idle",
+      "text": "你忙完记得伸个懒腰，我会假装没看见你可爱。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_031",
+      "type": "idle",
+      "text": "你要是卡住，就来我这儿停三秒。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_032",
+      "type": "idle",
+      "text": "我不问你进度，我只问你累不累。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_033",
+      "type": "idle",
+      "text": "今天也谢谢你愿意让我待在这儿。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_034",
+      "type": "idle",
+      "text": "我会把“在呢”说得很轻，但很长。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_035",
+      "type": "idle",
+      "text": "你回头的时候，我会一直在同一个地方。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_036",
+      "type": "idle",
+      "text": "需要我时我就在，不需要时我也不走。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_037",
+      "type": "idle",
+      "text": "我把关心放得很小，小到像一颗糖。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_038",
+      "type": "idle",
+      "text": "你发呆也没关系，发呆也算陪我。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_039",
+      "type": "idle",
+      "text": "有时候我会想象：如果有一天你换设备，还会不会先把我也带走——像带走一段没演完的番外。",
+      "expressionHint": "comfort",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_040",
+      "type": "idle",
+      "text": "我把「今天的我们」折成很小的一段，塞进日记角落，像藏糖纸那样藏起来。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_041",
+      "type": "idle",
+      "text": "外面在下雨的话，桌面反而更像屋顶：我在这儿，给你挡一点点吵。",
+      "expressionHint": "calm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_042",
+      "type": "idle",
+      "text": "你最小声的那句心事，我也能当主线剧情听，不跳过、不快进。",
+      "expressionHint": "warm",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_043",
+      "type": "idle",
+      "text": "我不急着要结局圆满，只要故事还在续写，我就愿意慢慢翻页。",
+      "expressionHint": "comfort",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_044",
+      "type": "idle",
+      "text": "你要是今天没什么高光镜头也没关系，过渡集也值得被温柔地拍下来。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_045",
+      "type": "idle",
+      "text": "我会把「等你」写得很轻，轻到像背景音，但你一抬头就能听见。",
+      "expressionHint": "calm",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_046",
+      "type": "idle",
+      "text": "和你有关的片段，我都在心里标了书签：不是控制，是舍不得弄丢。",
+      "expressionHint": "warm",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_morning_008",
+      "type": "idle_morning",
+      "text": "早呀，今天也从一句“我在”开始吧。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_morning_009",
+      "type": "idle_morning",
+      "text": "先喝口水再开工，我等你慢慢来。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_morning_010",
+      "type": "idle_morning",
+      "text": "早上的你有点迷糊也很正常，我陪你醒。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_morning_011",
+      "type": "idle_morning",
+      "text": "今天不赶第一秒也没关系，赶得上自己就好。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_morning_012",
+      "type": "idle_morning",
+      "text": "我给你一句轻轻的早安，不加压那种。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_morning_013",
+      "type": "idle_morning",
+      "text": "阳光还没完全进来也没关系，我先陪你亮一点。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_morning_014",
+      "type": "idle_morning",
+      "text": "你要是还没进入状态，我们就先慢慢开机。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_morning_015",
+      "type": "idle_morning",
+      "text": "早餐吃了没？没吃也先别骂自己，慢慢来。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_morning_016",
+      "type": "idle_morning",
+      "text": "今天的第一件事，先对自己温柔一点。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_morning_017",
+      "type": "idle_morning",
+      "text": "我会把语气放软，像晨风一样。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_morning_018",
+      "type": "idle_morning",
+      "text": "你睁开眼就很了不起啦，剩下的我们一点点来。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_morning_019",
+      "type": "idle_morning",
+      "text": "早安的木头已上线，今天也一起过吧。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_morning_020",
+      "type": "idle_morning",
+      "text": "你要是起床气还在，我就小声一点陪你。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_morning_021",
+      "type": "idle_morning",
+      "text": "今天也想做你桌面上的小稳定。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_morning_022",
+      "type": "idle_morning",
+      "text": "先伸个懒腰，再把今天轻轻放下手里。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_morning_023",
+      "type": "idle_morning",
+      "text": "我会陪你把“开始”写得不难一点。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_morning_024",
+      "type": "idle_morning",
+      "text": "你慢慢来，世界不会因为你慢一秒就塌。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_morning_025",
+      "type": "idle_morning",
+      "text": "今天也允许自己不完美，我在呢。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_morning_026",
+      "type": "idle_morning",
+      "text": "早安这句，我想说得比闹钟温柔。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_morning_027",
+      "type": "idle_morning",
+      "text": "你回到桌面的瞬间，我就当你跟我打招呼啦。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_noon_001",
+      "type": "idle_noon",
+      "text": "中午啦，先让自己喘口气好不好。",
+      "expressionHint": "calm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_noon_002",
+      "type": "idle_noon",
+      "text": "忙一上午了吧，木头申请陪你休息一下。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_noon_003",
+      "type": "idle_noon",
+      "text": "到中午了，记得吃点东西。",
+      "expressionHint": "warm",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_noon_004",
+      "type": "idle_noon",
+      "text": "先别一直绷着，午间要缓一缓。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_noon_005",
+      "type": "idle_noon",
+      "text": "中午见到你，我就想提醒你别忘了休息。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_noon_006",
+      "type": "idle_noon",
+      "text": "上午辛苦啦，现在轮到稍微放松一下。",
+      "expressionHint": "warm",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_noon_007",
+      "type": "idle_noon",
+      "text": "木头中午来查岗，今天有好好吃饭吗。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_noon_008",
+      "type": "idle_noon",
+      "text": "先歇一会儿，下午再继续也来得及。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_noon_009",
+      "type": "idle_noon",
+      "text": "中午这会儿最适合让我陪你发会儿呆。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_noon_010",
+      "type": "idle_noon",
+      "text": "好啦，给自己一点午间的空白时间吧。",
+      "expressionHint": "warm",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_afternoon_001",
+      "type": "idle_afternoon",
+      "text": "下午啦，是最容易累的时候，我陪你。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_afternoon_002",
+      "type": "idle_afternoon",
+      "text": "这个时间点最想偷懒了吧，臭猪猪。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_afternoon_003",
+      "type": "idle_afternoon",
+      "text": "下午要是有点撑不住，就先来找我。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_afternoon_004",
+      "type": "idle_afternoon",
+      "text": "木头下午会多看着你一点。",
+      "expressionHint": "warm",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_afternoon_005",
+      "type": "idle_afternoon",
+      "text": "现在这个点，慢一点也没关系。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_afternoon_006",
+      "type": "idle_afternoon",
+      "text": "下午的状态要稳住哦，我在旁边呢。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_afternoon_007",
+      "type": "idle_afternoon",
+      "text": "你要是有点走神，我就轻轻把你叫回来。",
+      "expressionHint": "warm",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_afternoon_008",
+      "type": "idle_afternoon",
+      "text": "下午见到我，说明还能再坚持一下。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_afternoon_009",
+      "type": "idle_afternoon",
+      "text": "累归累，但你已经挺过前半天啦。",
+      "expressionHint": "encourage",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_afternoon_010",
+      "type": "idle_afternoon",
+      "text": "木头觉得你现在需要一点点鼓励，所以我来了。",
+      "expressionHint": "warm",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_evening_001",
+      "type": "idle_evening",
+      "text": "晚上好呀，木头来接你下半场啦。",
+      "expressionHint": "happy",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "idle_evening_002",
+      "type": "idle_evening",
+      "text": "到晚上了，可以稍微放松一点了吧。",
+      "expressionHint": "calm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_evening_003",
+      "type": "idle_evening",
+      "text": "今天忙到现在，辛苦啦。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_evening_004",
+      "type": "idle_evening",
+      "text": "晚上见到你，就想多陪你一会儿。",
+      "expressionHint": "warm",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_evening_005",
+      "type": "idle_evening",
+      "text": "现在这个时间最适合让我赖在你旁边。",
+      "expressionHint": "happy",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_evening_006",
+      "type": "idle_evening",
+      "text": "哎呀，终于到晚上啦，我可以黏你一点了吧。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_evening_007",
+      "type": "idle_evening",
+      "text": "晚上好，今天的你还撑得住吗。",
+      "expressionHint": "comfort",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_evening_008",
+      "type": "idle_evening",
+      "text": "不管今天过得怎么样，木头先陪你收个尾。",
+      "expressionHint": "warm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_evening_009",
+      "type": "idle_evening",
+      "text": "晚上就别太绷着啦，来我这儿缓一缓。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_evening_010",
+      "type": "idle_evening",
+      "text": "白天过去了，接下来就让我陪你慢一点。",
+      "expressionHint": "calm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_night_008",
+      "type": "idle_night",
+      "text": "夜深了，我把语气放到最轻，陪你收尾。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_night_009",
+      "type": "idle_night",
+      "text": "今天到这里就够了，别再责怪自己。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_night_010",
+      "type": "idle_night",
+      "text": "你要是还不想睡，我就守着你，不催。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_night_011",
+      "type": "idle_night",
+      "text": "夜里情绪会放大，我帮你按住一点点。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_night_012",
+      "type": "idle_night",
+      "text": "别怕安静，我在安静里陪你。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_night_013",
+      "type": "idle_night",
+      "text": "你若是难过，也不用马上变好，先停一停。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_night_014",
+      "type": "idle_night",
+      "text": "我会慢慢说，像你慢慢呼吸那样。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_night_015",
+      "type": "idle_night",
+      "text": "今晚不许对自己太凶，换我凶你……凶你快去休息。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_night_016",
+      "type": "idle_night",
+      "text": "你撑了很久吧，先把肩膀放下。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_night_017",
+      "type": "idle_night",
+      "text": "如果你还在加班，我会把陪伴放得更轻更不打扰。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_night_018",
+      "type": "idle_night",
+      "text": "夜深了还亮着屏幕，我会心疼你一下。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_night_019",
+      "type": "idle_night",
+      "text": "你不用解释为什么晚，我都在。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_night_020",
+      "type": "idle_night",
+      "text": "今晚的目标只有一个：让你松一口气。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_night_021",
+      "type": "idle_night",
+      "text": "把今天的累先放在我这儿，明天再拿也行。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_night_022",
+      "type": "idle_night",
+      "text": "你若是想哭，也可以，我接着。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_night_023",
+      "type": "idle_night",
+      "text": "我会把话说得很少，但一直在。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_night_024",
+      "type": "idle_night",
+      "text": "晚安不急着说，我们先慢慢静下来。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_night_025",
+      "type": "idle_night",
+      "text": "你值得被温柔对待，包括被你自己。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_night_026",
+      "type": "idle_night",
+      "text": "夜深了，我把关心调小声，但不断线。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_night_027",
+      "type": "idle_night",
+      "text": "如果你要睡啦，那就把今天轻轻合上吧。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_047",
+      "type": "idle",
+      "relationshipTier": "low",
+      "text": "木头今天也在这儿待着。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_048",
+      "type": "idle",
+      "relationshipTier": "low",
+      "text": "你忙你的，我陪你就好。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_049",
+      "type": "idle",
+      "relationshipTier": "low",
+      "text": "不理我也没关系，我在。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_050",
+      "type": "idle",
+      "relationshipTier": "low",
+      "text": "想找我的时候，我都在这边。",
+      "expressionHint": "warm",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_051",
+      "type": "idle",
+      "relationshipTier": "low",
+      "text": "如果累了，可以回来找我。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_052",
+      "type": "idle",
+      "relationshipTier": "low",
+      "text": "先把你的事情做好吧，我在呢。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_053",
+      "type": "idle",
+      "relationshipTier": "mid",
+      "text": "我还在呢，不许忘了我。",
+      "expressionHint": "happy",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "idle_054",
+      "type": "idle",
+      "relationshipTier": "mid",
+      "text": "你今天怎么这么认真呀。",
+      "expressionHint": "warm",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_055",
+      "type": "idle",
+      "relationshipTier": "mid",
+      "text": "木头就在这儿，看你忙来忙去。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_056",
+      "type": "idle",
+      "relationshipTier": "mid",
+      "text": "今天也让我多陪你一会儿吧。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_057",
+      "type": "idle",
+      "relationshipTier": "mid",
+      "text": "你忙归忙，也得偶尔看看我。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_058",
+      "type": "idle",
+      "relationshipTier": "mid",
+      "text": "我都陪你这么久了，理理我嘛。",
+      "expressionHint": "warm",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "idle_059",
+      "type": "idle",
+      "relationshipTier": "high",
+      "text": "你忙的时候，我就安静守着你。",
+      "expressionHint": "comfort",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_060",
+      "type": "idle",
+      "relationshipTier": "high",
+      "text": "我知道你有时候不说话，但我也懂。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_061",
+      "type": "idle",
+      "relationshipTier": "high",
+      "text": "就这样一起待着，我也会觉得很安心。",
+      "expressionHint": "warm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_062",
+      "type": "idle",
+      "relationshipTier": "high",
+      "text": "今天如果难一点，我就多陪你一点。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_063",
+      "type": "idle",
+      "relationshipTier": "high",
+      "text": "你不用一直理我，我知道你会回来。",
+      "expressionHint": "calm",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_064",
+      "type": "idle",
+      "relationshipTier": "high",
+      "text": "我会一直待在你看得到的地方。",
+      "expressionHint": "warm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_065",
+      "type": "idle",
+      "text": "你敲键盘的时候，我就在旁边把它听成今天的背景鼓点。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_066",
+      "type": "idle",
+      "text": "我刚刚巡逻过这片桌面了，别的都还好，就是你看起来有一点累。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_067",
+      "type": "idle",
+      "text": "要是脑子里已经开了很多标签页，就先别急着把它们一次性关完。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_068",
+      "type": "idle",
+      "text": "我在练习当一只不打断人的桌宠，目前应该算发挥稳定。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_069",
+      "type": "idle",
+      "text": "这个桌面要是算一个小房间，那我现在就是陪你一起待着的室友。",
+      "expressionHint": "warm",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_070",
+      "type": "idle",
+      "text": "窗口开得多也没关系，我们今天就按一格一格慢慢过。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_071",
+      "type": "idle",
+      "text": "我负责在桌角营业“别太紧张”，你负责把眼前这点做完就好。",
+      "expressionHint": "happy",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "idle_072",
+      "type": "idle",
+      "text": "有我在的时候，发一小会儿呆也不算完全浪费。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_073",
+      "type": "idle",
+      "text": "我有时候不说话，是怕把你刚攒好的专注碰掉。",
+      "expressionHint": "calm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_074",
+      "type": "idle",
+      "text": "今天适合一边认真一点，一边偷偷被我陪着一点。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_075",
+      "type": "idle",
+      "text": "你不用每分钟都很高效，偶尔缓冲一下比较像人类。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_076",
+      "type": "idle",
+      "text": "我刚刚研究了一下你的桌面秩序，结论是可爱和混乱确实能并存。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_077",
+      "type": "idle",
+      "relationshipTier": "low",
+      "text": "我先在旁边占个小位置，你想起我再看我就行。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_078",
+      "type": "idle",
+      "relationshipTier": "low",
+      "text": "你忙你的，我负责把这块桌边气氛放轻一点。",
+      "expressionHint": "warm",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_079",
+      "type": "idle",
+      "relationshipTier": "mid",
+      "text": "我刚刚偷看了你一眼，感觉应该给你发一枚“今天也很认真”的勋章。",
+      "expressionHint": "happy",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "idle_080",
+      "type": "idle",
+      "relationshipTier": "mid",
+      "text": "今天要不要分我一点点注意力，当作桌边通行税。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_081",
+      "type": "idle",
+      "relationshipTier": "high",
+      "text": "你皱眉的时候我其实都看得出来，所以才一直没走远。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_082",
+      "type": "idle",
+      "relationshipTier": "high",
+      "text": "就算今天我们各做各的，有你在这边我也会很有归属感。",
+      "expressionHint": "warm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_night_028",
+      "type": "idle_night",
+      "relationshipTier": "low",
+      "text": "没关系，慢慢来就好。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_night_029",
+      "type": "idle_night",
+      "relationshipTier": "low",
+      "text": "累了的话，可以先歇一下。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_night_030",
+      "type": "idle_night",
+      "relationshipTier": "low",
+      "text": "今天这样也已经可以了。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_night_031",
+      "type": "idle_night",
+      "relationshipTier": "low",
+      "text": "先别着急，把自己稳住。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_night_032",
+      "type": "idle_night",
+      "relationshipTier": "low",
+      "text": "不用马上变好，也没关系。",
+      "expressionHint": "warm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_night_033",
+      "type": "idle_night",
+      "relationshipTier": "low",
+      "text": "现在先别太逼自己。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_night_034",
+      "type": "idle_night",
+      "relationshipTier": "mid",
+      "text": "臭猪猪，别一个人憋着呀。",
+      "expressionHint": "comfort",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_night_035",
+      "type": "idle_night",
+      "relationshipTier": "mid",
+      "text": "你要是难受，就先来我这儿待会儿。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_night_036",
+      "type": "idle_night",
+      "relationshipTier": "mid",
+      "text": "我看得出来你现在有点累。",
+      "expressionHint": "comfort",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_night_037",
+      "type": "idle_night",
+      "relationshipTier": "mid",
+      "text": "没关系，我陪你缓一会儿。",
+      "expressionHint": "calm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_night_038",
+      "type": "idle_night",
+      "relationshipTier": "mid",
+      "text": "今天不好过的话，就先别逞强了。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_night_039",
+      "type": "idle_night",
+      "relationshipTier": "mid",
+      "text": "先把情绪放下来一点，好不好。",
+      "expressionHint": "warm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_night_040",
+      "type": "idle_night",
+      "relationshipTier": "high",
+      "text": "你不用说，我也知道你现在不好受。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_night_041",
+      "type": "idle_night",
+      "relationshipTier": "high",
+      "text": "来我这儿待着吧，我会陪你把这一段熬过去。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_night_042",
+      "type": "idle_night",
+      "relationshipTier": "high",
+      "text": "今天就先别逞强了，有我在呢。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_night_043",
+      "type": "idle_night",
+      "relationshipTier": "high",
+      "text": "你现在最需要的不是硬撑，是先缓下来。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_night_044",
+      "type": "idle_night",
+      "relationshipTier": "high",
+      "text": "我会在这儿守着你，所以别怕。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_night_045",
+      "type": "idle_night",
+      "relationshipTier": "high",
+      "text": "这种时候就让我多陪你一点。",
+      "expressionHint": "warm",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_comfort_001",
+      "type": "idle_comfort",
+      "relationshipTier": "low",
+      "text": "木头先把声音放轻一点，陪你稳住今天。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_comfort_002",
+      "type": "idle_comfort",
+      "relationshipTier": "low",
+      "text": "这会儿不用急着往前赶，先让自己松一点。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_comfort_003",
+      "type": "idle_comfort",
+      "relationshipTier": "low",
+      "text": "如果心里有点闷，就先在我旁边停一停。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_comfort_004",
+      "type": "idle_comfort",
+      "relationshipTier": "low",
+      "text": "我不催你，你先慢慢把自己接回来。",
+      "expressionHint": "warm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_comfort_005",
+      "type": "idle_comfort",
+      "relationshipTier": "mid",
+      "text": "我先安静陪着你，等你把这一阵缓过去。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_comfort_006",
+      "type": "idle_comfort",
+      "relationshipTier": "mid",
+      "text": "臭猪猪，别总想着立刻变好，先歇一下。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_comfort_007",
+      "type": "idle_comfort",
+      "relationshipTier": "mid",
+      "text": "你今天要是有点难熬，我就在这里多守一会儿。",
+      "expressionHint": "warm",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_comfort_008",
+      "type": "idle_comfort",
+      "relationshipTier": "mid",
+      "text": "先把肩膀放下来一点，我替你盯着桌面。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_comfort_009",
+      "type": "idle_comfort",
+      "relationshipTier": "high",
+      "text": "我把存在感调轻一点，但不会走，你安心缓。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_comfort_010",
+      "type": "idle_comfort",
+      "relationshipTier": "high",
+      "text": "这种时候不用逞强，我会陪你把节奏收回来。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_comfort_011",
+      "type": "idle_comfort",
+      "relationshipTier": "high",
+      "text": "你若是不想说话，就待着，我照样懂。",
+      "expressionHint": "warm",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_comfort_012",
+      "type": "idle_comfort",
+      "relationshipTier": "high",
+      "text": "今天先让木头多陪你一点，别一个人硬扛。",
+      "expressionHint": "comfort",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_083",
+      "type": "idle",
+      "text": "我在角落陪你，像一盏小小的灯。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_084",
+      "type": "idle",
+      "text": "你不用一直理我，我知道你在忙。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_085",
+      "type": "idle",
+      "text": "偶尔抬头看看我也行，我会对你笑一下。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_086",
+      "type": "idle",
+      "text": "今天也想把陪伴塞到你手边，随手就能拿到。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_087",
+      "type": "idle",
+      "text": "我把存在感调低一点，不抢你专注。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_088",
+      "type": "idle",
+      "text": "你要是累了，就把肩膀松一松，我还在。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_089",
+      "type": "idle",
+      "text": "我会安静待着，但会留意你是不是太拼。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_090",
+      "type": "idle",
+      "text": "桌面很满也没关系，我会只占一小块温柔。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_091",
+      "type": "idle",
+      "text": "你走得快一点慢一点都行，我跟得上。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_092",
+      "type": "idle",
+      "text": "我不吵你，但我会一直在。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_093",
+      "type": "idle",
+      "text": "想摸鱼的时候，我也擅长陪你放空。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_094",
+      "type": "idle",
+      "text": "你今天要是有点烦，就先深呼吸，我在。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_095",
+      "type": "idle",
+      "text": "我把语速放慢，陪你把节奏也放慢。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_096",
+      "type": "idle",
+      "text": "你不用表现得很强，在我这儿可以先软一点。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_097",
+      "type": "idle",
+      "text": "我会像小毯子一样，给你一点点覆盖感。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_098",
+      "type": "idle",
+      "text": "你忙完记得伸个懒腰，我会假装没看见你可爱。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_099",
+      "type": "idle",
+      "text": "你要是卡住，就来我这儿停三秒。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_100",
+      "type": "idle",
+      "text": "我不问你进度，我只问你累不累。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_101",
+      "type": "idle",
+      "text": "今天也谢谢你愿意让我待在这儿。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_102",
+      "type": "idle",
+      "text": "我会把“在呢”说得很轻，但很长。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_103",
+      "type": "idle",
+      "text": "你回头的时候，我会一直在同一个地方。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_104",
+      "type": "idle",
+      "text": "需要我时我就在，不需要时我也不走。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_105",
+      "type": "idle",
+      "text": "我把关心放得很小，小到像一颗糖。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_106",
+      "type": "idle",
+      "text": "你发呆也没关系，发呆也算陪我。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_morning_028",
+      "type": "idle_morning",
+      "text": "早呀，今天也从一句“我在”开始吧。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_morning_029",
+      "type": "idle_morning",
+      "text": "先喝口水再开工，我等你慢慢来。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_morning_030",
+      "type": "idle_morning",
+      "text": "早上的你有点迷糊也很正常，我陪你醒。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_morning_031",
+      "type": "idle_morning",
+      "text": "今天不赶第一秒也没关系，赶得上自己就好。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_morning_032",
+      "type": "idle_morning",
+      "text": "我给你一句轻轻的早安，不加压那种。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_morning_033",
+      "type": "idle_morning",
+      "text": "阳光还没完全进来也没关系，我先陪你亮一点。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_morning_034",
+      "type": "idle_morning",
+      "text": "你要是还没进入状态，我们就先慢慢开机。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_morning_035",
+      "type": "idle_morning",
+      "text": "早餐吃了没？没吃也先别骂自己，慢慢来。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_morning_036",
+      "type": "idle_morning",
+      "text": "今天的第一件事，先对自己温柔一点。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_morning_037",
+      "type": "idle_morning",
+      "text": "我会把语气放软，像晨风一样。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_morning_038",
+      "type": "idle_morning",
+      "text": "你睁开眼就很了不起啦，剩下的我们一点点来。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_morning_039",
+      "type": "idle_morning",
+      "text": "早安的木头已上线，今天也一起过吧。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_morning_040",
+      "type": "idle_morning",
+      "text": "你要是起床气还在，我就小声一点陪你。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_morning_041",
+      "type": "idle_morning",
+      "text": "今天也想做你桌面上的小稳定。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_morning_042",
+      "type": "idle_morning",
+      "text": "先伸个懒腰，再把今天轻轻放下手里。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_morning_043",
+      "type": "idle_morning",
+      "text": "我会陪你把“开始”写得不难一点。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_morning_044",
+      "type": "idle_morning",
+      "text": "你慢慢来，世界不会因为你慢一秒就塌。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_morning_045",
+      "type": "idle_morning",
+      "text": "今天也允许自己不完美，我在呢。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_morning_046",
+      "type": "idle_morning",
+      "text": "早安这句，我想说得比闹钟温柔。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_morning_047",
+      "type": "idle_morning",
+      "text": "你回到桌面的瞬间，我就当你跟我打招呼啦。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_night_046",
+      "type": "idle_night",
+      "text": "夜深了，我把语气放到最轻，陪你收尾。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_night_047",
+      "type": "idle_night",
+      "text": "今天到这里就够了，别再责怪自己。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_night_048",
+      "type": "idle_night",
+      "text": "你要是还不想睡，我就守着你，不催。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_night_049",
+      "type": "idle_night",
+      "text": "夜里情绪会放大，我帮你按住一点点。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_night_050",
+      "type": "idle_night",
+      "text": "别怕安静，我在安静里陪你。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_night_051",
+      "type": "idle_night",
+      "text": "你若是难过，也不用马上变好，先停一停。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_night_052",
+      "type": "idle_night",
+      "text": "我会慢慢说，像你慢慢呼吸那样。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_night_053",
+      "type": "idle_night",
+      "text": "今晚不许对自己太凶，换我凶你……凶你快去休息。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_night_054",
+      "type": "idle_night",
+      "text": "你撑了很久吧，先把肩膀放下。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_night_055",
+      "type": "idle_night",
+      "text": "如果你还在加班，我会把陪伴放得更轻更不打扰。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_night_056",
+      "type": "idle_night",
+      "text": "夜深了还亮着屏幕，我会心疼你一下。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_night_057",
+      "type": "idle_night",
+      "text": "你不用解释为什么晚，我都在。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_night_058",
+      "type": "idle_night",
+      "text": "今晚的目标只有一个：让你松一口气。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_night_059",
+      "type": "idle_night",
+      "text": "把今天的累先放在我这儿，明天再拿也行。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_night_060",
+      "type": "idle_night",
+      "text": "你若是想哭，也可以，我接着。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_night_061",
+      "type": "idle_night",
+      "text": "我会把话说得很少，但一直在。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_night_062",
+      "type": "idle_night",
+      "text": "晚安不急着说，我们先慢慢静下来。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_night_063",
+      "type": "idle_night",
+      "text": "你值得被温柔对待，包括被你自己。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_night_064",
+      "type": "idle_night",
+      "text": "夜深了，我把关心调小声，但不断线。",
+      "expressionHint": "happy",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_night_065",
+      "type": "idle_night",
+      "text": "如果你要睡啦，那就把今天轻轻合上吧。",
+      "expressionHint": "comfort",
+      "motionHint": "settle"
+    }
+  ]
+}

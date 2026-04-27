@@ -1,0 +1,70 @@
+{
+  "badges": [
+    {
+      "id": "first_hello",
+      "name": "初次见面",
+      "description": "从今天起，木头正式住进了你的桌面。",
+      "unlockHint": "第一次点击与木头互动"
+    },
+    {
+      "id": "keeps_coming",
+      "name": "又来找我",
+      "description": "你开始越来越常来找木头了。",
+      "unlockHint": "累计互动达到 20 次"
+    },
+    {
+      "id": "week_together",
+      "name": "陪伴一周",
+      "description": "原来一起待着，已经悄悄过了一周。",
+      "unlockHint": "陪伴满 7 天"
+    },
+    {
+      "id": "night_walk",
+      "name": "深夜同行",
+      "description": "最安静的时间里，木头也陪你熬过来了。",
+      "unlockHint": "深夜时段（23:00–5:00）累计互动 5 次"
+    },
+    {
+      "id": "focus_first",
+      "name": "今天也很认真",
+      "description": "那一小段认真，木头有看见。",
+      "unlockHint": "完成 1 次专注"
+    },
+    {
+      "id": "tacit_mid",
+      "name": "越来越有默契",
+      "description": "木头开始越来越懂你，你也越来越习惯他。",
+      "unlockHint": "关系达到中好感阶段"
+    },
+    {
+      "id": "fed_with_care",
+      "name": "被你放在心上",
+      "description": "被你好好照顾的感觉，木头会记很久。",
+      "unlockHint": "累计喂食 5 次"
+    },
+    {
+      "id": "tacit_high",
+      "name": "很懂木头",
+      "description": "不是每个人都能陪木头走到这一步。",
+      "unlockHint": "关系达到高好感阶段"
+    },
+    {
+      "id": "holiday_mutou_birthday",
+      "name": "生日那天你在",
+      "description": "木头公历生日那天，你记得来桌面看他。",
+      "unlockHint": "在 8 月 18 日（木头生日）当日与木头互动"
+    },
+    {
+      "id": "holiday_new_year",
+      "name": "新年第一声你好",
+      "description": "元旦那天，你们一起翻开了新的一页。",
+      "unlockHint": "在元旦当日与木头互动"
+    },
+    {
+      "id": "holiday_festival_day",
+      "name": "节日相伴",
+      "description": "某个节日里，木头没有独自待在角落。",
+      "unlockHint": "在配置的节日当日与木头互动"
+    }
+  ]
+}
