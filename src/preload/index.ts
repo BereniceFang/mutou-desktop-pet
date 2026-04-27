@@ -7,6 +7,9 @@ export interface PetApi {
   notifyMouseLeave(): Promise<void>
   openDiaryWindow(): Promise<void>
   closeDiaryWindow(): Promise<void>
+  checkNewUnlocks(): Promise<string[]>
+  recordMoodCheckin(mood: string): Promise<void>
+  checkTierUp(): Promise<string | null>
   loadAppBootstrapData(): Promise<unknown>
   triggerStartupGreeting(): Promise<unknown>
   handlePetClick(): Promise<unknown>
@@ -43,6 +46,9 @@ const petApi: PetApi = {
   notifyMouseLeave: () => ipcRenderer.invoke('pet:mouse-leave'),
   openDiaryWindow: () => ipcRenderer.invoke('pet:open-diary-window'),
   closeDiaryWindow: () => ipcRenderer.invoke('pet:close-diary-window'),
+  checkNewUnlocks: () => ipcRenderer.invoke('pet:check-unlocks'),
+  recordMoodCheckin: (mood) => ipcRenderer.invoke('pet:mood-checkin', mood),
+  checkTierUp: () => ipcRenderer.invoke('pet:check-tier-up'),
   loadAppBootstrapData: () => ipcRenderer.invoke('pet:bootstrap'),
   triggerStartupGreeting: () => ipcRenderer.invoke('pet:startup-greeting'),
   handlePetClick: () => ipcRenderer.invoke('pet:click'),

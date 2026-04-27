@@ -22,6 +22,9 @@ dist-ssr
 **/data/diary-day-summaries.json
 *.local.json
 
+# Claude Code config
+.claude/
+
 # Build output
 release/
 

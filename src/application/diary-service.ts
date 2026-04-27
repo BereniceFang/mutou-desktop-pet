@@ -169,6 +169,9 @@ function aggregateDayEvents(
     seen.add(item.id)
     fedFoodLabels.push(item.label)
   }
+  const moodEvent = dayEvents.find((event) => event.type === 'mood_checkin')
+  const userMood = moodEvent?.payload?.userMood ?? null
+
   return {
     relationshipTier: visitTier,
     interactionCount,
@@ -176,6 +179,7 @@ function aggregateDayEvents(
     focusStartedCount: dayEvents.filter((event) => event.type === 'focus_start').length,
     focusCompletedCount: dayEvents.filter((event) => event.type === 'focus_complete').length,
     focusInterruptedCount: dayEvents.filter((event) => event.type === 'focus_interrupt').length,
+    userMood,
   }
 }
 
@@ -193,14 +197,14 @@ function buildSummary(
     return {
       dateKey, narrativeKind: 'prelude_stranger', absence: false,
       relationshipTier: 'low', interactionCount: 0, fedFoodLabels: [],
-      focusStartedCount: 0, focusCompletedCount: 0, focusInterruptedCount: 0,
+      focusStartedCount: 0, focusCompletedCount: 0, focusInterruptedCount: 0, userMood: null,
     }
   }
 
   if (dateKey === encounter) {
     const agg = dayEvents.length > 0 ? aggregateDayEvents(dayEvents, fallbackTier) : {
       relationshipTier: fallbackTier, interactionCount: 0, fedFoodLabels: [],
-      focusStartedCount: 0, focusCompletedCount: 0, focusInterruptedCount: 0,
+      focusStartedCount: 0, focusCompletedCount: 0, focusInterruptedCount: 0, userMood: null,
     }
     return { dateKey, narrativeKind: 'first_encounter', absence: false, ...agg }
   }
@@ -209,7 +213,7 @@ function buildSummary(
     return {
       dateKey, narrativeKind: 'absence', absence: true,
       relationshipTier: fallbackTier, interactionCount: 0, fedFoodLabels: [],
-      focusStartedCount: 0, focusCompletedCount: 0, focusInterruptedCount: 0,
+      focusStartedCount: 0, focusCompletedCount: 0, focusInterruptedCount: 0, userMood: null,
     }
   }
 
@@ -269,6 +273,19 @@ function pushActivityParagraphs(
   else if (summary.focusCompletedCount > 0 && summary.focusInterruptedCount > 0) paragraphs.push(pick(templates.focusMixed, seed + 41))
   else if (summary.focusCompletedCount === 0 && summary.focusInterruptedCount > 0) paragraphs.push(pick(templates.focusRegret, seed + 43))
   else if (summary.focusStartedCount > 0) paragraphs.push(pick(templates.focusMixed, seed + 47))
+
+  if (summary.userMood) {
+    const poolMap: Record<string, string[] | undefined> = {
+      great: templates.moodCheckinGreat,
+      ok: templates.moodCheckinOk,
+      tired: templates.moodCheckinTired,
+      sad: templates.moodCheckinSad,
+    }
+    const pool = poolMap[summary.userMood]
+    if (pool && pool.length > 0) {
+      paragraphs.push(pick(pool, seed + 59))
+    }
+  }
 }
 
 export function generateDiaryEntry(summary: DailyDiarySummary, templates: DiaryTemplates): DiaryEntry {

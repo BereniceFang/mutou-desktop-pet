@@ -31,7 +31,6 @@ export function registerIpcHandlers(runtimeService, getWindow) {
         const isDev = Boolean(process.env.VITE_DEV_SERVER_URL);
         if (isDev && process.env.VITE_DEV_SERVER_URL) {
             await diaryWindow.loadURL(`${process.env.VITE_DEV_SERVER_URL}?diary=1`);
-            diaryWindow.webContents.openDevTools({ mode: 'detach' });
         } else {
             await diaryWindow.loadFile(path.resolve(__dirname, '../../dist/index.html'), { query: { diary: '1' } });
         }

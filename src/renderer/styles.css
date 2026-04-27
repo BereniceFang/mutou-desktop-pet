@@ -1088,6 +1088,74 @@
   padding-top: 4px;
 }
 
+/* === Mood check-in === */
+.mood-checkin {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: rgba(18, 12, 36, 0.92);
+  border: 1px solid rgba(134, 59, 255, 0.2);
+  border-radius: 12px;
+  z-index: 40;
+  animation: bubbleFadeIn 0.3s ease-out;
+}
+
+.mood-checkin-title {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.mood-checkin-options {
+  display: flex;
+  gap: 6px;
+}
+
+.mood-checkin-options button {
+  padding: 5px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ede6ff;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.mood-checkin-options button:hover {
+  background: rgba(134, 59, 255, 0.25);
+  border-color: rgba(134, 59, 255, 0.4);
+}
+
+/* === Unlock toast === */
+.unlock-toast {
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 14px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(134, 59, 255, 0.5), rgba(255, 180, 100, 0.4));
+  border: 1px solid rgba(255, 200, 130, 0.3);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+  z-index: 50;
+  animation: toastIn 0.3s ease-out;
+  pointer-events: none;
+}
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(-8px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
 /* === Debug panel (dev only) === */
 .action-btn-debug {
   color: rgba(120, 220, 180, 0.85);

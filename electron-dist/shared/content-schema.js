@@ -55,6 +55,8 @@ const dialogueTypes = [
     'interaction_personal_milestone',
     'idle_hunger_hint',
     'interaction_hunger_hint',
+    'interaction_tier_up_mid',
+    'interaction_tier_up_high',
 ];
 /** 供调试面板等列出全部台词类型（与 DialogueType 对齐） */
 export const ALL_DIALOGUE_TYPES = dialogueTypes;

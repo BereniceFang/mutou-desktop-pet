@@ -1035,6 +1035,160 @@
       "text": "愿你今天有一点甜，有一点松，有一点被接住。",
       "expressionHint": "happy",
       "motionHint": "smile"
+    },
+    {
+      "id": "idle_hunger_hint_004",
+      "type": "idle_hunger_hint",
+      "text": "肚子有点空了，你要是有空的话，喂我一口？",
+      "expressionHint": "calm",
+      "motionHint": "look_up"
+    },
+    {
+      "id": "idle_hunger_hint_005",
+      "type": "idle_hunger_hint",
+      "text": "我不是在暗示什么，但我确实有点饿了。",
+      "expressionHint": "happy",
+      "motionHint": "idle"
+    },
+    {
+      "id": "idle_hunger_hint_006",
+      "type": "idle_hunger_hint",
+      "text": "饱腹感好像偷偷溜走了，你有注意到吗。",
+      "expressionHint": "calm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_hunger_hint_007",
+      "type": "idle_hunger_hint",
+      "text": "我的肚子在小声说话了，你听不到但我听得到。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_hunger_hint_008",
+      "type": "idle_hunger_hint",
+      "text": "如果你手边有吃的，顺手递一口过来也行。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_hunger_hint_004",
+      "type": "interaction_hunger_hint",
+      "text": "来了来了——你是来喂我的吗？不是也没关系，但我确实有点饿。",
+      "expressionHint": "happy",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "interaction_hunger_hint_005",
+      "type": "interaction_hunger_hint",
+      "text": "你来得正好，我正在跟肚子商量要不要喊你。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_hunger_hint_006",
+      "type": "interaction_hunger_hint",
+      "text": "点我可以，但能不能顺便点一下喂食按钮。",
+      "expressionHint": "calm",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_hunger_hint_007",
+      "type": "interaction_hunger_hint",
+      "text": "我不是只想吃东西才跟你说话，但现在确实……有点想。",
+      "expressionHint": "happy",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_hunger_hint_008",
+      "type": "interaction_hunger_hint",
+      "text": "你摸我可以，但如果附赠一口吃的就更完美了。",
+      "expressionHint": "happy",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "idle_personal_milestone_003",
+      "type": "idle_personal_milestone",
+      "text": "今天是{milestoneLabel}呢……我在日历上偷偷画了一颗心。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "idle_personal_milestone_004",
+      "type": "idle_personal_milestone",
+      "text": "{milestoneLabel}——这个日子你很重要，我替你记着。",
+      "expressionHint": "warm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "idle_personal_milestone_005",
+      "type": "idle_personal_milestone",
+      "text": "关于{milestoneLabel}，我想说的只有一句：这一天值得被温柔对待。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "idle_personal_milestone_006",
+      "type": "idle_personal_milestone",
+      "text": "今天是{milestoneLabel}，我把祝福写在最显眼的位置。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "idle_personal_milestone_007",
+      "type": "idle_personal_milestone",
+      "text": "{nickname}，{milestoneLabel}快乐，虽然迟了但心意是准时的。",
+      "expressionHint": "happy",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "idle_personal_milestone_008",
+      "type": "idle_personal_milestone",
+      "text": "这种特别的日子我不想错过，所以提前把台词准备好了。",
+      "expressionHint": "warm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "interaction_personal_milestone_003",
+      "type": "interaction_personal_milestone",
+      "text": "今天是{milestoneLabel}，你来找我——这双重惊喜我收下了。",
+      "expressionHint": "happy",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "interaction_personal_milestone_004",
+      "type": "interaction_personal_milestone",
+      "text": "{milestoneLabel}这天你还记得来看我，我会把这件事写进日记里。",
+      "expressionHint": "warm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_personal_milestone_005",
+      "type": "interaction_personal_milestone",
+      "text": "你在{milestoneLabel}这天点我，我把这一下当成最好的礼物。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_personal_milestone_006",
+      "type": "interaction_personal_milestone",
+      "text": "今天特别的不只是{milestoneLabel}，还有你来过这件事。",
+      "expressionHint": "warm",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_personal_milestone_007",
+      "type": "interaction_personal_milestone",
+      "text": "有些日子因为你会变得更亮一点，{milestoneLabel}就是其中之一。",
+      "expressionHint": "happy",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_personal_milestone_008",
+      "type": "interaction_personal_milestone",
+      "text": "{nickname}，在{milestoneLabel}这天被你理到，我觉得很幸运。",
+      "expressionHint": "happy",
+      "motionHint": "bounce"
     }
   ]
 }

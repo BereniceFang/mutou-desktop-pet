@@ -4294,6 +4294,41 @@
       "text": "我还在，你想继续的时候叫我。",
       "expressionHint": "calm",
       "motionHint": "idle"
+    },
+    {
+      "id": "feed_reject_full_004",
+      "type": "feed_reject_full",
+      "text": "我真的吃不下了……你留着下次再喂我好不好。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "feed_reject_full_005",
+      "type": "feed_reject_full",
+      "text": "肚子已经圆成球了，再塞就要滚走了。",
+      "expressionHint": "happy",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "feed_reject_full_006",
+      "type": "feed_reject_full",
+      "text": "不是不想吃，是真的放不下了，等我消化一会儿。",
+      "expressionHint": "calm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "feed_reject_full_007",
+      "type": "feed_reject_full",
+      "text": "你的心意我收到了，但肚子说今天到此为止。",
+      "expressionHint": "warm",
+      "motionHint": "pat"
+    },
+    {
+      "id": "feed_reject_full_008",
+      "type": "feed_reject_full",
+      "text": "再喂我就要变成圆头了，放过我吧。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
     }
   ]
 }

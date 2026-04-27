@@ -160,6 +160,8 @@ export class RuntimeService {
   dialogueSequence: number = 0
   recentClickAt: number[] = []
   recentFeedAt: number[] = []
+  notifiedUnlocks: Set<string> = new Set()
+  pendingTierUpType: string | null = null
 
   contentRoot: string
   dataRoot: string
@@ -180,8 +182,28 @@ export class RuntimeService {
     this.dialogueSequence = this.state.stats.interactionCount
     this.applySatietyDecayToState(new Date())
     this.applyDailyProgress()
+    this.lastKnownTier = this.state.relationshipTier
     await this.persist()
     await runDiarySessionHooks(this.dataRoot, this.contentRoot, this.state.relationshipTier)
+    await this.initCollectionNotifications()
+  }
+
+  private async initCollectionNotifications(): Promise<void> {
+    try {
+      const [badgesBundle, cardsBundle] = await Promise.all([
+        loadCollectionBadges(this.contentRoot),
+        loadStoryCards(this.contentRoot),
+      ])
+      this.collectionDefs = { badges: badgesBundle.badges, cards: cardsBundle.cards }
+      for (const b of this.collectionDefs.badges) {
+        if (isBadgeUnlocked(b.id, this.state)) this.notifiedUnlocks.add(b.id)
+      }
+      for (const c of this.collectionDefs.cards) {
+        if (isStoryCardUnlocked(c.id, this.state)) this.notifiedUnlocks.add(c.id)
+      }
+    } catch {
+      // collection files may not exist yet
+    }
   }
 
   async loadBootstrapData(): Promise<{
@@ -1102,8 +1124,55 @@ export class RuntimeService {
     }
   }
 
+  detectTierUp(previousTier: string): void {
+    const currentTier = this.state.relationshipTier
+    if (previousTier === currentTier) return
+    if (previousTier === 'low' && currentTier === 'mid') {
+      this.pendingTierUpType = 'interaction_tier_up_mid'
+    } else if (previousTier === 'mid' && currentTier === 'high') {
+      this.pendingTierUpType = 'interaction_tier_up_high'
+    }
+  }
+
+  consumeTierUpBubble(): string | null {
+    if (!this.pendingTierUpType) return null
+    try {
+      const line = this.decorateSpeechLine(this.pickLineWithFallback(this.pendingTierUpType, 'interaction'))
+      this.pendingTierUpType = null
+      return line.text
+    } catch {
+      this.pendingTierUpType = null
+      return null
+    }
+  }
+
+  checkNewUnlocks(): string[] {
+    if (!this.collectionDefs) return []
+    const newlyUnlocked: string[] = []
+    for (const badge of this.collectionDefs.badges) {
+      if (!this.notifiedUnlocks.has(badge.id) && isBadgeUnlocked(badge.id, this.state)) {
+        this.notifiedUnlocks.add(badge.id)
+        newlyUnlocked.push(`🏅 解锁徽章「${badge.name}」`)
+      }
+    }
+    for (const card of this.collectionDefs.cards) {
+      if (!this.notifiedUnlocks.has(card.id) && isStoryCardUnlocked(card.id, this.state)) {
+        this.notifiedUnlocks.add(card.id)
+        newlyUnlocked.push(`📖 解锁故事「${card.title}」`)
+      }
+    }
+    return newlyUnlocked
+  }
+
   async getSettings(): Promise<Settings> {
     return this.state.settings
+  }
+
+  async recordMoodCheckin(mood: string): Promise<void> {
+    await appendDiaryEvent(this.dataRoot, {
+      type: 'mood_checkin',
+      payload: { userMood: mood },
+    })
   }
 
   async updateSettings(input: Partial<Settings>): Promise<Settings> {
@@ -1730,7 +1799,12 @@ export class RuntimeService {
     return Math.max(1, Math.round(elapsedMs / 60000))
   }
 
+  private lastKnownTier: string = 'low'
+
   async persist(): Promise<void> {
+    const prevTier = this.lastKnownTier
+    this.lastKnownTier = this.state.relationshipTier
+    this.detectTierUp(prevTier)
     const run = this.persistQueue.catch(() => undefined).then(async () => {
       await saveAppState(this.dataRoot, this.state)
     })
@@ -1740,22 +1814,25 @@ export class RuntimeService {
 
   applyDailyProgress(): void {
     const today = localDateKeyFromDate(new Date())
-    const lastInteractionDay = this.state.lastInteractionAt
-      ? localDateKeyFromDate(new Date(this.state.lastInteractionAt))
-      : null
+    const lastVisit = this.state.stats.lastVisitDateKey
+    const yesterday = localDateKeyFromDate(new Date(Date.now() - 86400000))
 
-    if (lastInteractionDay === today) {
+    if (lastVisit === today) {
       return
     }
+
+    const isConsecutive = lastVisit === yesterday
+    const newStreak = isConsecutive ? (this.state.stats.visitStreak ?? 0) + 1 : 1
+    const streakBonus = newStreak >= 7 ? 2 : newStreak >= 3 ? 1 : 0
 
     this.state = {
       ...this.state,
       stats: {
         ...this.state.stats,
-        companionDays: Math.max(
-          1,
-          this.state.stats.companionDays + (lastInteractionDay ? 1 : 0),
-        ),
+        companionDays: Math.max(1, this.state.stats.companionDays + 1),
+        visitStreak: newStreak,
+        lastVisitDateKey: today,
+        favorability: this.state.stats.favorability + streakBonus,
       },
     }
   }
@@ -1834,6 +1911,8 @@ function createDefaultState(): AppState {
       satietyClockAt: null,
       lastBranchPlotAtInteraction: -1000,
       branchPlotRotation: 0,
+      visitStreak: 0,
+      lastVisitDateKey: null,
     },
   }
 }

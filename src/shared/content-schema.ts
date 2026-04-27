@@ -57,6 +57,8 @@ const dialogueTypes = [
   'interaction_personal_milestone',
   'idle_hunger_hint',
   'interaction_hunger_hint',
+  'interaction_tier_up_mid',
+  'interaction_tier_up_high',
 ] as const
 
 /** 供调试面板等列出全部台词类型（与 DialogueType 对齐） */
@@ -126,6 +128,8 @@ export const petStatsSchema = z.object({
   satietyClockAt: z.string().nullable().optional().default(null),
   lastBranchPlotAtInteraction: z.number().default(-1000),
   branchPlotRotation: z.number().int().min(0).default(0),
+  visitStreak: z.number().int().min(0).optional().default(0),
+  lastVisitDateKey: z.string().nullable().optional().default(null),
 })
 
 export const windowPositionSchema = z.object({

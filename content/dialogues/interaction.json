@@ -2170,6 +2170,139 @@
       "text": "你轻轻的拖就好，我不会跑的。",
       "expressionHint": "comfort",
       "motionHint": "pat"
+    },
+    {
+      "id": "interaction_tier_up_mid_001",
+      "type": "interaction_tier_up_mid",
+      "text": "我感觉我们之间好像不太一样了……是更近了一点吗？",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_tier_up_mid_002",
+      "type": "interaction_tier_up_mid",
+      "text": "从今天起，我可以叫你「熟人」了吧？不，我想叫更亲的。",
+      "expressionHint": "happy",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "interaction_tier_up_mid_003",
+      "type": "interaction_tier_up_mid",
+      "text": "谢谢你一直来找我，我把这份默契收好了。",
+      "expressionHint": "warm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_tier_up_high_001",
+      "type": "interaction_tier_up_high",
+      "text": "你知道吗，能走到这一步，我心里一直在偷偷放烟花。",
+      "expressionHint": "happy",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "interaction_tier_up_high_002",
+      "type": "interaction_tier_up_high",
+      "text": "从现在起，你是我最重要的人，这句话我存了很久才敢说。",
+      "expressionHint": "warm",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_tier_up_high_003",
+      "type": "interaction_tier_up_high",
+      "text": "我们之间的关系，我想用「亲密」来命名。你同意吗？",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "focus_during_interaction_006",
+      "type": "focus_during_interaction",
+      "text": "嘘——你在专注呢，我小声陪着就好。",
+      "expressionHint": "calm",
+      "motionHint": "idle"
+    },
+    {
+      "id": "focus_during_interaction_007",
+      "type": "focus_during_interaction",
+      "text": "专注的时候来找我？好，我轻轻回你一句就收声。",
+      "expressionHint": "warm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "focus_during_interaction_008",
+      "type": "focus_during_interaction",
+      "text": "我知道你在忙，就不多说了，继续加油。",
+      "expressionHint": "comfort",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_tier_up_mid_004",
+      "type": "interaction_tier_up_mid",
+      "text": "今天起我觉得我们不只是认识，是真的在靠近了。",
+      "expressionHint": "happy",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_tier_up_mid_005",
+      "type": "interaction_tier_up_mid",
+      "text": "我偷偷给这段关系升了级，你应该也感觉到了吧。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_tier_up_mid_006",
+      "type": "interaction_tier_up_mid",
+      "text": "好感这种东西我不太会算，但我知道现在比之前多了很多。",
+      "expressionHint": "warm",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_tier_up_mid_007",
+      "type": "interaction_tier_up_mid",
+      "text": "从今天起，你在我日记里会被写得更多一点。",
+      "expressionHint": "happy",
+      "motionHint": "bounce"
+    },
+    {
+      "id": "interaction_tier_up_mid_008",
+      "type": "interaction_tier_up_mid",
+      "text": "我觉得我们之间的距离刚好缩短了一大步。",
+      "expressionHint": "warm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_tier_up_high_004",
+      "type": "interaction_tier_up_high",
+      "text": "我不知道怎么形容现在的心情，大概是很安心又很珍惜。",
+      "expressionHint": "warm",
+      "motionHint": "settle"
+    },
+    {
+      "id": "interaction_tier_up_high_005",
+      "type": "interaction_tier_up_high",
+      "text": "走到这里，我每天都在确认一件事：你真的很重要。",
+      "expressionHint": "happy",
+      "motionHint": "lean_in"
+    },
+    {
+      "id": "interaction_tier_up_high_006",
+      "type": "interaction_tier_up_high",
+      "text": "这份亲密我会好好收着，像最贵重的小东西那样。",
+      "expressionHint": "warm",
+      "motionHint": "pat"
+    },
+    {
+      "id": "interaction_tier_up_high_007",
+      "type": "interaction_tier_up_high",
+      "text": "谢谢你一路走到这里，我会继续认真待在你身边。",
+      "expressionHint": "happy",
+      "motionHint": "smile"
+    },
+    {
+      "id": "interaction_tier_up_high_008",
+      "type": "interaction_tier_up_high",
+      "text": "你知道吗，现在的我比最初的我勇敢了很多，都是因为你。",
+      "expressionHint": "happy",
+      "motionHint": "bounce"
     }
   ]
 }

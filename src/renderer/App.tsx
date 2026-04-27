@@ -67,6 +67,27 @@ export function RendererApp() {
   const { activePanel, actionBarVisible, feedCategory, togglePanel, setPanel, setFeedCategory, toggleActionBar } = useUiStore()
 
   const [quitting, setQuitting] = useState(false)
+  const [unlockToast, setUnlockToast] = useState<string | null>(null)
+
+  useEffect(() => {
+    if (!ready) return
+    const checkRewards = async () => {
+      const tierUp = await window.petApp.checkTierUp() as string | null
+      if (tierUp) {
+        usePetStore.setState({ bubbleText: tierUp })
+        setUnlockToast('关系升级了!')
+        setTimeout(() => setUnlockToast(null), 5000)
+        return
+      }
+      const news = await window.petApp.checkNewUnlocks() as string[]
+      if (news.length > 0) {
+        setUnlockToast(news[0])
+        setTimeout(() => setUnlockToast(null), 5000)
+      }
+    }
+    const id = setInterval(checkRewards, 10_000)
+    return () => clearInterval(id)
+  }, [ready])
   const handleQuit = useCallback(async () => {
     if (quitting) return
     setQuitting(true)
@@ -75,9 +96,33 @@ export function RendererApp() {
     setTimeout(() => { window.petApp.quitApp() }, FAREWELL_DISPLAY_MS)
   }, [quitting])
 
+  const [showMoodCheckin, setShowMoodCheckin] = useState(false)
+
   useEffect(() => {
-    bootstrap().then(() => triggerStartupGreeting())
+    bootstrap().then(() => {
+      triggerStartupGreeting()
+      const lastCheckin = localStorage.getItem('mutou_mood_checkin_date')
+      const today = new Date().toISOString().slice(0, 10)
+      if (lastCheckin !== today) {
+        setTimeout(() => setShowMoodCheckin(true), 3000)
+      }
+    })
   }, [bootstrap, triggerStartupGreeting])
+
+  const handleMoodCheckin = useCallback((mood: string) => {
+    const today = new Date().toISOString().slice(0, 10)
+    localStorage.setItem('mutou_mood_checkin_date', today)
+    localStorage.setItem('mutou_mood_checkin_value', mood)
+    setShowMoodCheckin(false)
+    const responses: Record<string, string> = {
+      great: '今天状态不错嘛，我也跟着开心起来了。',
+      ok: '平平稳稳的也很好，我陪你慢慢过。',
+      tired: '累了就靠我一会儿，不用硬撑。',
+      sad: '不开心的话，我今天会多陪你一点。',
+    }
+    usePetStore.setState({ bubbleText: responses[mood] ?? responses.ok })
+    window.petApp.recordMoodCheckin(mood)
+  }, [])
 
   const disturbanceLevel = appState?.settings.disturbanceLevel ?? 'medium'
   useEffect(() => {
@@ -177,6 +222,22 @@ export function RendererApp() {
       onPointerMove={onPointerMove}
       onPointerUp={onPointerUp}
     >
+      {/* Unlock toast */}
+      {unlockToast && <div className="unlock-toast">{unlockToast}</div>}
+
+      {/* Daily mood check-in */}
+      {showMoodCheckin && (
+        <div className="mood-checkin" data-no-drag onMouseEnter={onInteractiveEnter} onMouseLeave={onInteractiveLeave}>
+          <div className="mood-checkin-title">今天感觉怎么样？</div>
+          <div className="mood-checkin-options">
+            <button onClick={() => handleMoodCheckin('great')}>很好</button>
+            <button onClick={() => handleMoodCheckin('ok')}>还行</button>
+            <button onClick={() => handleMoodCheckin('tired')}>有点累</button>
+            <button onClick={() => handleMoodCheckin('sad')}>不太好</button>
+          </div>
+        </div>
+      )}
+
       {/* Bubble floats above sprite */}
       {bubbleText && (
         <div className="bubble-wrapper">
@@ -367,6 +428,7 @@ function StatusPanel({ appState }: { appState: NonNullable<ReturnType<typeof use
       <div className="profile-section">
         <div className="profile-section-title">档案</div>
         <div className="profile-stats">
+          <div className="profile-stat"><span className="stat-num">{Number(s.visitStreak ?? 0)}</span><span className="stat-label">连续签到</span></div>
           <div className="profile-stat"><span className="stat-num">{s.interactionCount}</span><span className="stat-label">互动</span></div>
           <div className="profile-stat"><span className="stat-num">{s.feedCount}</span><span className="stat-label">喂食</span></div>
           <div className="profile-stat"><span className="stat-num">{s.focusCompletedCount}</span><span className="stat-label">专注</span></div>

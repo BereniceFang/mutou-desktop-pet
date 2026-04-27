@@ -102,6 +102,18 @@ export function registerIpcHandlers(
     currentWindowDisplayMode = mode
   })
 
+  ipcMain.handle('pet:check-unlocks', async () => {
+    return runtimeService.checkNewUnlocks()
+  })
+
+  ipcMain.handle('pet:mood-checkin', async (_event, mood: string) => {
+    return runtimeService.recordMoodCheckin(mood)
+  })
+
+  ipcMain.handle('pet:check-tier-up', async () => {
+    return runtimeService.consumeTierUpBubble()
+  })
+
   ipcMain.handle('pet:click', async () => {
     console.log('[pet-debug:ipc-click] received')
     const result = await runtimeService.handlePetClick()
