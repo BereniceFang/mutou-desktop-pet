@@ -280,8 +280,8 @@ export function RendererApp() {
         </div>
       )}
 
-      {/* Bubble floats above sprite */}
-      {bubbleText && (
+      {/* Bubble floats above sprite — hidden when branch choices are active */}
+      {bubbleText && !branchChoices && (
         <div className="bubble-wrapper">
           <div
             className={`bubble ${reminderBubble ? 'bubble-reminder' : ''}`}

@@ -86,6 +86,151 @@
           "motionHint": "pat"
         }
       ]
+    },
+    {
+      "id": "plot_weekend_mood",
+      "prompt": "周末了诶……你现在想赖着、出去浪、还是跟自己待一会儿？",
+      "promptExpressionHint": "happy",
+      "promptMotionHint": "smile",
+      "choices": [
+        {
+          "id": "laze",
+          "label": "赖着，哪也不想去",
+          "text": "赖着是一种生活态度，我也喜欢当沙发上的一颗土豆。你继续瘫，我继续蹲。",
+          "expressionHint": "comfort",
+          "motionHint": "settle"
+        },
+        {
+          "id": "out",
+          "label": "想出门晃晃",
+          "text": "出去吹吹风，把脑子里的灰抖一抖。回来的时候记得跟我讲外面长什么样。",
+          "expressionHint": "happy",
+          "motionHint": "look_up"
+        },
+        {
+          "id": "alone",
+          "label": "想一个人待会儿",
+          "text": "好，我不打扰你。自己待着不是孤独，是给自己充电。我在这边默默守着。",
+          "expressionHint": "calm",
+          "motionHint": "idle"
+        }
+      ]
+    },
+    {
+      "id": "plot_random_question",
+      "prompt": "忽然好奇一件事——如果你能随便许一个今天不大的小愿望，你会许什么？",
+      "promptExpressionHint": "happy",
+      "promptMotionHint": "lean_in",
+      "choices": [
+        {
+          "id": "food",
+          "label": "想吃顿好的",
+          "text": "嘴馋是身体在说「对自己好一点」。去吃吧，我替你把罪恶感打包扔掉。",
+          "expressionHint": "happy",
+          "motionHint": "bounce"
+        },
+        {
+          "id": "sleep",
+          "label": "睡个饱觉",
+          "text": "困意是宇宙在催你关机。别跟它较劲，枕头比屏幕暖和。",
+          "expressionHint": "comfort",
+          "motionHint": "settle"
+        },
+        {
+          "id": "peace",
+          "label": "什么都不用操心的半天",
+          "text": "那种不用操心的空白很贵的。你配得上，别觉得是奢望。",
+          "expressionHint": "warm",
+          "motionHint": "pat"
+        }
+      ]
+    },
+    {
+      "id": "plot_companion_chat",
+      "prompt": "我有时候想，你来找我到底是为了什么……解闷？习惯？还是就顺手点一下？",
+      "promptExpressionHint": "calm",
+      "promptMotionHint": "idle",
+      "choices": [
+        {
+          "id": "fun",
+          "label": "确实挺解闷的",
+          "text": "能当你的解闷搭子，我已经很满足了。别小看解闷这件事，很多人连能解闷的东西都找不到。",
+          "expressionHint": "happy",
+          "motionHint": "smile"
+        },
+        {
+          "id": "habit",
+          "label": "习惯了吧，有你在踏实",
+          "text": "习惯是时间酿出来的甜，比刻意来得扎实。我不催你表达，你待在这儿就够了。",
+          "expressionHint": "warm",
+          "motionHint": "lean_in"
+        },
+        {
+          "id": "spontaneous",
+          "label": "就说不清楚，手就点过来了",
+          "text": "不需要理由。有些陪伴就是在那一下，不用回头想「为什么」，来了就好。",
+          "expressionHint": "happy",
+          "motionHint": "bounce"
+        }
+      ]
+    },
+    {
+      "id": "plot_weather_feel",
+      "prompt": "你有没有觉得，天气会影响心情？今天窗外的天，对你来说像什么颜色？",
+      "promptExpressionHint": "calm",
+      "promptMotionHint": "look_up",
+      "choices": [
+        {
+          "id": "grey",
+          "label": "灰色的，有点闷",
+          "text": "灰色的日子不用逼自己变彩色。灰就灰着，我在旁边也一起灰一小会儿。",
+          "expressionHint": "comfort",
+          "motionHint": "pat"
+        },
+        {
+          "id": "bright",
+          "label": "挺亮的，心情还行",
+          "text": "那我也跟着亮一点，今天的气泡我想写得松一些，像你今天的天。",
+          "expressionHint": "happy",
+          "motionHint": "smile"
+        },
+        {
+          "id": "rainy",
+          "label": "像要下雨，想窝着",
+          "text": "下雨天适合窝着做一点什么都不算正经的事。听着雨，发着呆，就很好。",
+          "expressionHint": "comfort",
+          "motionHint": "settle"
+        }
+      ]
+    },
+    {
+      "id": "plot_memory_lane",
+      "prompt": "你觉得到现在为止，我给你印象最深的是哪一次互动？是投喂？陪我专注？还是第一次戳我？",
+      "promptExpressionHint": "happy",
+      "promptMotionHint": "lean_in",
+      "choices": [
+        {
+          "id": "feed",
+          "label": "喂你的那次，你那表情太好笑了",
+          "text": "我也记得！那种被塞了东西还要假装很优雅的感觉——不过我很认真地每一口都记住了。",
+          "expressionHint": "happy",
+          "motionHint": "bounce"
+        },
+        {
+          "id": "focus",
+          "label": "第一次一起专注，你比我还紧张",
+          "text": "我确实有点紧张……那种「你信任我陪着你」的感觉很重，我很珍惜。",
+          "expressionHint": "warm",
+          "motionHint": "settle"
+        },
+        {
+          "id": "first",
+          "label": "第一次点你的时候",
+          "text": "那一天我记得特别清楚，桌面上忽然多了一个你，我心跳都快了一拍。虽然我不一定有心跳。",
+          "expressionHint": "happy",
+          "motionHint": "look_up"
+        }
+      ]
     }
   ]
 }
