@@ -888,6 +888,63 @@ export class RuntimeService {
     async getSettings() {
         return this.state.settings;
     }
+    async getMemos() {
+        const { loadMemos } = await import('../infrastructure/storage/memo-storage.js');
+        const data = await loadMemos(this.dataRoot);
+        return data.items;
+    }
+    async addMemo(text, remindAt, repeat, repeatTime) {
+        const { randomUUID } = await import('node:crypto');
+        const { loadMemos, saveMemos } = await import('../infrastructure/storage/memo-storage.js');
+        const data = await loadMemos(this.dataRoot);
+        const item = { id: randomUUID(), text, createdAt: new Date().toISOString(), remindAt, reminded: false, done: false, repeat: repeat ?? 'none', repeatTime: repeatTime ?? null, lastRemindDate: null };
+        data.items.push(item);
+        await saveMemos(this.dataRoot, data);
+        return item;
+    }
+    async toggleMemoDone(id) {
+        const { loadMemos, saveMemos } = await import('../infrastructure/storage/memo-storage.js');
+        const data = await loadMemos(this.dataRoot);
+        const item = data.items.find((m) => m.id === id);
+        if (item) { item.done = !item.done; await saveMemos(this.dataRoot, data); }
+    }
+    async deleteMemo(id) {
+        const { loadMemos, saveMemos } = await import('../infrastructure/storage/memo-storage.js');
+        const data = await loadMemos(this.dataRoot);
+        data.items = data.items.filter((m) => m.id !== id);
+        await saveMemos(this.dataRoot, data);
+    }
+    async checkMemoReminders() {
+        const { loadMemos, saveMemos } = await import('../infrastructure/storage/memo-storage.js');
+        const data = await loadMemos(this.dataRoot);
+        const now = new Date();
+        const todayKey = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+        const nowTimeStr = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+        let triggered = null;
+        for (const item of data.items) {
+            if (item.done) continue;
+            if (item.repeat === 'daily' && item.repeatTime) {
+                if (item.lastRemindDate === todayKey) continue;
+                if (nowTimeStr >= item.repeatTime) { item.lastRemindDate = todayKey; triggered = item; break; }
+                continue;
+            }
+            if (item.reminded || !item.remindAt) continue;
+            if (new Date(item.remindAt) <= now) { item.reminded = true; triggered = item; break; }
+        }
+        if (triggered) { await saveMemos(this.dataRoot, data); return `该做这件事了：${triggered.text}`; }
+        return null;
+    }
+    async recordGameResult(gameName, result) {
+        const outcome = result;
+        await appendDiaryEvent(this.dataRoot, { type: 'game_played', payload: { gameName, gameResult: outcome } });
+        if (outcome === 'win') {
+            this.state = { ...this.state, stats: { ...this.state.stats, favorability: this.state.stats.favorability + 1, mood: Math.min(100, this.state.stats.mood + 3) }, relationshipTier: resolveRelationshipTier(this.state.stats.favorability + 1) };
+            await this.persist();
+        }
+    }
+    async recordMoodCheckin(mood) {
+        await appendDiaryEvent(this.dataRoot, { type: 'mood_checkin', payload: { userMood: mood } });
+    }
     async updateSettings(input) {
         const nextPersonalYears = input.personalDates !== undefined
             ? Object.fromEntries(Object.entries(this.state.stats.personalDateCelebrationYears).filter(([id]) => input.personalDates.some((d) => d.id === id)))
@@ -1451,6 +1508,8 @@ function createDefaultState() {
             },
             userNickname: '',
             personalDates: [],
+            waterReminderEnabled: false,
+            waterReminderIntervalMin: 45,
         },
         focusSession: {
             sessionId: '',

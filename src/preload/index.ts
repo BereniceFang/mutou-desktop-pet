@@ -14,7 +14,7 @@ export interface PetApi {
   getMilestones(): Promise<{ key: string; label: string; date: string }[]>
   checkNewUnlocks(): Promise<string[]>
   getMemos(): Promise<unknown[]>
-  addMemo(text: string, remindAt: string | null): Promise<unknown>
+  addMemo(text: string, remindAt: string | null, repeat?: string, repeatTime?: string): Promise<unknown>
   toggleMemoDone(id: string): Promise<void>
   deleteMemo(id: string): Promise<void>
   checkMemoReminders(): Promise<string | null>
@@ -64,7 +64,7 @@ const petApi: PetApi = {
   getMilestones: () => ipcRenderer.invoke('pet:milestones'),
   checkNewUnlocks: () => ipcRenderer.invoke('pet:check-unlocks'),
   getMemos: () => ipcRenderer.invoke('pet:memo-list'),
-  addMemo: (text, remindAt) => ipcRenderer.invoke('pet:memo-add', text, remindAt),
+  addMemo: (text, remindAt, repeat, repeatTime) => ipcRenderer.invoke('pet:memo-add', text, remindAt, repeat, repeatTime),
   toggleMemoDone: (id) => ipcRenderer.invoke('pet:memo-toggle', id),
   deleteMemo: (id) => ipcRenderer.invoke('pet:memo-delete', id),
   checkMemoReminders: () => ipcRenderer.invoke('pet:memo-check-reminders'),

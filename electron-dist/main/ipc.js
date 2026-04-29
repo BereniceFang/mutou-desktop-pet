@@ -74,7 +74,7 @@ export function registerIpcHandlers(runtimeService, getWindow) {
         if (memoWindow && !memoWindow.isDestroyed()) { memoWindow.close(); memoWindow = null; }
     });
     ipcMain.handle('pet:memo-list', async () => runtimeService.getMemos());
-    ipcMain.handle('pet:memo-add', async (_event, text, remindAt) => runtimeService.addMemo(text, remindAt));
+    ipcMain.handle('pet:memo-add', async (_event, text, remindAt, repeat, repeatTime) => runtimeService.addMemo(text, remindAt, repeat, repeatTime));
     ipcMain.handle('pet:memo-toggle', async (_event, id) => runtimeService.toggleMemoDone(id));
     ipcMain.handle('pet:memo-delete', async (_event, id) => runtimeService.deleteMemo(id));
     ipcMain.handle('pet:memo-check-reminders', async () => runtimeService.checkMemoReminders());

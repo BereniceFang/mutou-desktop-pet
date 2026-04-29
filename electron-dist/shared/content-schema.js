@@ -86,6 +86,8 @@ export const settingsSchema = z.object({
     }),
     userNickname: z.string().max(16).default(''),
     personalDates: z.array(personalDateItemSchema).max(8).default([]),
+    waterReminderEnabled: z.boolean().optional().default(false),
+    waterReminderIntervalMin: z.number().int().min(15).max(240).optional().default(45),
 });
 export const focusSessionSchema = z.object({
     sessionId: z.string(),

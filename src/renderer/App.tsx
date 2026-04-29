@@ -68,6 +68,7 @@ export function RendererApp() {
 
   const [quitting, setQuitting] = useState(false)
   const [unlockToast, setUnlockToast] = useState<string | null>(null)
+  const [reminderBubble, setReminderBubble] = useState<string | null>(null)
 
   useEffect(() => {
     if (!ready) return
@@ -88,10 +89,47 @@ export function RendererApp() {
     const id = setInterval(checkRewards, 10_000)
     const memoId = setInterval(async () => {
       const reminder = await window.petApp.checkMemoReminders() as string | null
-      if (reminder) usePetStore.setState({ bubbleText: reminder })
+      if (reminder) {
+        usePetStore.setState({ bubbleText: reminder })
+        setReminderBubble(reminder)
+        if ('Notification' in window && Notification.permission === 'granted') {
+          new Notification('木头提醒你', { body: reminder })
+        } else if ('Notification' in window && Notification.permission !== 'denied') {
+          Notification.requestPermission().then((p) => {
+            if (p === 'granted') new Notification('木头提醒你', { body: reminder })
+          })
+        }
+      }
     }, 30_000)
     return () => { clearInterval(id); clearInterval(memoId) }
   }, [ready])
+
+  const waterLines = [
+    '该喝水了，别让我一个人润着。',
+    '你多久没喝水了？我帮你记着呢。',
+    '喝口水吧，坐了好一阵了。',
+    '补水时间到，嘴巴干了我会心疼的。',
+    '水杯还在旁边吗？拿起来喝一口。',
+    '我替你倒不了水，但我能提醒你。',
+    '今天的水喝够了吗？来，喝一口。',
+    '休息一下，先喝口水再继续。',
+    '你上次喝水是什么时候？我猜你忘了。',
+    '我的提醒很轻，但水要真的喝进去才行。',
+  ]
+  const waterIntervalMs = (appState?.settings.waterReminderIntervalMin ?? 45) * 60_000
+  const waterEnabled = appState?.settings.waterReminderEnabled ?? false
+  useEffect(() => {
+    if (!ready || !waterEnabled) return
+    const id = setInterval(() => {
+      const line = waterLines[Math.floor(Math.random() * waterLines.length)]
+      usePetStore.setState({ bubbleText: line })
+      setReminderBubble(line)
+      if ('Notification' in window && Notification.permission === 'granted') {
+        new Notification('木头提醒你', { body: line })
+      }
+    }, waterIntervalMs)
+    return () => clearInterval(id)
+  }, [ready, waterEnabled, waterIntervalMs])
   const handleQuit = useCallback(async () => {
     if (quitting) return
     setQuitting(true)
@@ -151,10 +189,10 @@ export function RendererApp() {
 
   const { clearBubble } = usePetStore()
   useEffect(() => {
-    if (!bubbleText || quitting) return
+    if (!bubbleText || quitting || reminderBubble) return
     const id = setTimeout(clearBubble, BUBBLE_AUTO_DISMISS_MS)
     return () => clearTimeout(id)
-  }, [bubbleText, clearBubble, quitting])
+  }, [bubbleText, clearBubble, quitting, reminderBubble])
 
   const dragRef = useRef(false)
   const lastDragBubbleRef = useRef(0)
@@ -246,15 +284,25 @@ export function RendererApp() {
       {bubbleText && (
         <div className="bubble-wrapper">
           <div
-            className="bubble"
+            className={`bubble ${reminderBubble ? 'bubble-reminder' : ''}`}
             style={{
               backgroundColor: appState.settings.bubbleStyle.backgroundColor,
-              borderColor: appState.settings.bubbleStyle.borderColor,
-              borderWidth: appState.settings.bubbleStyle.borderWidth,
+              borderColor: reminderBubble ? 'rgba(255,180,100,0.5)' : appState.settings.bubbleStyle.borderColor,
+              borderWidth: appState.settings.bubbleStyle.borderWidth || 1,
               color: appState.settings.bubbleStyle.textColor,
             }}
           >
             <p className="bubble-text">{bubbleText}</p>
+            {reminderBubble && (
+              <button
+                className="bubble-dismiss"
+                onClick={() => { setReminderBubble(null); clearBubble() }}
+                onMouseEnter={onInteractiveEnter}
+                onMouseLeave={onInteractiveLeave}
+              >
+                知道了
+              </button>
+            )}
           </div>
         </div>
       )}
@@ -763,6 +811,33 @@ function SettingsPanel({
           onChange={(e) => onUpdate({ userNickname: e.target.value })}
         />
       </label>
+
+      <div className="setting-section-title">喝水提醒</div>
+      <label className="setting-row">
+        <span>开启提醒</span>
+        <input
+          type="checkbox"
+          checked={settings.waterReminderEnabled ?? false}
+          onChange={(e) => onUpdate({ waterReminderEnabled: e.target.checked })}
+        />
+      </label>
+      {settings.waterReminderEnabled && (
+        <label className="setting-row">
+          <span>间隔</span>
+          <select
+            className="setting-select"
+            value={settings.waterReminderIntervalMin ?? 45}
+            onChange={(e) => onUpdate({ waterReminderIntervalMin: Number(e.target.value) })}
+          >
+            <option value={15}>15 分钟</option>
+            <option value={30}>30 分钟</option>
+            <option value={45}>45 分钟</option>
+            <option value={60}>1 小时</option>
+            <option value={90}>1.5 小时</option>
+            <option value={120}>2 小时</option>
+          </select>
+        </label>
+      )}
 
       <div className="setting-section-title">我的纪念日（最多 8 个）</div>
       <PersonalDatesEditor

@@ -1251,7 +1251,7 @@ export class RuntimeService {
     return data.items
   }
 
-  async addMemo(text: string, remindAt: string | null): Promise<MemoItem> {
+  async addMemo(text: string, remindAt: string | null, repeat?: string, repeatTime?: string): Promise<MemoItem> {
     const data = await loadMemos(this.dataRoot)
     const item: MemoItem = {
       id: randomUUID(),
@@ -1260,6 +1260,9 @@ export class RuntimeService {
       remindAt,
       reminded: false,
       done: false,
+      repeat: (repeat as 'none' | 'daily') ?? 'none',
+      repeatTime: repeatTime ?? null,
+      lastRemindDate: null,
     }
     data.items.push(item)
     await saveMemos(this.dataRoot, data)
@@ -1284,9 +1287,24 @@ export class RuntimeService {
   async checkMemoReminders(): Promise<string | null> {
     const data = await loadMemos(this.dataRoot)
     const now = new Date()
+    const todayKey = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`
+    const nowTimeStr = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`
     let triggered: MemoItem | null = null
+
     for (const item of data.items) {
-      if (item.done || item.reminded || !item.remindAt) continue
+      if (item.done) continue
+
+      if (item.repeat === 'daily' && item.repeatTime) {
+        if (item.lastRemindDate === todayKey) continue
+        if (nowTimeStr >= item.repeatTime) {
+          item.lastRemindDate = todayKey
+          triggered = item
+          break
+        }
+        continue
+      }
+
+      if (item.reminded || !item.remindAt) continue
       if (new Date(item.remindAt) <= now) {
         item.reminded = true
         triggered = item
@@ -2005,6 +2023,8 @@ function createDefaultState(): AppState {
       },
       userNickname: '',
       personalDates: [],
+      waterReminderEnabled: false,
+      waterReminderIntervalMin: 45,
     },
     focusSession: {
       sessionId: '',

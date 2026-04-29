@@ -25,7 +25,13 @@
   background: rgba(134,59,255,0.06); color: #e8e0f8; font-size: 13px;
 }
 .mw-add-input::placeholder { color: rgba(200,190,230,0.3); }
-.mw-add-row { display: flex; gap: 6px; }
+.mw-add-row { display: flex; gap: 6px; align-items: center; }
+.mw-repeat-tabs { display: flex; gap: 2px; flex-shrink: 0; }
+.mw-repeat-tab {
+  padding: 4px 8px; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px;
+  background: transparent; color: #c4b8e0; font-size: 10px; cursor: pointer;
+}
+.mw-repeat-tab.active { background: rgba(134,59,255,0.25); border-color: rgba(134,59,255,0.4); }
 .mw-add-time {
   flex: 1; padding: 5px 8px; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px;
   background: rgba(255,255,255,0.04); color: #c4b8e0; font-size: 11px;
@@ -60,6 +66,7 @@
 .mw-item-text { font-size: 13px; word-break: break-word; }
 .mw-item-time { font-size: 10px; opacity: 0.4; }
 .mw-item-time.reminded { color: rgba(255,180,100,0.7); }
+.mw-item-time.mw-daily { color: rgba(120,180,255,0.6); }
 
 .mw-del {
   flex-shrink: 0; background: none; border: none; color: rgba(255,120,120,0.4);

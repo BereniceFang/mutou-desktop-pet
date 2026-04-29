@@ -9,12 +9,17 @@ interface MemoItem {
   remindAt: string | null
   reminded: boolean
   done: boolean
+  repeat?: string
+  repeatTime?: string | null
+  lastRemindDate?: string | null
 }
 
 export function MemoWindow() {
   const [memos, setMemos] = useState<MemoItem[]>([])
   const [newText, setNewText] = useState('')
   const [newRemind, setNewRemind] = useState('')
+  const [repeatMode, setRepeatMode] = useState<'none' | 'daily'>('none')
+  const [dailyTime, setDailyTime] = useState('')
   const [loading, setLoading] = useState(true)
 
   const reload = useCallback(async () => {
@@ -32,12 +37,14 @@ export function MemoWindow() {
   const handleAdd = useCallback(async () => {
     const text = newText.trim()
     if (!text) return
-    const remindAt = newRemind ? new Date(newRemind).toISOString() : null
-    await window.petApp.addMemo(text, remindAt)
+    const remindAt = repeatMode === 'none' && newRemind ? new Date(newRemind).toISOString() : null
+    const repeatTime = repeatMode === 'daily' && dailyTime ? dailyTime : undefined
+    await window.petApp.addMemo(text, remindAt, repeatMode, repeatTime)
     setNewText('')
     setNewRemind('')
+    setDailyTime('')
     reload()
-  }, [newText, newRemind, reload])
+  }, [newText, newRemind, repeatMode, dailyTime, reload])
 
   const handleToggle = useCallback(async (id: string) => {
     await window.petApp.toggleMemoDone(id)
@@ -70,12 +77,15 @@ export function MemoWindow() {
           onKeyDown={(e) => e.key === 'Enter' && handleAdd()}
         />
         <div className="mw-add-row">
-          <input
-            className="mw-add-time"
-            type="datetime-local"
-            value={newRemind}
-            onChange={(e) => setNewRemind(e.target.value)}
-          />
+          <div className="mw-repeat-tabs">
+            <button className={`mw-repeat-tab ${repeatMode === 'none' ? 'active' : ''}`} onClick={() => setRepeatMode('none')}>单次</button>
+            <button className={`mw-repeat-tab ${repeatMode === 'daily' ? 'active' : ''}`} onClick={() => setRepeatMode('daily')}>每日</button>
+          </div>
+          {repeatMode === 'none' ? (
+            <input className="mw-add-time" type="datetime-local" value={newRemind} onChange={(e) => setNewRemind(e.target.value)} />
+          ) : (
+            <input className="mw-add-time" type="time" value={dailyTime} onChange={(e) => setDailyTime(e.target.value)} />
+          )}
           <button className="mw-add-btn" onClick={handleAdd}>记下</button>
         </div>
       </div>
@@ -91,7 +101,10 @@ export function MemoWindow() {
             <button className="mw-check" onClick={() => handleToggle(m.id)}>○</button>
             <div className="mw-item-body">
               <span className="mw-item-text">{m.text}</span>
-              {m.remindAt && (
+              {m.repeat === 'daily' && m.repeatTime && (
+                <span className="mw-item-time mw-daily">每天 {m.repeatTime}</span>
+              )}
+              {m.repeat !== 'daily' && m.remindAt && (
                 <span className={`mw-item-time ${m.reminded ? 'reminded' : ''}`}>
                   {m.reminded ? '已提醒' : `提醒: ${new Date(m.remindAt).toLocaleString('zh-CN', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' })}`}
                 </span>

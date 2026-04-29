@@ -157,7 +157,7 @@ export function registerIpcHandlers(
   })
 
   ipcMain.handle('pet:memo-list', async () => runtimeService.getMemos())
-  ipcMain.handle('pet:memo-add', async (_event, text: string, remindAt: string | null) => runtimeService.addMemo(text, remindAt))
+  ipcMain.handle('pet:memo-add', async (_event, text: string, remindAt: string | null, repeat?: string, repeatTime?: string) => runtimeService.addMemo(text, remindAt, repeat, repeatTime))
   ipcMain.handle('pet:memo-toggle', async (_event, id: string) => runtimeService.toggleMemoDone(id))
   ipcMain.handle('pet:memo-delete', async (_event, id: string) => runtimeService.deleteMemo(id))
   ipcMain.handle('pet:memo-check-reminders', async () => runtimeService.checkMemoReminders())

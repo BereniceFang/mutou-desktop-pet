@@ -85,6 +85,7 @@ function BombGame() {
   const [lo, setLo] = useState(1)
   const [hi, setHi] = useState(100)
   const [gameOver, setGameOver] = useState<'win' | 'lose' | null>(null)
+  const [explodedNum, setExplodedNum] = useState<number | null>(null)
   const [turn, setTurn] = useState<'player' | 'pet'>('player')
   const [history, setHistory] = useState<string[]>([])
 
@@ -95,6 +96,7 @@ function BombGame() {
     setLo(1)
     setHi(100)
     setGameOver(null)
+    setExplodedNum(null)
     setTurn('player')
     setHistory([])
   }
@@ -102,6 +104,7 @@ function BombGame() {
   function guess(num: number, who: 'player' | 'pet') {
     const bomb = bombRef.current
     if (num === bomb) {
+      setExplodedNum(num)
       setGameOver(who === 'player' ? 'lose' : 'win')
       setHistory((h) => [...h, `${who === 'player' ? '你' : '木头'}猜了 ${num}——💥 炸弹！`])
       const outcome = who === 'player' ? 'lose' : 'win'
@@ -137,32 +140,44 @@ function BombGame() {
   }
 
   return (
-    <div className="gw-game">
+    <div className="gw-game bomb-layout">
       <div className="bomb-range">范围：{lo} ~ {hi}</div>
-      <div className="bomb-history">
-        {history.map((h, i) => <div key={i} className="bomb-line">{h}</div>)}
-      </div>
-      {gameOver ? (
-        <div className="bomb-over">
-          <span className={`bomb-result bomb-${gameOver}`}>
-            {gameOver === 'win' ? '你赢了！木头踩了炸弹' : '你踩到炸弹了！'}
-          </span>
-          <button className="bomb-restart" onClick={reset}>再来一局</button>
-        </div>
-      ) : turn === 'player' ? (
+
+      <div className="bomb-grid-area">
         <div className="bomb-grid">
           {Array.from({ length: 100 }, (_, i) => i + 1).map((n) => {
             const inRange = n >= lo && n <= hi
-            return inRange ? (
-              <button key={n} className="bomb-num" onClick={() => guess(n, 'player')}>{n}</button>
-            ) : (
-              <span key={n} className="bomb-num-hidden" />
+            const isExploded = n === explodedNum
+            return (
+              <button
+                key={n}
+                className={`bomb-num ${!inRange ? 'bomb-num-out' : ''} ${isExploded ? 'bomb-num-exploded' : ''}`}
+                disabled={!inRange || turn !== 'player' || gameOver !== null}
+                onClick={() => guess(n, 'player')}
+              >{isExploded ? '💥' : n}</button>
             )
           })}
         </div>
-      ) : (
-        <div className="bomb-waiting">木头在想……</div>
-      )}
+        {gameOver && (
+          <div className="bomb-grid-overlay">
+            <span className={`bomb-result bomb-${gameOver}`}>
+              {gameOver === 'win' ? '你赢了！' : '你踩到炸弹了！'}
+            </span>
+            <button className="bomb-restart" onClick={reset}>再来一局</button>
+          </div>
+        )}
+      </div>
+
+      <div className="bomb-footer">
+        {!gameOver && turn === 'pet' ? (
+          <div className="bomb-waiting">木头在想……</div>
+        ) : (
+          <div className="bomb-hint">选一个数字</div>
+        )}
+        <div className="bomb-history">
+          {history.map((h, i) => <div key={i} className="bomb-line">{h}</div>)}
+        </div>
+      </div>
     </div>
   )
 }

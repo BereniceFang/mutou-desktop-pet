@@ -67,10 +67,18 @@
 .rps-draw { color: rgba(200,190,255,0.7); }
 
 /* Bomb in game window */
-.bomb-range { font-size: 15px; font-weight: 600; text-align: center; }
+.bomb-layout {
+  display: flex; flex-direction: column; flex: 1; min-height: 0;
+}
+.bomb-range { font-size: 14px; font-weight: 600; text-align: center; flex-shrink: 0; padding-bottom: 6px; }
+.bomb-footer {
+  flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 4px;
+  padding-top: 8px; min-height: 70px;
+}
+.bomb-hint { font-size: 11px; opacity: 0.35; }
 .bomb-history {
-  width: 100%; max-height: 60px; overflow-y: auto;
-  display: flex; flex-direction: column; gap: 2px;
+  width: 100%; max-height: 48px; overflow-y: auto;
+  display: flex; flex-direction: column; gap: 1px;
 }
 .bomb-line { font-size: 11px; opacity: 0.55; }
 .bomb-grid {
@@ -81,10 +89,38 @@
   background: rgba(134,59,255,0.08); color: #e0d8f4; font-size: 12px;
   cursor: pointer; text-align: center; transition: all 0.1s;
 }
-.bomb-num:hover { background: rgba(134,59,255,0.3); border-color: rgba(134,59,255,0.5); }
-.bomb-num-hidden { visibility: hidden; }
+.bomb-grid-area {
+  position: relative; flex: 1; min-height: 0; display: flex; flex-direction: column;
+}
+.bomb-num:hover:not(:disabled) { background: rgba(134,59,255,0.3); border-color: rgba(134,59,255,0.5); }
+.bomb-num:disabled { cursor: default; }
+.bomb-num-out { opacity: 0.15; background: transparent; border-color: rgba(255,255,255,0.04); }
+.bomb-num-exploded {
+  background: rgba(220,60,60,0.5) !important; border-color: rgba(220,60,60,0.7) !important;
+  color: white !important; opacity: 1 !important; font-size: 14px;
+  animation: bombShake 0.4s ease-out;
+}
+@keyframes bombShake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-3px); }
+  40% { transform: translateX(3px); }
+  60% { transform: translateX(-2px); }
+  80% { transform: translateX(2px); }
+}
+.bomb-grid-overlay {
+  position: absolute; inset: 0; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 12px;
+  background: rgba(14,10,30,0.75); border-radius: 8px;
+  animation: overlayFadeIn 0.3s ease-out;
+}
+@keyframes overlayFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 .bomb-waiting { font-size: 13px; opacity: 0.5; font-style: italic; padding: 16px 0; }
 .bomb-over { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 12px 0; }
+.bomb-grid-overlay .bomb-result { font-size: 16px; }
+.bomb-grid-overlay .bomb-restart { padding: 8px 24px; font-size: 13px; }
 .bomb-result { font-size: 14px; font-weight: 600; }
 .bomb-win { color: rgba(120,220,160,0.9); }
 .bomb-lose { color: rgba(255,140,140,0.9); }

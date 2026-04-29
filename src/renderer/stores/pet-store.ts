@@ -23,6 +23,8 @@ type AppState = {
     }
     userNickname: string
     personalDates: { id: string; label: string; month: number; day: number; kind: string }[]
+    waterReminderEnabled?: boolean
+    waterReminderIntervalMin?: number
   }
   focusSession: {
     sessionId: string

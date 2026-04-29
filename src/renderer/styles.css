@@ -51,6 +51,32 @@
   white-space: pre-wrap;
 }
 
+.bubble-reminder {
+  border-color: rgba(255, 180, 100, 0.5) !important;
+  animation: bubbleFadeIn 0.25s ease-out, reminderPulse 2s ease-in-out infinite;
+}
+
+.bubble-dismiss {
+  margin-top: 6px;
+  padding: 3px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  color: inherit;
+  font-size: 11px;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.bubble-dismiss:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+@keyframes reminderPulse {
+  0%, 100% { box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12); }
+  50% { box-shadow: 0 4px 20px rgba(255, 180, 100, 0.25); }
+}
+
 @keyframes bubbleFadeIn {
   from { opacity: 0; transform: translateY(4px); }
   to { opacity: 1; transform: translateY(0); }
