@@ -75,7 +75,7 @@ export function RendererApp() {
     const checkRewards = async () => {
       const tierUp = await window.petApp.checkTierUp() as string | null
       if (tierUp) {
-        usePetStore.setState({ bubbleText: tierUp })
+        if (!usePetStore.getState().reminderLock) usePetStore.setState({ bubbleText: tierUp })
         setUnlockToast('关系升级了!')
         setTimeout(() => setUnlockToast(null), 5000)
         return
@@ -90,7 +90,7 @@ export function RendererApp() {
     const memoId = setInterval(async () => {
       const reminder = await window.petApp.checkMemoReminders() as string | null
       if (reminder) {
-        usePetStore.setState({ bubbleText: reminder })
+        usePetStore.setState({ bubbleText: reminder, reminderLock: true })
         setReminderBubble(reminder)
         if ('Notification' in window && Notification.permission === 'granted') {
           new Notification('木头提醒你', { body: reminder })
@@ -122,7 +122,7 @@ export function RendererApp() {
     if (!ready || !waterEnabled) return
     const id = setInterval(() => {
       const line = waterLines[Math.floor(Math.random() * waterLines.length)]
-      usePetStore.setState({ bubbleText: line })
+      usePetStore.setState({ bubbleText: line, reminderLock: true })
       setReminderBubble(line)
       if ('Notification' in window && Notification.permission === 'granted') {
         new Notification('木头提醒你', { body: line })
@@ -212,7 +212,7 @@ export function RendererApp() {
         lastDragBubbleRef.current = now
         window.petApp.triggerDragBubble().then((r) => {
           const res = r as { state: unknown; bubbleText: string | null }
-          if (res.bubbleText) usePetStore.setState({ bubbleText: res.bubbleText })
+          if (res.bubbleText && !usePetStore.getState().reminderLock) usePetStore.setState({ bubbleText: res.bubbleText })
         })
       }
     }
@@ -296,7 +296,7 @@ export function RendererApp() {
             {reminderBubble && (
               <button
                 className="bubble-dismiss"
-                onClick={() => { setReminderBubble(null); clearBubble() }}
+                onClick={() => { setReminderBubble(null); usePetStore.setState({ reminderLock: false, bubbleText: null }) }}
                 onMouseEnter={onInteractiveEnter}
                 onMouseLeave={onInteractiveLeave}
               >

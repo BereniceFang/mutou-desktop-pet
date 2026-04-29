@@ -72,6 +72,7 @@ interface PetStore {
   actions: Action[]
   branchChoices: { id: string; label: string }[] | null
   environment: BootstrapEnvironment | null
+  reminderLock: boolean
 
   bootstrap(): Promise<void>
   triggerStartupGreeting(): Promise<void>
@@ -95,15 +96,15 @@ declare global {
 }
 
 function applyIpcResult(
-  set: (partial: Partial<PetStore>) => void,
+  set: (partial: Partial<PetStore> | ((s: PetStore) => Partial<PetStore>)) => void,
   result: { state: AppState; bubbleText?: string | null; actions?: Action[]; branchChoices?: { id: string; label: string }[] },
 ) {
-  set({
+  set((prev) => ({
     appState: result.state,
-    bubbleText: result.bubbleText ?? null,
+    bubbleText: prev.reminderLock ? prev.bubbleText : (result.bubbleText ?? null),
     ...(result.actions ? { actions: result.actions } : {}),
     branchChoices: result.branchChoices ?? result.state.pendingBranchPlotChoices ?? null,
-  })
+  }))
 }
 
 export const usePetStore = create<PetStore>((set) => ({
@@ -113,6 +114,7 @@ export const usePetStore = create<PetStore>((set) => ({
   actions: [],
   branchChoices: null,
   environment: null,
+  reminderLock: false,
 
   async bootstrap() {
     const data = await window.petApp.loadAppBootstrapData() as {
@@ -188,7 +190,7 @@ export const usePetStore = create<PetStore>((set) => ({
   },
 
   clearBubble() {
-    set({ bubbleText: null })
+    set((prev) => prev.reminderLock ? {} : { bubbleText: null })
   },
 }))
 // AIGC END
