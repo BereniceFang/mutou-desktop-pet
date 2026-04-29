@@ -4,7 +4,7 @@ import { app } from 'electron'
 import electronMain from 'electron/main'
 
 import type { RuntimeService } from '../application/runtime-service.js'
-import { createDiaryWindow, createGameWindow } from './window-manager.js'
+import { createDiaryWindow, createGameWindow, createMemoWindow } from './window-manager.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -132,6 +132,35 @@ export function registerIpcHandlers(
   ipcMain.handle('pet:check-unlocks', async () => {
     return runtimeService.checkNewUnlocks()
   })
+
+  let memoWindow: Electron.BrowserWindow | null = null
+
+  ipcMain.handle('pet:open-memo-window', async () => {
+    const mainWin = getWindow()
+    if (!mainWin) return
+    if (memoWindow && !memoWindow.isDestroyed()) { memoWindow.focus(); return }
+    memoWindow = createMemoWindow(mainWin)
+    const isDev = Boolean(process.env.VITE_DEV_SERVER_URL)
+    if (isDev && process.env.VITE_DEV_SERVER_URL) {
+      await memoWindow.loadURL(`${process.env.VITE_DEV_SERVER_URL}?memo=1`)
+    } else {
+      await memoWindow.loadFile(
+        path.resolve(__dirname, '../../dist/index.html'),
+        { query: { memo: '1' } },
+      )
+    }
+    memoWindow.on('closed', () => { memoWindow = null })
+  })
+
+  ipcMain.handle('pet:close-memo-window', async () => {
+    if (memoWindow && !memoWindow.isDestroyed()) { memoWindow.close(); memoWindow = null }
+  })
+
+  ipcMain.handle('pet:memo-list', async () => runtimeService.getMemos())
+  ipcMain.handle('pet:memo-add', async (_event, text: string, remindAt: string | null) => runtimeService.addMemo(text, remindAt))
+  ipcMain.handle('pet:memo-toggle', async (_event, id: string) => runtimeService.toggleMemoDone(id))
+  ipcMain.handle('pet:memo-delete', async (_event, id: string) => runtimeService.deleteMemo(id))
+  ipcMain.handle('pet:memo-check-reminders', async () => runtimeService.checkMemoReminders())
 
   ipcMain.handle('pet:game-result', async (_event, gameName: string, result: string) => {
     return runtimeService.recordGameResult(gameName, result)

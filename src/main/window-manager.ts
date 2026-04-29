@@ -44,6 +44,28 @@ export function createMainWindow(
   return win
 }
 
+export function createMemoWindow(parentWindow: Electron.BrowserWindow): Electron.BrowserWindow {
+  const preloadPath = path.join(__dirname, '../preload/index.js')
+  const [px, py] = parentWindow.getPosition()
+
+  return new BrowserWindow({
+    width: 320,
+    height: 440,
+    x: px - 340,
+    y: py - 60,
+    frame: false,
+    resizable: true,
+    alwaysOnTop: true,
+    backgroundColor: '#120c24',
+    webPreferences: {
+      preload: preloadPath,
+      sandbox: false,
+      contextIsolation: true,
+      nodeIntegration: false,
+    },
+  })
+}
+
 export function createGameWindow(parentWindow: Electron.BrowserWindow): Electron.BrowserWindow {
   const preloadPath = path.join(__dirname, '../preload/index.js')
   const [px, py] = parentWindow.getPosition()

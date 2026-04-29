@@ -1,0 +1,73 @@
+/* AIGC START */
+.mw-root {
+  width: 100%; height: 100vh; display: flex; flex-direction: column;
+  background: linear-gradient(160deg, #15102a 0%, #0e0a1e 100%);
+  color: #e8e0f8; font-family: "PingFang SC", system-ui, sans-serif;
+  font-size: 13px; overflow: hidden;
+  border: 1px solid rgba(134,59,255,0.12); border-radius: 14px;
+}
+
+.mw-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 14px 4px; flex-shrink: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.mw-header-drag { -webkit-app-region: drag; }
+.mw-header button { -webkit-app-region: no-drag; }
+.mw-title { font-size: 13px; font-weight: 600; opacity: 0.5; letter-spacing: 0.5px; }
+.mw-close { background: none; border: none; color: #c4b8e0; cursor: pointer; font-size: 14px; opacity: 0.3; padding: 2px 4px; }
+.mw-close:hover { opacity: 0.8; }
+
+/* Add form */
+.mw-add { padding: 10px 14px; display: flex; flex-direction: column; gap: 6px; flex-shrink: 0; }
+.mw-add-input {
+  width: 100%; padding: 8px 10px; border: 1px solid rgba(134,59,255,0.15); border-radius: 8px;
+  background: rgba(134,59,255,0.06); color: #e8e0f8; font-size: 13px;
+}
+.mw-add-input::placeholder { color: rgba(200,190,230,0.3); }
+.mw-add-row { display: flex; gap: 6px; }
+.mw-add-time {
+  flex: 1; padding: 5px 8px; border: 1px solid rgba(255,255,255,0.08); border-radius: 6px;
+  background: rgba(255,255,255,0.04); color: #c4b8e0; font-size: 11px;
+}
+.mw-add-btn {
+  padding: 5px 16px; border: none; border-radius: 6px;
+  background: rgba(134,59,255,0.35); color: #e8e0f8; font-size: 12px; cursor: pointer;
+}
+.mw-add-btn:hover { background: rgba(134,59,255,0.5); }
+
+/* List */
+.mw-list { flex: 1; overflow-y: auto; padding: 4px 14px 14px; }
+.mw-empty { text-align: center; padding: 24px 0; opacity: 0.3; font-style: italic; }
+.mw-section-title { font-size: 11px; opacity: 0.3; padding: 10px 0 4px; }
+
+.mw-item {
+  display: flex; align-items: flex-start; gap: 8px; padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.mw-item-done { opacity: 0.4; }
+.mw-item-done .mw-item-text { text-decoration: line-through; }
+
+.mw-check {
+  flex-shrink: 0; width: 20px; height: 20px; border: 1.5px solid rgba(134,59,255,0.3); border-radius: 50%;
+  background: transparent; color: transparent; font-size: 11px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; margin-top: 1px;
+}
+.mw-check:hover { border-color: rgba(134,59,255,0.6); }
+.mw-check.checked { border-color: rgba(120,220,160,0.4); color: rgba(120,220,160,0.8); background: rgba(120,220,160,0.08); }
+
+.mw-item-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.mw-item-text { font-size: 13px; word-break: break-word; }
+.mw-item-time { font-size: 10px; opacity: 0.4; }
+.mw-item-time.reminded { color: rgba(255,180,100,0.7); }
+
+.mw-del {
+  flex-shrink: 0; background: none; border: none; color: rgba(255,120,120,0.4);
+  cursor: pointer; font-size: 12px; padding: 2px 4px; opacity: 0;
+  transition: opacity 0.15s;
+}
+.mw-item:hover .mw-del { opacity: 1; }
+
+.mw-list::-webkit-scrollbar { width: 3px; }
+.mw-list::-webkit-scrollbar-thumb { background: rgba(134,59,255,0.15); border-radius: 2px; }
+/* AIGC END */

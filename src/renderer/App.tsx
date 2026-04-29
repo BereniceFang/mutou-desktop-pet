@@ -86,7 +86,11 @@ export function RendererApp() {
       }
     }
     const id = setInterval(checkRewards, 10_000)
-    return () => clearInterval(id)
+    const memoId = setInterval(async () => {
+      const reminder = await window.petApp.checkMemoReminders() as string | null
+      if (reminder) usePetStore.setState({ bubbleText: reminder })
+    }, 30_000)
+    return () => { clearInterval(id); clearInterval(memoId) }
   }, [ready])
   const handleQuit = useCallback(async () => {
     if (quitting) return
@@ -305,6 +309,12 @@ export function RendererApp() {
           </button>
           <button className="action-btn action-btn-comfort" onClick={() => requestComfort('heavy')}>
             认真安慰
+          </button>
+          <button
+            className="action-btn"
+            onClick={() => window.petApp.openMemoWindow()}
+          >
+            便签
           </button>
           <button
             className="action-btn"

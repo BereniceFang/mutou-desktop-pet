@@ -10,6 +10,8 @@ import { loadContentBundle, pickDialogue } from '../infrastructure/content/conte
 import { loadHolidayCalendar } from '../infrastructure/content/holiday-loader.js'
 import { loadInteractivePlotsBundle } from '../infrastructure/content/interactive-plots-loader.js'
 import { loadAppState, saveAppState } from '../infrastructure/storage/app-state-storage.js'
+import type { MemoItem } from '../shared/memo-schema.js'
+import { loadMemos, saveMemos } from '../infrastructure/storage/memo-storage.js'
 import {
   getFeedSatietyGainForPreference,
   getFoodCatalogItem,
@@ -1242,6 +1244,60 @@ export class RuntimeService {
       type: 'mood_checkin',
       payload: { userMood: mood },
     })
+  }
+
+  async getMemos(): Promise<MemoItem[]> {
+    const data = await loadMemos(this.dataRoot)
+    return data.items
+  }
+
+  async addMemo(text: string, remindAt: string | null): Promise<MemoItem> {
+    const data = await loadMemos(this.dataRoot)
+    const item: MemoItem = {
+      id: randomUUID(),
+      text,
+      createdAt: new Date().toISOString(),
+      remindAt,
+      reminded: false,
+      done: false,
+    }
+    data.items.push(item)
+    await saveMemos(this.dataRoot, data)
+    return item
+  }
+
+  async toggleMemoDone(id: string): Promise<void> {
+    const data = await loadMemos(this.dataRoot)
+    const item = data.items.find((m) => m.id === id)
+    if (item) {
+      item.done = !item.done
+      await saveMemos(this.dataRoot, data)
+    }
+  }
+
+  async deleteMemo(id: string): Promise<void> {
+    const data = await loadMemos(this.dataRoot)
+    data.items = data.items.filter((m) => m.id !== id)
+    await saveMemos(this.dataRoot, data)
+  }
+
+  async checkMemoReminders(): Promise<string | null> {
+    const data = await loadMemos(this.dataRoot)
+    const now = new Date()
+    let triggered: MemoItem | null = null
+    for (const item of data.items) {
+      if (item.done || item.reminded || !item.remindAt) continue
+      if (new Date(item.remindAt) <= now) {
+        item.reminded = true
+        triggered = item
+        break
+      }
+    }
+    if (triggered) {
+      await saveMemos(this.dataRoot, data)
+      return `该做这件事了：${triggered.text}`
+    }
+    return null
   }
 
   async updateSettings(input: Partial<Settings>): Promise<Settings> {

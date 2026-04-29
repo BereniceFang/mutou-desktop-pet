@@ -9,8 +9,15 @@ export interface PetApi {
   closeDiaryWindow(): Promise<void>
   openGameWindow(): Promise<void>
   closeGameWindow(): Promise<void>
+  openMemoWindow(): Promise<void>
+  closeMemoWindow(): Promise<void>
   getMilestones(): Promise<{ key: string; label: string; date: string }[]>
   checkNewUnlocks(): Promise<string[]>
+  getMemos(): Promise<unknown[]>
+  addMemo(text: string, remindAt: string | null): Promise<unknown>
+  toggleMemoDone(id: string): Promise<void>
+  deleteMemo(id: string): Promise<void>
+  checkMemoReminders(): Promise<string | null>
   recordGameResult(gameName: string, result: string): Promise<void>
   recordMoodCheckin(mood: string): Promise<void>
   checkTierUp(): Promise<string | null>
@@ -52,8 +59,15 @@ const petApi: PetApi = {
   closeDiaryWindow: () => ipcRenderer.invoke('pet:close-diary-window'),
   openGameWindow: () => ipcRenderer.invoke('pet:open-game-window'),
   closeGameWindow: () => ipcRenderer.invoke('pet:close-game-window'),
+  openMemoWindow: () => ipcRenderer.invoke('pet:open-memo-window'),
+  closeMemoWindow: () => ipcRenderer.invoke('pet:close-memo-window'),
   getMilestones: () => ipcRenderer.invoke('pet:milestones'),
   checkNewUnlocks: () => ipcRenderer.invoke('pet:check-unlocks'),
+  getMemos: () => ipcRenderer.invoke('pet:memo-list'),
+  addMemo: (text, remindAt) => ipcRenderer.invoke('pet:memo-add', text, remindAt),
+  toggleMemoDone: (id) => ipcRenderer.invoke('pet:memo-toggle', id),
+  deleteMemo: (id) => ipcRenderer.invoke('pet:memo-delete', id),
+  checkMemoReminders: () => ipcRenderer.invoke('pet:memo-check-reminders'),
   recordGameResult: (gameName, result) => ipcRenderer.invoke('pet:game-result', gameName, result),
   recordMoodCheckin: (mood) => ipcRenderer.invoke('pet:mood-checkin', mood),
   checkTierUp: () => ipcRenderer.invoke('pet:check-tier-up'),
