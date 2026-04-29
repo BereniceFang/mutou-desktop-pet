@@ -308,6 +308,12 @@ export function RendererApp() {
           </button>
           <button
             className="action-btn"
+            onClick={() => window.petApp.openGameWindow()}
+          >
+            小游戏
+          </button>
+          <button
+            className="action-btn"
             onClick={() => window.petApp.openDiaryWindow()}
           >
             日记
@@ -335,7 +341,7 @@ export function RendererApp() {
         <div className="panel-layer" data-no-drag onMouseEnter={onInteractiveEnter} onMouseLeave={onInteractiveLeave}>
           <div className="panel-header">
             <span className="panel-title">
-              {actions.find((a) => a.id === activePanel)?.label ?? ({ diary: '日记', debug: '调试' } as Record<string, string>)[activePanel ?? ''] ?? activePanel}
+              {actions.find((a) => a.id === activePanel)?.label ?? ({ diary: '日记', game: '小游戏', debug: '调试' } as Record<string, string>)[activePanel ?? ''] ?? activePanel}
             </span>
             <button className="panel-close" onClick={() => setPanel(null)}>✕</button>
           </div>
@@ -436,6 +442,36 @@ function StatusPanel({ appState }: { appState: NonNullable<ReturnType<typeof use
           <div className="profile-stat"><span className="stat-num">{Number(s.focusTotalMinutes ?? 0)}</span><span className="stat-label">专注分钟</span></div>
           <div className="profile-stat"><span className="stat-num">{s.nightInteractionCount}</span><span className="stat-label">深夜互动</span></div>
         </div>
+      </div>
+
+      {/* Milestones timeline */}
+      <MilestonesTimeline />
+    </div>
+  )
+}
+
+function MilestonesTimeline() {
+  const [milestones, setMilestones] = useState<{ key: string; label: string; date: string }[]>([])
+
+  useEffect(() => {
+    window.petApp.getMilestones().then((m) => setMilestones(m as { key: string; label: string; date: string }[]))
+  }, [])
+
+  if (milestones.length === 0) return null
+
+  return (
+    <div className="profile-section">
+      <div className="profile-section-title">成长里程碑</div>
+      <div className="milestone-list">
+        {milestones.map((m) => (
+          <div key={m.key} className="milestone-item">
+            <div className="milestone-dot" />
+            <div className="milestone-content">
+              <span className="milestone-label">{m.label}</span>
+              <span className="milestone-date">{m.date.slice(0, 10)}</span>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   )
@@ -962,6 +998,8 @@ function DiaryPanel() {
 interface CollectionItem { id: string; name: string; description: string; unlockHint: string; unlocked: boolean }
 interface CardItem extends CollectionItem { title: string; body: string }
 interface DiaryEntryView { dateKey: string; title: string; moodTag: string; paragraphs: string[]; highlights: string[]; finalized: boolean }
+
+
 
 const DIALOGUE_TYPE_GROUPS: { label: string; prefix: string }[] = [
   { label: '互动', prefix: 'interaction' },

@@ -7,7 +7,11 @@ export interface PetApi {
   notifyMouseLeave(): Promise<void>
   openDiaryWindow(): Promise<void>
   closeDiaryWindow(): Promise<void>
+  openGameWindow(): Promise<void>
+  closeGameWindow(): Promise<void>
+  getMilestones(): Promise<{ key: string; label: string; date: string }[]>
   checkNewUnlocks(): Promise<string[]>
+  recordGameResult(gameName: string, result: string): Promise<void>
   recordMoodCheckin(mood: string): Promise<void>
   checkTierUp(): Promise<string | null>
   loadAppBootstrapData(): Promise<unknown>
@@ -46,7 +50,11 @@ const petApi: PetApi = {
   notifyMouseLeave: () => ipcRenderer.invoke('pet:mouse-leave'),
   openDiaryWindow: () => ipcRenderer.invoke('pet:open-diary-window'),
   closeDiaryWindow: () => ipcRenderer.invoke('pet:close-diary-window'),
+  openGameWindow: () => ipcRenderer.invoke('pet:open-game-window'),
+  closeGameWindow: () => ipcRenderer.invoke('pet:close-game-window'),
+  getMilestones: () => ipcRenderer.invoke('pet:milestones'),
   checkNewUnlocks: () => ipcRenderer.invoke('pet:check-unlocks'),
+  recordGameResult: (gameName, result) => ipcRenderer.invoke('pet:game-result', gameName, result),
   recordMoodCheckin: (mood) => ipcRenderer.invoke('pet:mood-checkin', mood),
   checkTierUp: () => ipcRenderer.invoke('pet:check-tier-up'),
   loadAppBootstrapData: () => ipcRenderer.invoke('pet:bootstrap'),

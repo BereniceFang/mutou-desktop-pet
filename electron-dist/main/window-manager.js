@@ -31,6 +31,15 @@ export function createMainWindow(settings, windowPosition) {
     win.setIgnoreMouseEvents(true, { forward: true });
     return win;
 }
+export function createGameWindow(parentWindow) {
+    const preloadPath = path.join(__dirname, '../preload/index.js');
+    const [px, py] = parentWindow.getPosition();
+    return new BrowserWindow({
+        width: 360, height: 480, x: px + 290, y: py,
+        frame: false, resizable: false, alwaysOnTop: true, backgroundColor: '#120c24',
+        webPreferences: { preload: preloadPath, sandbox: false, contextIsolation: true, nodeIntegration: false },
+    });
+}
 export function createDiaryWindow(parentWindow) {
     const preloadPath = path.join(__dirname, '../preload/index.js');
     const [px, py] = parentWindow.getPosition();

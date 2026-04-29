@@ -172,6 +172,11 @@ function aggregateDayEvents(
   const moodEvent = dayEvents.find((event) => event.type === 'mood_checkin')
   const userMood = moodEvent?.payload?.userMood ?? null
 
+  const gameEvents = dayEvents.filter((event) => event.type === 'game_played')
+  const gameWins = gameEvents.filter((e) => e.payload?.gameResult === 'win').length
+  const gameLosses = gameEvents.filter((e) => e.payload?.gameResult === 'lose').length
+  const gameDraws = gameEvents.filter((e) => e.payload?.gameResult === 'draw').length
+
   return {
     relationshipTier: visitTier,
     interactionCount,
@@ -180,6 +185,9 @@ function aggregateDayEvents(
     focusCompletedCount: dayEvents.filter((event) => event.type === 'focus_complete').length,
     focusInterruptedCount: dayEvents.filter((event) => event.type === 'focus_interrupt').length,
     userMood,
+    gameWins,
+    gameLosses,
+    gameDraws,
   }
 }
 
@@ -197,14 +205,14 @@ function buildSummary(
     return {
       dateKey, narrativeKind: 'prelude_stranger', absence: false,
       relationshipTier: 'low', interactionCount: 0, fedFoodLabels: [],
-      focusStartedCount: 0, focusCompletedCount: 0, focusInterruptedCount: 0, userMood: null,
+      focusStartedCount: 0, focusCompletedCount: 0, focusInterruptedCount: 0, userMood: null, gameWins: 0, gameLosses: 0, gameDraws: 0,
     }
   }
 
   if (dateKey === encounter) {
     const agg = dayEvents.length > 0 ? aggregateDayEvents(dayEvents, fallbackTier) : {
       relationshipTier: fallbackTier, interactionCount: 0, fedFoodLabels: [],
-      focusStartedCount: 0, focusCompletedCount: 0, focusInterruptedCount: 0, userMood: null,
+      focusStartedCount: 0, focusCompletedCount: 0, focusInterruptedCount: 0, userMood: null, gameWins: 0, gameLosses: 0, gameDraws: 0,
     }
     return { dateKey, narrativeKind: 'first_encounter', absence: false, ...agg }
   }
@@ -213,7 +221,7 @@ function buildSummary(
     return {
       dateKey, narrativeKind: 'absence', absence: true,
       relationshipTier: fallbackTier, interactionCount: 0, fedFoodLabels: [],
-      focusStartedCount: 0, focusCompletedCount: 0, focusInterruptedCount: 0, userMood: null,
+      focusStartedCount: 0, focusCompletedCount: 0, focusInterruptedCount: 0, userMood: null, gameWins: 0, gameLosses: 0, gameDraws: 0,
     }
   }
 
@@ -284,6 +292,17 @@ function pushActivityParagraphs(
     const pool = poolMap[summary.userMood]
     if (pool && pool.length > 0) {
       paragraphs.push(pick(pool, seed + 59))
+    }
+  }
+
+  const totalGames = (summary.gameWins ?? 0) + (summary.gameLosses ?? 0) + (summary.gameDraws ?? 0)
+  if (totalGames > 0) {
+    if ((summary.gameWins ?? 0) > (summary.gameLosses ?? 0) && templates.gameLose?.length) {
+      paragraphs.push(pick(templates.gameLose, seed + 67))
+    } else if ((summary.gameLosses ?? 0) > (summary.gameWins ?? 0) && templates.gameWin?.length) {
+      paragraphs.push(pick(templates.gameWin, seed + 67))
+    } else if (templates.gameDraw?.length) {
+      paragraphs.push(pick(templates.gameDraw, seed + 67))
     }
   }
 }

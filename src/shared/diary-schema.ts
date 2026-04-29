@@ -6,7 +6,7 @@ const relationshipTierSchema = z.enum(['low', 'mid', 'high'])
 export const diaryEventSchema = z.object({
   id: z.string(),
   dateKey: z.string(),
-  type: z.enum(['day_visit', 'interaction', 'feed', 'focus_start', 'focus_complete', 'focus_interrupt', 'mood_checkin']),
+  type: z.enum(['day_visit', 'interaction', 'feed', 'focus_start', 'focus_complete', 'focus_interrupt', 'mood_checkin', 'game_played']),
   timestamp: z.string(),
   payload: z
     .object({
@@ -15,6 +15,8 @@ export const diaryEventSchema = z.object({
       actualDurationMinutes: z.number().optional(),
       relationshipTier: relationshipTierSchema.optional(),
       userMood: z.string().optional(),
+      gameName: z.string().optional(),
+      gameResult: z.string().optional(),
     })
     .optional(),
 })
@@ -56,6 +58,9 @@ export const dailyDiarySummarySchema = z.object({
   focusCompletedCount: z.number().int().min(0),
   focusInterruptedCount: z.number().int().min(0),
   userMood: z.string().nullable().optional().default(null),
+  gameWins: z.number().int().min(0).optional().default(0),
+  gameLosses: z.number().int().min(0).optional().default(0),
+  gameDraws: z.number().int().min(0).optional().default(0),
 })
 
 export const diarySummariesFileSchema = z.object({
@@ -102,6 +107,9 @@ export const diaryTemplatesSchema = z.object({
   moodCheckinOk: z.array(z.string()).optional().default([]),
   moodCheckinTired: z.array(z.string()).optional().default([]),
   moodCheckinSad: z.array(z.string()).optional().default([]),
+  gameWin: z.array(z.string()).optional().default([]),
+  gameLose: z.array(z.string()).optional().default([]),
+  gameDraw: z.array(z.string()).optional().default([]),
 })
 
 export type DiaryEvent = z.infer<typeof diaryEventSchema>

@@ -1097,6 +1097,56 @@ export class RuntimeService {
     return getDiaryEntryForDate(this.dataRoot, this.contentRoot, dateKey, this.state.relationshipTier)
   }
 
+  recordMilestone(key: string): boolean {
+    const milestones = this.state.stats.milestones ?? {}
+    if (milestones[key]) return false
+    this.state = {
+      ...this.state,
+      stats: {
+        ...this.state.stats,
+        milestones: { ...milestones, [key]: new Date().toISOString() },
+      },
+    }
+    return true
+  }
+
+  checkAutoMilestones(): void {
+    const s = this.state.stats
+    if (s.interactionCount >= 1) this.recordMilestone('first_interaction')
+    if (s.feedCount >= 1) this.recordMilestone('first_feed')
+    if (s.focusCompletedCount >= 1) this.recordMilestone('first_focus_complete')
+    if (s.nightInteractionCount >= 1) this.recordMilestone('first_night_interaction')
+    if (s.companionDays >= 7) this.recordMilestone('week_together')
+    if (s.companionDays >= 30) this.recordMilestone('month_together')
+    if (s.interactionCount >= 100) this.recordMilestone('interaction_100')
+    if (s.feedCount >= 50) this.recordMilestone('feed_50')
+    if (s.focusCompletedCount >= 10) this.recordMilestone('focus_10')
+    if ((s.visitStreak ?? 0) >= 7) this.recordMilestone('streak_7')
+    if (this.state.relationshipTier === 'mid') this.recordMilestone('tier_mid')
+    if (this.state.relationshipTier === 'high') this.recordMilestone('tier_high')
+  }
+
+  getMilestones(): { key: string; label: string; date: string }[] {
+    const milestones = this.state.stats.milestones ?? {}
+    const labels: Record<string, string> = {
+      first_interaction: '第一次互动',
+      first_feed: '第一次喂食',
+      first_focus_complete: '第一次专注完成',
+      first_night_interaction: '第一次深夜互动',
+      week_together: '陪伴满一周',
+      month_together: '陪伴满一个月',
+      interaction_100: '互动满 100 次',
+      feed_50: '喂食满 50 次',
+      focus_10: '专注完成 10 次',
+      streak_7: '连续签到 7 天',
+      tier_mid: '关系升级：熟悉',
+      tier_high: '关系升级：亲密',
+    }
+    return Object.entries(milestones)
+      .map(([key, date]) => ({ key, label: labels[key] ?? key, date }))
+      .sort((a, b) => a.date.localeCompare(b.date))
+  }
+
   async getCollection(): Promise<{
     badges: (CollectionBadgeDef & { unlocked: boolean })[]
     cards: (CollectionCardDef & { unlocked: boolean })[]
@@ -1166,6 +1216,25 @@ export class RuntimeService {
 
   async getSettings(): Promise<Settings> {
     return this.state.settings
+  }
+
+  async recordGameResult(gameName: string, result: string): Promise<void> {
+    await appendDiaryEvent(this.dataRoot, {
+      type: 'game_played',
+      payload: { gameName, gameResult: result },
+    })
+    if (result === 'win') {
+      this.state = {
+        ...this.state,
+        stats: {
+          ...this.state.stats,
+          favorability: this.state.stats.favorability + 1,
+          mood: Math.min(100, this.state.stats.mood + 3),
+        },
+        relationshipTier: resolveRelationshipTier(this.state.stats.favorability + 1),
+      }
+      await this.persist()
+    }
   }
 
   async recordMoodCheckin(mood: string): Promise<void> {
@@ -1805,6 +1874,7 @@ export class RuntimeService {
     const prevTier = this.lastKnownTier
     this.lastKnownTier = this.state.relationshipTier
     this.detectTierUp(prevTier)
+    this.checkAutoMilestones()
     const run = this.persistQueue.catch(() => undefined).then(async () => {
       await saveAppState(this.dataRoot, this.state)
     })
@@ -1913,6 +1983,7 @@ function createDefaultState(): AppState {
       branchPlotRotation: 0,
       visitStreak: 0,
       lastVisitDateKey: null,
+      milestones: {},
     },
   }
 }

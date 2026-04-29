@@ -4,7 +4,7 @@ import { app } from 'electron'
 import electronMain from 'electron/main'
 
 import type { RuntimeService } from '../application/runtime-service.js'
-import { createDiaryWindow } from './window-manager.js'
+import { createDiaryWindow, createGameWindow } from './window-manager.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -64,6 +64,29 @@ export function registerIpcHandlers(
     diaryWindow.on('closed', () => { diaryWindow = null })
   })
 
+  let gameWindow: Electron.BrowserWindow | null = null
+
+  ipcMain.handle('pet:open-game-window', async () => {
+    const mainWin = getWindow()
+    if (!mainWin) return
+    if (gameWindow && !gameWindow.isDestroyed()) { gameWindow.focus(); return }
+    gameWindow = createGameWindow(mainWin)
+    const isDev = Boolean(process.env.VITE_DEV_SERVER_URL)
+    if (isDev && process.env.VITE_DEV_SERVER_URL) {
+      await gameWindow.loadURL(`${process.env.VITE_DEV_SERVER_URL}?game=1`)
+    } else {
+      await gameWindow.loadFile(
+        path.resolve(__dirname, '../../dist/index.html'),
+        { query: { game: '1' } },
+      )
+    }
+    gameWindow.on('closed', () => { gameWindow = null })
+  })
+
+  ipcMain.handle('pet:close-game-window', async () => {
+    if (gameWindow && !gameWindow.isDestroyed()) { gameWindow.close(); gameWindow = null }
+  })
+
   ipcMain.handle('pet:close-diary-window', async () => {
     if (diaryWindow && !diaryWindow.isDestroyed()) {
       diaryWindow.close()
@@ -102,8 +125,16 @@ export function registerIpcHandlers(
     currentWindowDisplayMode = mode
   })
 
+  ipcMain.handle('pet:milestones', async () => {
+    return runtimeService.getMilestones()
+  })
+
   ipcMain.handle('pet:check-unlocks', async () => {
     return runtimeService.checkNewUnlocks()
+  })
+
+  ipcMain.handle('pet:game-result', async (_event, gameName: string, result: string) => {
+    return runtimeService.recordGameResult(gameName, result)
   })
 
   ipcMain.handle('pet:mood-checkin', async (_event, mood: string) => {

@@ -1,7 +1,7 @@
 // AIGC START
 import { create } from 'zustand'
 
-export type PanelId = 'status' | 'feed' | 'focus' | 'comfort' | 'settings' | 'collection' | 'diary' | 'debug' | null
+export type PanelId = 'status' | 'feed' | 'focus' | 'comfort' | 'settings' | 'collection' | 'diary' | 'game' | 'debug' | null
 
 export type FoodCategoryFilter = 'all' | 'sweet' | 'fruit' | 'drink' | 'savory' | 'meal'
 

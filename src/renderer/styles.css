@@ -182,7 +182,7 @@
   bottom: 40px;
   left: 8px;
   right: 8px;
-  max-height: 55%;
+  max-height: 75%;
   background: rgba(18, 12, 36, 0.94);
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 14px;
@@ -485,6 +485,59 @@
 .profile-stat .stat-label {
   font-size: 10px;
   opacity: 0.35;
+}
+
+/* === Milestones timeline === */
+.milestone-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-left: 8px;
+}
+
+.milestone-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.milestone-item:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 12px;
+  bottom: 0;
+  width: 1px;
+  background: rgba(134, 59, 255, 0.15);
+}
+
+.milestone-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(134, 59, 255, 0.5);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.milestone-content {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  min-width: 0;
+}
+
+.milestone-label {
+  font-size: 11px;
+  color: #e0d8f4;
+}
+
+.milestone-date {
+  font-size: 10px;
+  opacity: 0.35;
+  flex-shrink: 0;
 }
 
 /* === Focus panel === */
@@ -1086,6 +1139,60 @@
   font-style: italic;
   text-align: center;
   padding-top: 4px;
+}
+
+/* === Mini Games === */
+.game-panel { display: flex; flex-direction: column; gap: 10px; }
+.game-tabs { display: flex; gap: 4px; }
+.game-tab {
+  flex: 1; padding: 5px; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;
+  background: transparent; color: #ede6ff; font-size: 12px; cursor: pointer;
+}
+.game-tab.active { background: rgba(134,59,255,0.3); border-color: rgba(134,59,255,0.5); }
+.game-content { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+
+/* RPS */
+.rps-choices { display: flex; gap: 8px; }
+.rps-btn {
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  padding: 10px 16px; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px;
+  background: rgba(255,255,255,0.04); color: #ede6ff; cursor: pointer; transition: all 0.15s;
+}
+.rps-btn:hover { background: rgba(134,59,255,0.2); border-color: rgba(134,59,255,0.4); }
+.rps-emoji { font-size: 24px; }
+.rps-label { font-size: 11px; opacity: 0.6; }
+.rps-result { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+.rps-vs { opacity: 0.3; font-size: 11px; }
+.rps-outcome { font-size: 12px; font-weight: 600; margin-left: 8px; }
+.rps-win { color: rgba(120,220,160,0.9); }
+.rps-lose { color: rgba(255,140,140,0.9); }
+.rps-draw { color: rgba(200,190,255,0.7); }
+
+/* Bomb */
+.bomb-range { font-size: 14px; font-weight: 600; text-align: center; }
+.bomb-history {
+  width: 100%; max-height: 80px; overflow-y: auto;
+  display: flex; flex-direction: column; gap: 2px;
+}
+.bomb-line { font-size: 11px; opacity: 0.6; }
+.bomb-grid {
+  display: grid; grid-template-columns: repeat(10, 1fr); gap: 2px; width: 100%;
+}
+.bomb-num {
+  padding: 3px 0; border: 1px solid rgba(134,59,255,0.2); border-radius: 4px;
+  background: rgba(134,59,255,0.08); color: #e0d8f4; font-size: 10px;
+  cursor: pointer; text-align: center; transition: all 0.1s;
+}
+.bomb-num:hover { background: rgba(134,59,255,0.3); border-color: rgba(134,59,255,0.5); }
+.bomb-num-hidden { visibility: hidden; }
+.bomb-waiting { font-size: 12px; opacity: 0.5; font-style: italic; }
+.bomb-over { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.bomb-result { font-size: 13px; font-weight: 600; }
+.bomb-win { color: rgba(120,220,160,0.9); }
+.bomb-lose { color: rgba(255,140,140,0.9); }
+.bomb-restart {
+  padding: 5px 14px; border: 1px solid rgba(255,255,255,0.12); border-radius: 8px;
+  background: transparent; color: #ede6ff; font-size: 12px; cursor: pointer;
 }
 
 /* === Mood check-in === */
