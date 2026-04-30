@@ -308,7 +308,7 @@ export function RendererApp() {
             style={{
               backgroundColor: appState.settings.bubbleStyle.backgroundColor,
               borderColor: reminderBubble ? 'rgba(255,180,100,0.5)' : appState.settings.bubbleStyle.borderColor,
-              borderWidth: appState.settings.bubbleStyle.borderWidth || 1,
+              borderWidth: appState.settings.bubbleStyle.borderWidth ?? 1,
               color: appState.settings.bubbleStyle.textColor,
             }}
           >
