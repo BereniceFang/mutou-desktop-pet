@@ -23,7 +23,7 @@ let dragSession: DragSession | null = null
 let currentWindowDisplayMode: WindowDisplayMode = 'desktop'
 
 const WINDOW_SIZES: Record<WindowDisplayMode, { width: number; height: number }> = {
-  desktop: { width: 280, height: 300 },
+  desktop: { width: 360, height: 640 },
   desktop_expanded: { width: 360, height: 640 },
   panel: { width: 520, height: 760 },
 }
@@ -105,24 +105,32 @@ export function registerIpcHandlers(
   })
 
   ipcMain.handle('pet:window-display-mode', async (_event, mode: WindowDisplayMode) => {
-    const win = getWindow()
-    if (!win) {
-      return
+    try {
+      const win = getWindow()
+      if (!win) {
+        console.warn('[ipc:window-mode] no window; mode=', mode)
+        return { ok: false, reason: 'no-window' }
+      }
+      const prevMode = currentWindowDisplayMode
+      const before = win.getBounds()
+      await runtimeService.updateWindowPositionForDisplayMode(prevMode, { x: before.x, y: before.y })
+
+      const size = WINDOW_SIZES[mode] ?? WINDOW_SIZES.desktop
+      // Anchor the sprite's on-screen position: the sprite sits at the
+      // horizontal center and bottom of the window, so we keep the window's
+      // horizontal-center and bottom-edge on screen invariant across resizes.
+      const newX = Math.round(before.x + (before.width - size.width) / 2)
+      const newY = before.y + before.height - size.height
+      win.setBounds({ x: newX, y: newY, width: size.width, height: size.height })
+      const after = win.getBounds()
+
+      currentWindowDisplayMode = mode
+      console.log('[ipc:window-mode]', { from: prevMode, to: mode, before, after })
+      return { ok: true, before, after }
+    } catch (err) {
+      console.error('[ipc:window-mode] failed:', err)
+      return { ok: false, reason: String(err) }
     }
-    const [x, y] = win.getPosition()
-    await runtimeService.updateWindowPositionForDisplayMode(currentWindowDisplayMode, { x, y })
-
-    const targetPosition = runtimeService.getWindowPositionForDisplayMode(mode) ?? { x, y }
-    const size = WINDOW_SIZES[mode] ?? WINDOW_SIZES.desktop
-
-    win.setBounds({
-      x: targetPosition.x,
-      y: targetPosition.y,
-      width: size.width,
-      height: size.height,
-    })
-
-    currentWindowDisplayMode = mode
   })
 
   ipcMain.handle('pet:milestones', async () => {

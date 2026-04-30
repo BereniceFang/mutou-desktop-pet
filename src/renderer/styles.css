@@ -202,13 +202,26 @@
   cursor: default;
 }
 
+.debug-boundary {
+  margin: 8px;
+  padding: 8px;
+  border: 1px solid #ff6666;
+  border-radius: 6px;
+  background: rgba(80, 0, 0, 0.4);
+  color: #ffdada;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
 /* === Panel layer === */
 .panel-layer {
   position: absolute;
-  bottom: 40px;
+  top: 8px;
   left: 8px;
   right: 8px;
-  max-height: 45%;
+  max-height: calc(100% - 280px);
   background: rgba(18, 12, 36, 0.94);
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 14px;
@@ -231,6 +244,10 @@
   justify-content: space-between;
   padding: 10px 14px 6px;
   flex-shrink: 0;
+  cursor: grab;
+}
+.panel-header:active {
+  cursor: grabbing;
 }
 
 .panel-title {

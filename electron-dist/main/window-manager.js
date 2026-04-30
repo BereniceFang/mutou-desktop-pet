@@ -10,8 +10,8 @@ export function createMainWindow(settings, windowPosition) {
     const preloadPath = path.join(__dirname, '../preload/index.js');
     // AIGC END
     const win = new BrowserWindow({
-        width: 280,
-        height: 300,
+        width: 360,
+        height: 640,
         x: windowPosition?.x,
         y: windowPosition?.y,
         frame: false,
@@ -35,18 +35,40 @@ export function createMemoWindow(parentWindow) {
     const preloadPath = path.join(__dirname, '../preload/index.js');
     const [px, py] = parentWindow.getPosition();
     return new BrowserWindow({
-        width: 320, height: 440, x: px - 340, y: py - 60,
-        frame: false, resizable: true, alwaysOnTop: true, backgroundColor: '#120c24',
-        webPreferences: { preload: preloadPath, sandbox: false, contextIsolation: true, nodeIntegration: false },
+        width: 320,
+        height: 440,
+        x: px - 340,
+        y: py - 60,
+        frame: false,
+        resizable: true,
+        alwaysOnTop: true,
+        backgroundColor: '#120c24',
+        webPreferences: {
+            preload: preloadPath,
+            sandbox: false,
+            contextIsolation: true,
+            nodeIntegration: false,
+        },
     });
 }
 export function createGameWindow(parentWindow) {
     const preloadPath = path.join(__dirname, '../preload/index.js');
     const [px, py] = parentWindow.getPosition();
     return new BrowserWindow({
-        width: 360, height: 480, x: px + 290, y: py,
-        frame: false, resizable: false, alwaysOnTop: true, backgroundColor: '#120c24',
-        webPreferences: { preload: preloadPath, sandbox: false, contextIsolation: true, nodeIntegration: false },
+        width: 360,
+        height: 480,
+        x: px + 290,
+        y: py,
+        frame: false,
+        resizable: false,
+        alwaysOnTop: true,
+        backgroundColor: '#120c24',
+        webPreferences: {
+            preload: preloadPath,
+            sandbox: false,
+            contextIsolation: true,
+            nodeIntegration: false,
+        },
     });
 }
 export function createDiaryWindow(parentWindow) {

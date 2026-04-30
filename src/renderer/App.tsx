@@ -1,5 +1,4 @@
-// AIGC START
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { Component, type ReactNode, useCallback, useEffect, useRef, useState } from 'react'
 
 import mutouIdle from '../assets/mutou_base_idle_v1.png'
 import mutouTalk from '../assets/mutou_talk_idle_v1.gif'
@@ -148,6 +147,9 @@ export function RendererApp() {
       if (lastCheckin !== today) {
         setTimeout(() => setShowMoodCheckin(true), 3000)
       }
+      if (IS_DEV) {
+        ;(window as unknown as { __dev?: unknown }).__dev = { ui: useUiStore, pet: usePetStore }
+      }
     })
   }, [bootstrap, triggerStartupGreeting])
 
@@ -187,6 +189,11 @@ export function RendererApp() {
     return () => clearInterval(id)
   }, [focusHeartbeat, appState?.focusSession.status])
 
+  // Window is always 360×640 (see window-manager.ts). No resize on panel
+  // toggle — the panel is just a DOM layer inside the window. This
+  // eliminates the Chromium transparent-window repaint flicker that
+  // setBounds would otherwise cause on macOS.
+
   const { clearBubble } = usePetStore()
   useEffect(() => {
     if (!bubbleText || quitting || reminderBubble) return
@@ -196,17 +203,29 @@ export function RendererApp() {
 
   const dragRef = useRef(false)
   const lastDragBubbleRef = useRef(0)
+  const pointerStartRef = useRef<{ x: number; y: number } | null>(null)
+  const DRAG_THRESHOLD_PX = 6
 
   const onPointerDown = useCallback((e: React.PointerEvent) => {
-    if ((e.target as HTMLElement).closest('[data-no-drag]')) return
+    const el = e.target as HTMLElement
+    const inHeader = el.closest('.panel-header')
+    const onButton = el.closest('button')
+    const isDraggable = (inHeader && !onButton) || !el.closest('[data-no-drag]')
+    if (!isDraggable) return
     dragRef.current = false
-    window.petApp.startWindowDrag(e.screenX, e.screenY)
+    pointerStartRef.current = { x: e.screenX, y: e.screenY }
   }, [])
 
   const onPointerMove = useCallback((e: React.PointerEvent) => {
     if (e.buttons !== 1) return
+    const start = pointerStartRef.current
+    if (!start) return
     if (!dragRef.current) {
+      const dx = e.screenX - start.x
+      const dy = e.screenY - start.y
+      if (dx * dx + dy * dy < DRAG_THRESHOLD_PX * DRAG_THRESHOLD_PX) return
       dragRef.current = true
+      window.petApp.startWindowDrag(e.screenX, e.screenY)
       const now = Date.now()
       if (now - lastDragBubbleRef.current > 15_000) {
         lastDragBubbleRef.current = now
@@ -220,7 +239,8 @@ export function RendererApp() {
   }, [])
 
   const onPointerUp = useCallback(() => {
-    window.petApp.endWindowDrag()
+    pointerStartRef.current = null
+    if (dragRef.current) window.petApp.endWindowDrag()
   }, [])
 
   const clickTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -404,32 +424,34 @@ export function RendererApp() {
             <button className="panel-close" onClick={() => setPanel(null)}>✕</button>
           </div>
 
-          {activePanel === 'status' && <StatusPanel appState={appState} />}
-          {activePanel === 'feed' && (
-            <FeedPanel
-              tier={tier}
-              satiety={appState.stats.satiety}
-              feedCategory={feedCategory}
-              setFeedCategory={setFeedCategory}
-              onFeed={handleFeed}
-            />
-          )}
-          {activePanel === 'focus' && (
-            <FocusPanel
-              isFocusing={isFocusing}
-              session={appState.focusSession}
-              stats={appState.stats}
-              onStart={startFocus}
-              onComplete={completeFocus}
-              onInterrupt={interruptFocus}
-            />
-          )}
-          {activePanel === 'settings' && (
-            <SettingsPanel settings={appState.settings} onUpdate={updateSettings} />
-          )}
-          {activePanel === 'collection' && <CollectionPanel />}
-          {activePanel === 'diary' && <DiaryPanel />}
-          {activePanel === 'debug' && <DebugPanel />}
+          <PanelErrorBoundary>
+            {activePanel === 'status' && <StatusPanel appState={appState} />}
+            {activePanel === 'feed' && (
+              <FeedPanel
+                tier={tier}
+                satiety={appState.stats.satiety}
+                feedCategory={feedCategory}
+                setFeedCategory={setFeedCategory}
+                onFeed={handleFeed}
+              />
+            )}
+            {activePanel === 'focus' && (
+              <FocusPanel
+                isFocusing={isFocusing}
+                session={appState.focusSession}
+                stats={appState.stats}
+                onStart={startFocus}
+                onComplete={completeFocus}
+                onInterrupt={interruptFocus}
+              />
+            )}
+            {activePanel === 'settings' && (
+              <SettingsPanel settings={appState.settings} onUpdate={updateSettings} />
+            )}
+            {activePanel === 'collection' && <CollectionPanel />}
+            {activePanel === 'diary' && <DiaryPanel />}
+            {activePanel === 'debug' && <DebugPanel />}
+          </PanelErrorBoundary>
         </div>
       )}
     </div>
@@ -1233,4 +1255,29 @@ function DebugPanel() {
   )
 }
 
-// AIGC END
+class PanelErrorBoundary extends Component<
+  { children: ReactNode; onError?: (msg: string) => void },
+  { error: Error | null }
+> {
+  state = { error: null as Error | null }
+  static getDerivedStateFromError(error: Error) {
+    return { error }
+  }
+  componentDidCatch(error: Error, info: { componentStack?: string | null }) {
+    console.error('[PanelErrorBoundary]', error, info)
+    this.props.onError?.(`${error.message}\n${(info.componentStack ?? '').slice(0, 400)}`)
+  }
+  render() {
+    if (this.state.error) {
+      return (
+        <div className="debug-boundary">
+          <div><strong>Panel crashed:</strong></div>
+          <div>{this.state.error.message}</div>
+          <div style={{ marginTop: 4, opacity: 0.7 }}>{this.state.error.stack?.slice(0, 400)}</div>
+        </div>
+      )
+    }
+    return this.props.children
+  }
+}
+

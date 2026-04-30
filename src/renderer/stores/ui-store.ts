@@ -28,6 +28,7 @@ export const useUiStore = create<UiStore>((set) => ({
   togglePanel(panel: Exclude<PanelId, null>) {
     set((prev) => {
       const next = prev.activePanel === panel ? null : panel
+      console.log('[ui-store] togglePanel', { requested: panel, prev: prev.activePanel, next, actionBarVisible: next !== null || prev.actionBarVisible })
       return { activePanel: next, actionBarVisible: next !== null || prev.actionBarVisible }
     })
   },

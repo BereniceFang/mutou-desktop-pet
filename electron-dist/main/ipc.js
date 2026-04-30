@@ -9,76 +9,71 @@ const { ipcMain } = electronMain;
 let dragSession = null;
 let currentWindowDisplayMode = 'desktop';
 const WINDOW_SIZES = {
-    desktop: { width: 280, height: 300 },
+    desktop: { width: 360, height: 640 },
     desktop_expanded: { width: 360, height: 640 },
     panel: { width: 520, height: 760 },
 };
 export function registerIpcHandlers(runtimeService, getWindow) {
     ipcMain.handle('pet:mouse-enter', async () => {
         const win = getWindow();
-        if (win) win.setIgnoreMouseEvents(false);
+        if (win)
+            win.setIgnoreMouseEvents(false);
     });
     ipcMain.handle('pet:mouse-leave', async () => {
         const win = getWindow();
-        if (win) win.setIgnoreMouseEvents(true, { forward: true });
+        if (win)
+            win.setIgnoreMouseEvents(true, { forward: true });
     });
     let diaryWindow = null;
     ipcMain.handle('pet:open-diary-window', async () => {
         const mainWin = getWindow();
-        if (!mainWin) return;
-        if (diaryWindow && !diaryWindow.isDestroyed()) { diaryWindow.focus(); return; }
+        if (!mainWin)
+            return;
+        if (diaryWindow && !diaryWindow.isDestroyed()) {
+            diaryWindow.focus();
+            return;
+        }
         diaryWindow = createDiaryWindow(mainWin);
         const isDev = Boolean(process.env.VITE_DEV_SERVER_URL);
         if (isDev && process.env.VITE_DEV_SERVER_URL) {
             await diaryWindow.loadURL(`${process.env.VITE_DEV_SERVER_URL}?diary=1`);
-        } else {
+        }
+        else {
             await diaryWindow.loadFile(path.resolve(__dirname, '../../dist/index.html'), { query: { diary: '1' } });
         }
         diaryWindow.on('closed', () => { diaryWindow = null; });
     });
-    ipcMain.handle('pet:close-diary-window', async () => {
-        if (diaryWindow && !diaryWindow.isDestroyed()) { diaryWindow.close(); diaryWindow = null; }
-    });
     let gameWindow = null;
     ipcMain.handle('pet:open-game-window', async () => {
         const mainWin = getWindow();
-        if (!mainWin) return;
-        if (gameWindow && !gameWindow.isDestroyed()) { gameWindow.focus(); return; }
+        if (!mainWin)
+            return;
+        if (gameWindow && !gameWindow.isDestroyed()) {
+            gameWindow.focus();
+            return;
+        }
         gameWindow = createGameWindow(mainWin);
         const isDev = Boolean(process.env.VITE_DEV_SERVER_URL);
         if (isDev && process.env.VITE_DEV_SERVER_URL) {
             await gameWindow.loadURL(`${process.env.VITE_DEV_SERVER_URL}?game=1`);
-        } else {
+        }
+        else {
             await gameWindow.loadFile(path.resolve(__dirname, '../../dist/index.html'), { query: { game: '1' } });
         }
         gameWindow.on('closed', () => { gameWindow = null; });
     });
     ipcMain.handle('pet:close-game-window', async () => {
-        if (gameWindow && !gameWindow.isDestroyed()) { gameWindow.close(); gameWindow = null; }
-    });
-    let memoWindow = null;
-    ipcMain.handle('pet:open-memo-window', async () => {
-        const mainWin = getWindow();
-        if (!mainWin) return;
-        if (memoWindow && !memoWindow.isDestroyed()) { memoWindow.focus(); return; }
-        memoWindow = createMemoWindow(mainWin);
-        const isDev = Boolean(process.env.VITE_DEV_SERVER_URL);
-        if (isDev && process.env.VITE_DEV_SERVER_URL) {
-            await memoWindow.loadURL(`${process.env.VITE_DEV_SERVER_URL}?memo=1`);
-        } else {
-            await memoWindow.loadFile(path.resolve(__dirname, '../../dist/index.html'), { query: { memo: '1' } });
+        if (gameWindow && !gameWindow.isDestroyed()) {
+            gameWindow.close();
+            gameWindow = null;
         }
-        memoWindow.on('closed', () => { memoWindow = null; });
     });
-    ipcMain.handle('pet:close-memo-window', async () => {
-        if (memoWindow && !memoWindow.isDestroyed()) { memoWindow.close(); memoWindow = null; }
+    ipcMain.handle('pet:close-diary-window', async () => {
+        if (diaryWindow && !diaryWindow.isDestroyed()) {
+            diaryWindow.close();
+            diaryWindow = null;
+        }
     });
-    ipcMain.handle('pet:memo-list', async () => runtimeService.getMemos());
-    ipcMain.handle('pet:memo-add', async (_event, text, remindAt, repeat, repeatTime) => runtimeService.addMemo(text, remindAt, repeat, repeatTime));
-    ipcMain.handle('pet:memo-toggle', async (_event, id) => runtimeService.toggleMemoDone(id));
-    ipcMain.handle('pet:memo-delete', async (_event, id) => runtimeService.deleteMemo(id));
-    ipcMain.handle('pet:memo-check-reminders', async () => runtimeService.checkMemoReminders());
-    ipcMain.handle('pet:game-result', async (_event, gameName, result) => runtimeService.recordGameResult(gameName, result));
     ipcMain.handle('pet:bootstrap', async () => runtimeService.loadBootstrapData());
     ipcMain.handle('pet:startup-greeting', async () => {
         return runtimeService.triggerStartupGreeting();
@@ -87,21 +82,76 @@ export function registerIpcHandlers(runtimeService, getWindow) {
         console.log(`[pet-debug:${scope}]`, payload);
     });
     ipcMain.handle('pet:window-display-mode', async (_event, mode) => {
-        const win = getWindow();
-        if (!win) {
+        try {
+            const win = getWindow();
+            if (!win) {
+                console.warn('[ipc:window-mode] no window; mode=', mode);
+                return { ok: false, reason: 'no-window' };
+            }
+            const prevMode = currentWindowDisplayMode;
+            const before = win.getBounds();
+            await runtimeService.updateWindowPositionForDisplayMode(prevMode, { x: before.x, y: before.y });
+            const size = WINDOW_SIZES[mode] ?? WINDOW_SIZES.desktop;
+            // Anchor the sprite's on-screen position: the sprite sits at the
+            // horizontal center and bottom of the window, so we keep the window's
+            // horizontal-center and bottom-edge on screen invariant across resizes.
+            const newX = Math.round(before.x + (before.width - size.width) / 2);
+            const newY = before.y + before.height - size.height;
+            win.setBounds({ x: newX, y: newY, width: size.width, height: size.height });
+            const after = win.getBounds();
+            currentWindowDisplayMode = mode;
+            console.log('[ipc:window-mode]', { from: prevMode, to: mode, before, after });
+            return { ok: true, before, after };
+        }
+        catch (err) {
+            console.error('[ipc:window-mode] failed:', err);
+            return { ok: false, reason: String(err) };
+        }
+    });
+    ipcMain.handle('pet:milestones', async () => {
+        return runtimeService.getMilestones();
+    });
+    ipcMain.handle('pet:check-unlocks', async () => {
+        return runtimeService.checkNewUnlocks();
+    });
+    let memoWindow = null;
+    ipcMain.handle('pet:open-memo-window', async () => {
+        const mainWin = getWindow();
+        if (!mainWin)
+            return;
+        if (memoWindow && !memoWindow.isDestroyed()) {
+            memoWindow.focus();
             return;
         }
-        const [x, y] = win.getPosition();
-        await runtimeService.updateWindowPositionForDisplayMode(currentWindowDisplayMode, { x, y });
-        const targetPosition = runtimeService.getWindowPositionForDisplayMode(mode) ?? { x, y };
-        const size = WINDOW_SIZES[mode] ?? WINDOW_SIZES.desktop;
-        win.setBounds({
-            x: targetPosition.x,
-            y: targetPosition.y,
-            width: size.width,
-            height: size.height,
-        });
-        currentWindowDisplayMode = mode;
+        memoWindow = createMemoWindow(mainWin);
+        const isDev = Boolean(process.env.VITE_DEV_SERVER_URL);
+        if (isDev && process.env.VITE_DEV_SERVER_URL) {
+            await memoWindow.loadURL(`${process.env.VITE_DEV_SERVER_URL}?memo=1`);
+        }
+        else {
+            await memoWindow.loadFile(path.resolve(__dirname, '../../dist/index.html'), { query: { memo: '1' } });
+        }
+        memoWindow.on('closed', () => { memoWindow = null; });
+    });
+    ipcMain.handle('pet:close-memo-window', async () => {
+        if (memoWindow && !memoWindow.isDestroyed()) {
+            memoWindow.close();
+            memoWindow = null;
+        }
+    });
+    ipcMain.handle('pet:memo-list', async () => runtimeService.getMemos());
+    ipcMain.handle('pet:memo-add', async (_event, text, remindAt, repeat, repeatTime) => runtimeService.addMemo(text, remindAt, repeat, repeatTime));
+    ipcMain.handle('pet:memo-toggle', async (_event, id) => runtimeService.toggleMemoDone(id));
+    ipcMain.handle('pet:memo-delete', async (_event, id) => runtimeService.deleteMemo(id));
+    ipcMain.handle('pet:memo-check-reminders', async () => runtimeService.checkMemoReminders());
+    ipcMain.handle('pet:game-result', async (_event, gameName, result) => {
+        return runtimeService.recordGameResult(gameName, result);
+    });
+    ipcMain.handle('pet:mood-checkin', async (_event, mood) => {
+        return runtimeService.recordMoodCheckin(mood);
+    });
+    ipcMain.handle('pet:check-tier-up', async () => {
+        return runtimeService.consumeTierUpBubble();
     });
     ipcMain.handle('pet:click', async () => {
         console.log('[pet-debug:ipc-click] received');

@@ -1,4 +1,3 @@
-// AIGC START
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import electronMain from 'electron/main';
@@ -17,32 +16,35 @@ async function bootstrap() {
     const dataRoot = path.join(app.getPath('userData'), 'data');
     const runtimeService = new RuntimeService(contentRoot, dataRoot, app.getVersion());
     await runtimeService.initialize();
-    mainWindow = createMainWindow(runtimeService.getState().settings, 
-    // AIGC START
-    runtimeService.getWindowPositionForDisplayMode('desktop'));
+    mainWindow = createMainWindow(runtimeService.getState().settings, runtimeService.getWindowPositionForDisplayMode('desktop'));
     registerIpcHandlers(runtimeService, () => mainWindow);
     mainWindow.on('close', () => {
         if (!mainWindow) {
             return;
         }
         const [x, y] = mainWindow.getPosition();
-        // AIGC START
         const { width, height } = mainWindow.getBounds();
         void runtimeService.updateWindowPositionForDisplayMode(inferWindowDisplayMode({ width, height }), { x, y });
-        // AIGC END
     });
     if (isDev && process.env.VITE_DEV_SERVER_URL) {
         await mainWindow.loadURL(process.env.VITE_DEV_SERVER_URL);
+        mainWindow.webContents.openDevTools({ mode: 'detach' });
+        mainWindow.webContents.on('render-process-gone', (_e, details) => {
+            console.error('[main] renderer gone:', details);
+        });
+        mainWindow.webContents.on('unresponsive', () => {
+            console.error('[main] renderer unresponsive');
+        });
     }
     else {
         await mainWindow.loadFile(path.resolve(__dirname, '../../dist/index.html'));
     }
 }
 app.whenReady().then(async () => {
-    await bootstrap().catch((err) => console.error('[bootstrap] FATAL:', err));
+    await bootstrap();
     app.on('activate', async () => {
         if (mainWindow === null) {
-            await bootstrap().catch((err) => console.error('[bootstrap] FATAL:', err));
+            await bootstrap();
         }
     });
 });
@@ -51,5 +53,4 @@ app.on('window-all-closed', () => {
         app.quit();
     }
 });
-// AIGC END
 //# sourceMappingURL=index.js.map

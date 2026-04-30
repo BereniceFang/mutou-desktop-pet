@@ -1,4 +1,3 @@
-// AIGC START
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -29,7 +28,6 @@ async function bootstrap() {
 
   mainWindow = createMainWindow(
     runtimeService.getState().settings,
-    // AIGC START
     runtimeService.getWindowPositionForDisplayMode('desktop'),
   )
 
@@ -40,17 +38,22 @@ async function bootstrap() {
       return
     }
     const [x, y] = mainWindow.getPosition()
-    // AIGC START
     const { width, height } = mainWindow.getBounds()
     void runtimeService.updateWindowPositionForDisplayMode(
       inferWindowDisplayMode({ width, height }),
       { x, y },
     )
-    // AIGC END
   })
 
   if (isDev && process.env.VITE_DEV_SERVER_URL) {
     await mainWindow.loadURL(process.env.VITE_DEV_SERVER_URL)
+    mainWindow.webContents.openDevTools({ mode: 'detach' })
+    mainWindow.webContents.on('render-process-gone', (_e, details) => {
+      console.error('[main] renderer gone:', details)
+    })
+    mainWindow.webContents.on('unresponsive', () => {
+      console.error('[main] renderer unresponsive')
+    })
   } else {
     await mainWindow.loadFile(path.resolve(__dirname, '../../dist/index.html'))
   }
@@ -71,4 +74,3 @@ app.on('window-all-closed', () => {
     app.quit()
   }
 })
-// AIGC END

@@ -20,8 +20,8 @@ export function createMainWindow(
   // AIGC END
 
   const win = new BrowserWindow({
-    width: 280,
-    height: 300,
+    width: 360,
+    height: 640,
     x: windowPosition?.x,
     y: windowPosition?.y,
     frame: false,
