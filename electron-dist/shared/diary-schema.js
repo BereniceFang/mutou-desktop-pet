@@ -4,7 +4,7 @@ const relationshipTierSchema = z.enum(['low', 'mid', 'high']);
 export const diaryEventSchema = z.object({
     id: z.string(),
     dateKey: z.string(),
-    type: z.enum(['day_visit', 'interaction', 'feed', 'focus_start', 'focus_complete', 'focus_interrupt']),
+    type: z.enum(['day_visit', 'interaction', 'feed', 'focus_start', 'focus_complete', 'focus_interrupt', 'mood_checkin', 'game_played']),
     timestamp: z.string(),
     payload: z
         .object({
@@ -12,6 +12,9 @@ export const diaryEventSchema = z.object({
         plannedDurationMinutes: z.number().optional(),
         actualDurationMinutes: z.number().optional(),
         relationshipTier: relationshipTierSchema.optional(),
+        userMood: z.string().optional(),
+        gameName: z.string().optional(),
+        gameResult: z.string().optional(),
     })
         .optional(),
 });
@@ -48,6 +51,10 @@ export const dailyDiarySummarySchema = z.object({
     focusStartedCount: z.number().int().min(0),
     focusCompletedCount: z.number().int().min(0),
     focusInterruptedCount: z.number().int().min(0),
+    userMood: z.string().nullable().optional().default(null),
+    gameWins: z.number().int().min(0).optional().default(0),
+    gameLosses: z.number().int().min(0).optional().default(0),
+    gameDraws: z.number().int().min(0).optional().default(0),
 });
 export const diarySummariesFileSchema = z.object({
     version: z.literal(1),
@@ -88,6 +95,13 @@ export const diaryTemplatesSchema = z.object({
     firstMeetOpening: z.array(z.string()),
     firstMeetQuiet: z.array(z.string()),
     firstMeetClosing: z.array(z.string()),
+    moodCheckinGreat: z.array(z.string()).optional().default([]),
+    moodCheckinOk: z.array(z.string()).optional().default([]),
+    moodCheckinTired: z.array(z.string()).optional().default([]),
+    moodCheckinSad: z.array(z.string()).optional().default([]),
+    gameWin: z.array(z.string()).optional().default([]),
+    gameLose: z.array(z.string()).optional().default([]),
+    gameDraw: z.array(z.string()).optional().default([]),
 });
 // AIGC END
 //# sourceMappingURL=diary-schema.js.map

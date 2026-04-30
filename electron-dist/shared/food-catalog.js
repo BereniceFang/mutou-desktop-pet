@@ -27,6 +27,7 @@ export const FOOD_CATALOG = [
     { id: 'ramen', label: '拉面', category: 'meal', preferenceScore: 5, unlockTier: 'high' },
     { id: 'hotpot', label: '火锅', category: 'meal', preferenceScore: 5, unlockTier: 'high' },
     { id: 'snackPlatter', label: '小零食拼盘', category: 'savory', preferenceScore: 5, unlockTier: 'high' },
+    // 节日限定食物
     { id: 'iceCreamSummer', label: '夏日冰激凌', category: 'sweet', preferenceScore: 5, unlockTier: 'low', seasonalUnlock: { month: 6, day: 1, duration: 92 } },
     { id: 'dumplings', label: '饺子', category: 'meal', preferenceScore: 5, unlockTier: 'low', seasonalUnlock: { month: 1, day: 1, duration: 15 } },
     { id: 'tangyuan', label: '汤圆', category: 'sweet', preferenceScore: 5, unlockTier: 'low', seasonalUnlock: { month: 2, day: 1, duration: 28 } },
@@ -42,21 +43,26 @@ export function isRelationshipTierUnlocked(currentTier, requiredTier) {
     return RELATIONSHIP_TIER_ORDER.indexOf(currentTier) >= RELATIONSHIP_TIER_ORDER.indexOf(requiredTier);
 }
 export function isSeasonalFoodAvailable(food, now) {
-    if (!food.seasonalUnlock) return true;
+    if (!food.seasonalUnlock)
+        return true;
     const d = now ?? new Date();
     const { month, day, duration } = food.seasonalUnlock;
     const start = new Date(d.getFullYear(), month - 1, day);
     const end = new Date(start.getTime() + duration * 86400000);
-    if (d >= start && d < end) return true;
+    if (d >= start && d < end)
+        return true;
     const prevStart = new Date(d.getFullYear() - 1, month - 1, day);
     const prevEnd = new Date(prevStart.getTime() + duration * 86400000);
     return d >= prevStart && d < prevEnd;
 }
 export function isFoodUnlockedForTier(foodOrType, relationshipTier) {
     const food = typeof foodOrType === 'string' ? getFoodCatalogItem(foodOrType) : foodOrType;
-    if (!food) return false;
-    if (!isRelationshipTierUnlocked(relationshipTier, food.unlockTier)) return false;
-    if (food.seasonalUnlock && !isSeasonalFoodAvailable(food)) return false;
+    if (!food)
+        return false;
+    if (!isRelationshipTierUnlocked(relationshipTier, food.unlockTier))
+        return false;
+    if (food.seasonalUnlock && !isSeasonalFoodAvailable(food))
+        return false;
     return true;
 }
 export function getFoodUnlockTierLabel(tier) {
@@ -81,6 +87,10 @@ const CATEGORY_SATIETY_BASE = {
     savory: 5,
     meal: 8,
 };
+/**
+ * 饱腹增加 = 类别基础值 + 偏好加成。
+ * 零食/饮品基础低（2~3），正餐基础高（8），偏好 1–5 额外加 1–5。
+ */
 export function getFeedSatietyGainForPreference(preferenceScore, category) {
     const pref = Math.min(5, Math.max(1, Math.round(preferenceScore)));
     const base = category ? CATEGORY_SATIETY_BASE[category] : 5;

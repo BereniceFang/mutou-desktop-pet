@@ -1,3 +1,4 @@
+// AIGC START
 import { z } from 'zod';
 export const memoItemSchema = z.object({
     id: z.string(),
@@ -14,3 +15,5 @@ export const memoFileSchema = z.object({
     version: z.literal(1),
     items: z.array(memoItemSchema),
 });
+// AIGC END
+//# sourceMappingURL=memo-schema.js.map

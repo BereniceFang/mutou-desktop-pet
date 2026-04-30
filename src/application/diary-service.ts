@@ -155,7 +155,7 @@ export async function loadDiaryTemplates(contentRoot: string): Promise<DiaryTemp
 function aggregateDayEvents(
   dayEvents: DiaryEvent[],
   fallbackTier: RelationshipTier,
-): Omit<DailyDiarySummary, 'dateKey' | 'narrativeKind' | 'absence'> {
+) {
   const visitTier =
     (dayEvents.find((event) => event.type === 'day_visit')?.payload?.relationshipTier as RelationshipTier) ??
     fallbackTier

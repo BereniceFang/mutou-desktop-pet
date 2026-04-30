@@ -121,6 +121,9 @@ export const petStatsSchema = z.object({
     satietyClockAt: z.string().nullable().optional().default(null),
     lastBranchPlotAtInteraction: z.number().default(-1000),
     branchPlotRotation: z.number().int().min(0).default(0),
+    visitStreak: z.number().int().min(0).optional().default(0),
+    lastVisitDateKey: z.string().nullable().optional().default(null),
+    milestones: z.record(z.string(), z.string()).optional().default({}),
 });
 export const windowPositionSchema = z.object({
     x: z.number(),

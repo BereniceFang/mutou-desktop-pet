@@ -9,6 +9,7 @@ import { loadContentBundle, pickDialogue } from '../infrastructure/content/conte
 import { loadHolidayCalendar } from '../infrastructure/content/holiday-loader.js';
 import { loadInteractivePlotsBundle } from '../infrastructure/content/interactive-plots-loader.js';
 import { loadAppState, saveAppState } from '../infrastructure/storage/app-state-storage.js';
+import { loadMemos, saveMemos } from '../infrastructure/storage/memo-storage.js';
 import { getFeedSatietyGainForPreference, getFoodCatalogItem, getFoodDialogueType, getFoodUnlockTierLabel, isFoodUnlockedForTier, } from '../shared/food-catalog.js';
 const SCHEMA_VERSION = 1;
 /** 累计互动达到该值后，才可能触发分支小剧情 */
@@ -36,9 +37,11 @@ const SATIETY_HUNGER_THRESHOLD = 36;
 /** 每小时自然衰减（0–100 标尺），长时间离线会单次封顶避免暴扣 */
 const SATIETY_DECAY_PER_HOUR = 3.25;
 const SATIETY_DECAY_BURST_CAP = 48;
+/** 心情每小时自然下降 */
 const MOOD_DECAY_PER_HOUR = 1.5;
 const MOOD_DECAY_BURST_CAP = 20;
 const MOOD_FLOOR = 30;
+/** 精力每小时自然下降 */
 const ENERGY_DECAY_PER_HOUR = 2.0;
 const ENERGY_DECAY_BURST_CAP = 25;
 const ENERGY_FLOOR = 20;
@@ -99,6 +102,8 @@ export class RuntimeService {
     dialogueSequence = 0;
     recentClickAt = [];
     recentFeedAt = [];
+    notifiedUnlocks = new Set();
+    pendingTierUpType = null;
     contentRoot;
     dataRoot;
     appVersion;
@@ -116,8 +121,30 @@ export class RuntimeService {
         this.dialogueSequence = this.state.stats.interactionCount;
         this.applySatietyDecayToState(new Date());
         this.applyDailyProgress();
+        this.lastKnownTier = this.state.relationshipTier;
         await this.persist();
         await runDiarySessionHooks(this.dataRoot, this.contentRoot, this.state.relationshipTier);
+        await this.initCollectionNotifications();
+    }
+    async initCollectionNotifications() {
+        try {
+            const [badgesBundle, cardsBundle] = await Promise.all([
+                loadCollectionBadges(this.contentRoot),
+                loadStoryCards(this.contentRoot),
+            ]);
+            this.collectionDefs = { badges: badgesBundle.badges, cards: cardsBundle.cards };
+            for (const b of this.collectionDefs.badges) {
+                if (isBadgeUnlocked(b.id, this.state))
+                    this.notifiedUnlocks.add(b.id);
+            }
+            for (const c of this.collectionDefs.cards) {
+                if (isStoryCardUnlocked(c.id, this.state))
+                    this.notifiedUnlocks.add(c.id);
+            }
+        }
+        catch {
+            // collection files may not exist yet
+        }
     }
     async loadBootstrapData() {
         return {
@@ -863,6 +890,66 @@ export class RuntimeService {
     async getDiaryEntry(dateKey) {
         return getDiaryEntryForDate(this.dataRoot, this.contentRoot, dateKey, this.state.relationshipTier);
     }
+    recordMilestone(key) {
+        const milestones = this.state.stats.milestones ?? {};
+        if (milestones[key])
+            return false;
+        this.state = {
+            ...this.state,
+            stats: {
+                ...this.state.stats,
+                milestones: { ...milestones, [key]: new Date().toISOString() },
+            },
+        };
+        return true;
+    }
+    checkAutoMilestones() {
+        const s = this.state.stats;
+        if (s.interactionCount >= 1)
+            this.recordMilestone('first_interaction');
+        if (s.feedCount >= 1)
+            this.recordMilestone('first_feed');
+        if (s.focusCompletedCount >= 1)
+            this.recordMilestone('first_focus_complete');
+        if (s.nightInteractionCount >= 1)
+            this.recordMilestone('first_night_interaction');
+        if (s.companionDays >= 7)
+            this.recordMilestone('week_together');
+        if (s.companionDays >= 30)
+            this.recordMilestone('month_together');
+        if (s.interactionCount >= 100)
+            this.recordMilestone('interaction_100');
+        if (s.feedCount >= 50)
+            this.recordMilestone('feed_50');
+        if (s.focusCompletedCount >= 10)
+            this.recordMilestone('focus_10');
+        if ((s.visitStreak ?? 0) >= 7)
+            this.recordMilestone('streak_7');
+        if (this.state.relationshipTier === 'mid')
+            this.recordMilestone('tier_mid');
+        if (this.state.relationshipTier === 'high')
+            this.recordMilestone('tier_high');
+    }
+    getMilestones() {
+        const milestones = this.state.stats.milestones ?? {};
+        const labels = {
+            first_interaction: '第一次互动',
+            first_feed: '第一次喂食',
+            first_focus_complete: '第一次专注完成',
+            first_night_interaction: '第一次深夜互动',
+            week_together: '陪伴满一周',
+            month_together: '陪伴满一个月',
+            interaction_100: '互动满 100 次',
+            feed_50: '喂食满 50 次',
+            focus_10: '专注完成 10 次',
+            streak_7: '连续签到 7 天',
+            tier_mid: '关系升级：熟悉',
+            tier_high: '关系升级：亲密',
+        };
+        return Object.entries(milestones)
+            .map(([key, date]) => ({ key, label: labels[key] ?? key, date }))
+            .sort((a, b) => a.date.localeCompare(b.date));
+    }
     async getCollection() {
         if (!this.collectionDefs) {
             const [badgesBundle, cardsBundle] = await Promise.all([
@@ -885,65 +972,141 @@ export class RuntimeService {
             })),
         };
     }
+    detectTierUp(previousTier) {
+        const currentTier = this.state.relationshipTier;
+        if (previousTier === currentTier)
+            return;
+        if (previousTier === 'low' && currentTier === 'mid') {
+            this.pendingTierUpType = 'interaction_tier_up_mid';
+        }
+        else if (previousTier === 'mid' && currentTier === 'high') {
+            this.pendingTierUpType = 'interaction_tier_up_high';
+        }
+    }
+    consumeTierUpBubble() {
+        if (!this.pendingTierUpType)
+            return null;
+        try {
+            const line = this.decorateSpeechLine(this.pickLineWithFallback(this.pendingTierUpType, 'interaction'));
+            this.pendingTierUpType = null;
+            return line.text;
+        }
+        catch {
+            this.pendingTierUpType = null;
+            return null;
+        }
+    }
+    checkNewUnlocks() {
+        if (!this.collectionDefs)
+            return [];
+        const newlyUnlocked = [];
+        for (const badge of this.collectionDefs.badges) {
+            if (!this.notifiedUnlocks.has(badge.id) && isBadgeUnlocked(badge.id, this.state)) {
+                this.notifiedUnlocks.add(badge.id);
+                newlyUnlocked.push(`🏅 解锁徽章「${badge.name}」`);
+            }
+        }
+        for (const card of this.collectionDefs.cards) {
+            if (!this.notifiedUnlocks.has(card.id) && isStoryCardUnlocked(card.id, this.state)) {
+                this.notifiedUnlocks.add(card.id);
+                newlyUnlocked.push(`📖 解锁故事「${card.title}」`);
+            }
+        }
+        return newlyUnlocked;
+    }
     async getSettings() {
         return this.state.settings;
     }
+    async recordGameResult(gameName, result) {
+        await appendDiaryEvent(this.dataRoot, {
+            type: 'game_played',
+            payload: { gameName, gameResult: result },
+        });
+        if (result === 'win') {
+            this.state = {
+                ...this.state,
+                stats: {
+                    ...this.state.stats,
+                    favorability: this.state.stats.favorability + 1,
+                    mood: Math.min(100, this.state.stats.mood + 3),
+                },
+                relationshipTier: resolveRelationshipTier(this.state.stats.favorability + 1),
+            };
+            await this.persist();
+        }
+    }
+    async recordMoodCheckin(mood) {
+        await appendDiaryEvent(this.dataRoot, {
+            type: 'mood_checkin',
+            payload: { userMood: mood },
+        });
+    }
     async getMemos() {
-        const { loadMemos } = await import('../infrastructure/storage/memo-storage.js');
         const data = await loadMemos(this.dataRoot);
         return data.items;
     }
     async addMemo(text, remindAt, repeat, repeatTime) {
-        const { randomUUID } = await import('node:crypto');
-        const { loadMemos, saveMemos } = await import('../infrastructure/storage/memo-storage.js');
         const data = await loadMemos(this.dataRoot);
-        const item = { id: randomUUID(), text, createdAt: new Date().toISOString(), remindAt, reminded: false, done: false, repeat: repeat ?? 'none', repeatTime: repeatTime ?? null, lastRemindDate: null };
+        const item = {
+            id: randomUUID(),
+            text,
+            createdAt: new Date().toISOString(),
+            remindAt,
+            reminded: false,
+            done: false,
+            repeat: repeat ?? 'none',
+            repeatTime: repeatTime ?? null,
+            lastRemindDate: null,
+        };
         data.items.push(item);
         await saveMemos(this.dataRoot, data);
         return item;
     }
     async toggleMemoDone(id) {
-        const { loadMemos, saveMemos } = await import('../infrastructure/storage/memo-storage.js');
         const data = await loadMemos(this.dataRoot);
         const item = data.items.find((m) => m.id === id);
-        if (item) { item.done = !item.done; await saveMemos(this.dataRoot, data); }
+        if (item) {
+            item.done = !item.done;
+            await saveMemos(this.dataRoot, data);
+        }
     }
     async deleteMemo(id) {
-        const { loadMemos, saveMemos } = await import('../infrastructure/storage/memo-storage.js');
         const data = await loadMemos(this.dataRoot);
         data.items = data.items.filter((m) => m.id !== id);
         await saveMemos(this.dataRoot, data);
     }
     async checkMemoReminders() {
-        const { loadMemos, saveMemos } = await import('../infrastructure/storage/memo-storage.js');
         const data = await loadMemos(this.dataRoot);
         const now = new Date();
         const todayKey = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
         const nowTimeStr = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
         let triggered = null;
         for (const item of data.items) {
-            if (item.done) continue;
+            if (item.done)
+                continue;
             if (item.repeat === 'daily' && item.repeatTime) {
-                if (item.lastRemindDate === todayKey) continue;
-                if (nowTimeStr >= item.repeatTime) { item.lastRemindDate = todayKey; triggered = item; break; }
+                if (item.lastRemindDate === todayKey)
+                    continue;
+                if (nowTimeStr >= item.repeatTime) {
+                    item.lastRemindDate = todayKey;
+                    triggered = item;
+                    break;
+                }
                 continue;
             }
-            if (item.reminded || !item.remindAt) continue;
-            if (new Date(item.remindAt) <= now) { item.reminded = true; triggered = item; break; }
+            if (item.reminded || !item.remindAt)
+                continue;
+            if (new Date(item.remindAt) <= now) {
+                item.reminded = true;
+                triggered = item;
+                break;
+            }
         }
-        if (triggered) { await saveMemos(this.dataRoot, data); return `该做这件事了：${triggered.text}`; }
+        if (triggered) {
+            await saveMemos(this.dataRoot, data);
+            return `该做这件事了：${triggered.text}`;
+        }
         return null;
-    }
-    async recordGameResult(gameName, result) {
-        const outcome = result;
-        await appendDiaryEvent(this.dataRoot, { type: 'game_played', payload: { gameName, gameResult: outcome } });
-        if (outcome === 'win') {
-            this.state = { ...this.state, stats: { ...this.state.stats, favorability: this.state.stats.favorability + 1, mood: Math.min(100, this.state.stats.mood + 3) }, relationshipTier: resolveRelationshipTier(this.state.stats.favorability + 1) };
-            await this.persist();
-        }
-    }
-    async recordMoodCheckin(mood) {
-        await appendDiaryEvent(this.dataRoot, { type: 'mood_checkin', payload: { userMood: mood } });
     }
     async updateSettings(input) {
         const nextPersonalYears = input.personalDates !== undefined
@@ -1443,7 +1606,12 @@ export class RuntimeService {
         const elapsedMs = Math.max(0, Date.now() - new Date(startedAt).getTime());
         return Math.max(1, Math.round(elapsedMs / 60000));
     }
+    lastKnownTier = 'low';
     async persist() {
+        const prevTier = this.lastKnownTier;
+        this.lastKnownTier = this.state.relationshipTier;
+        this.detectTierUp(prevTier);
+        this.checkAutoMilestones();
         const run = this.persistQueue.catch(() => undefined).then(async () => {
             await saveAppState(this.dataRoot, this.state);
         });
@@ -1452,17 +1620,22 @@ export class RuntimeService {
     }
     applyDailyProgress() {
         const today = localDateKeyFromDate(new Date());
-        const lastInteractionDay = this.state.lastInteractionAt
-            ? localDateKeyFromDate(new Date(this.state.lastInteractionAt))
-            : null;
-        if (lastInteractionDay === today) {
+        const lastVisit = this.state.stats.lastVisitDateKey;
+        const yesterday = localDateKeyFromDate(new Date(Date.now() - 86400000));
+        if (lastVisit === today) {
             return;
         }
+        const isConsecutive = lastVisit === yesterday;
+        const newStreak = isConsecutive ? (this.state.stats.visitStreak ?? 0) + 1 : 1;
+        const streakBonus = newStreak >= 7 ? 2 : newStreak >= 3 ? 1 : 0;
         this.state = {
             ...this.state,
             stats: {
                 ...this.state.stats,
-                companionDays: Math.max(1, this.state.stats.companionDays + (lastInteractionDay ? 1 : 0)),
+                companionDays: Math.max(1, this.state.stats.companionDays + 1),
+                visitStreak: newStreak,
+                lastVisitDateKey: today,
+                favorability: this.state.stats.favorability + streakBonus,
             },
         };
     }
@@ -1542,6 +1715,9 @@ function createDefaultState() {
             satietyClockAt: null,
             lastBranchPlotAtInteraction: -1000,
             branchPlotRotation: 0,
+            visitStreak: 0,
+            lastVisitDateKey: null,
+            milestones: {},
         },
     };
 }
